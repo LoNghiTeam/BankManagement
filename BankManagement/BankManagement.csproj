@@ -47,11 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoDich.cs">
       <SubType>Form</SubType>
@@ -59,6 +66,10 @@
     <Compile Include="GiaoDich.Designer.cs">
       <DependentUpon>GiaoDich.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\GiaoDich.cs" />
+    <Compile Include="Model\KhoanVay.cs" />
+    <Compile Include="Model\LaiSuat.cs" />
+    <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="NapTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDich.resx">
       <DependentUpon>GiaoDich.cs</DependentUpon>
@@ -86,6 +100,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
