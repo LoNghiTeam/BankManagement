@@ -24,9 +24,9 @@ namespace BankManagement
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
-            HomeControl homeControl = new HomeControl();
-            homeControl.Size = new Size(this.ClientSize.Width, this.ClientSize.Height);
-            panelDesktop.Controls.Add(homeControl);
+            WelcomeControl welcomeControl = new WelcomeControl();
+            welcomeControl.Size = new Size(this.ClientSize.Width, this.ClientSize.Height);
+            panelDesktop.Controls.Add(welcomeControl);
         }
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -213,7 +213,20 @@ namespace BankManagement
         {
             HomeControl homeControl = new HomeControl();
             homeControl.Size = new Size(this.ClientSize.Width, this.ClientSize.Height);
+            panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(homeControl);
+        }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            GiaoDich giaoDich = new GiaoDich();
+            giaoDich.ShowDialog();
+        }
+
+        private void btnDeposit_Click(object sender, EventArgs e)
+        {
+            NapTien napTien = new NapTien();
+            napTien.ShowDialog();
         }
     }
 }

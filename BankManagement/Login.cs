@@ -12,7 +12,6 @@ namespace BankManagement
 {
     public partial class Login : Form
     {
-        private Boolean check = false;
         public Login()
         {
             InitializeComponent();
@@ -28,18 +27,32 @@ namespace BankManagement
             txtMK.UseSystemPasswordChar = false;
         }
 
-        private void rjButton1_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            if (check)
+           txtTK.Focus();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (Check())
             {
+                this.Hide();
                 Form2 form2 = new Form2();
                 form2.ShowDialog();
-                this.Hide();
             }
             else
             {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ");
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
             }
+           
+        }
+        private Boolean Check()
+        {
+            if(txtTK.Text=="admin" && txtMK.Text == "admin")
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
