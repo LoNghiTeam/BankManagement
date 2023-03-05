@@ -32,17 +32,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.icpbMK = new FontAwesome.Sharp.IconPictureBox();
             this.txtTK = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.txtMK = new System.Windows.Forms.TextBox();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.icpbMK = new FontAwesome.Sharp.IconPictureBox();
+            this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icpbMK)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +74,7 @@
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(255, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 39);
+            this.label1.Size = new System.Drawing.Size(321, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Login your account!";
             // 
@@ -86,17 +86,15 @@
             this.panel2.Location = new System.Drawing.Point(255, 178);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(415, 49);
-            this.panel2.TabIndex = 2;
+            this.panel2.TabIndex = 0;
             // 
-            // panel3
+            // txtTK
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.txtMK);
-            this.panel3.Controls.Add(this.icpbMK);
-            this.panel3.Location = new System.Drawing.Point(255, 233);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(415, 49);
-            this.panel3.TabIndex = 2;
+            this.txtTK.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTK.Location = new System.Drawing.Point(48, 6);
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(361, 36);
+            this.txtTK.TabIndex = 0;
             // 
             // iconPictureBox1
             // 
@@ -111,6 +109,25 @@
             this.iconPictureBox1.Size = new System.Drawing.Size(37, 36);
             this.iconPictureBox1.TabIndex = 3;
             this.iconPictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.txtMK);
+            this.panel3.Controls.Add(this.icpbMK);
+            this.panel3.Location = new System.Drawing.Point(255, 233);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(415, 49);
+            this.panel3.TabIndex = 1;
+            // 
+            // txtMK
+            // 
+            this.txtMK.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.Location = new System.Drawing.Point(48, 6);
+            this.txtMK.Name = "txtMK";
+            this.txtMK.Size = new System.Drawing.Size(361, 36);
+            this.txtMK.TabIndex = 1;
+            this.txtMK.UseSystemPasswordChar = true;
             // 
             // icpbMK
             // 
@@ -128,61 +145,46 @@
             this.icpbMK.MouseDown += new System.Windows.Forms.MouseEventHandler(this.icpbMK_MouseDown);
             this.icpbMK.MouseUp += new System.Windows.Forms.MouseEventHandler(this.icpbMK_MouseUp);
             // 
-            // txtTK
+            // btnLogin
             // 
-            this.txtTK.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.Location = new System.Drawing.Point(48, 6);
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(361, 36);
-            this.txtTK.TabIndex = 3;
-            // 
-            // txtMK
-            // 
-            this.txtMK.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(48, 6);
-            this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(361, 36);
-            this.txtMK.TabIndex = 3;
-            this.txtMK.UseSystemPasswordChar = true;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.DimGray;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.DimGray;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(255, 320);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(150, 40);
-            this.rjButton1.TabIndex = 3;
-            this.rjButton1.Text = "Đăng nhập";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.DimGray;
+            this.btnLogin.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLogin.BorderRadius = 0;
+            this.btnLogin.BorderSize = 0;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(255, 320);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(150, 40);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.TextColor = System.Drawing.Color.White;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 540);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icpbMK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,6 +202,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtMK;
         private FontAwesome.Sharp.IconPictureBox icpbMK;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private RJCodeAdvance.RJControls.RJButton btnLogin;
     }
 }
