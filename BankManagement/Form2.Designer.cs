@@ -28,40 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMenu = new System.Windows.Forms.Panel();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.btnMinimize = new FontAwesome.Sharp.IconButton();
+            this.btnMaximize = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.btnTransaction = new FontAwesome.Sharp.IconButton();
             this.btnClose2 = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.btnMaximize = new FontAwesome.Sharp.IconButton();
-            this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.panelMenu.SuspendLayout();
+            this.btnDeposit = new FontAwesome.Sharp.IconButton();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.panelTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.panelMenu.Controls.Add(this.iconButton1);
-            this.panelMenu.Controls.Add(this.btnClose2);
-            this.panelMenu.Controls.Add(this.iconButton4);
-            this.panelMenu.Controls.Add(this.iconButton3);
-            this.panelMenu.Controls.Add(this.btnHome);
-            this.panelMenu.Controls.Add(this.panel1);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(230, 572);
-            this.panelMenu.TabIndex = 0;
             // 
             // panelTitle
             // 
@@ -84,6 +70,57 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(947, 512);
             this.panelDesktop.TabIndex = 2;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimize.IconColor = System.Drawing.Color.White;
+            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimize.IconSize = 20;
+            this.btnMinimize.Location = new System.Drawing.Point(814, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
+            this.btnMinimize.TabIndex = 1;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.ExpandAlt;
+            this.btnMaximize.IconColor = System.Drawing.Color.White;
+            this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaximize.IconSize = 20;
+            this.btnMaximize.Location = new System.Drawing.Point(859, 0);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(45, 25);
+            this.btnMaximize.TabIndex = 1;
+            this.btnMaximize.UseVisualStyleBackColor = false;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.IndianRed;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 20;
+            this.btnClose.Location = new System.Drawing.Point(904, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(43, 25);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel1
             // 
@@ -168,28 +205,29 @@
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
-            // iconButton4
+            // btnTransaction
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Wallet;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 30;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 180);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.iconButton4.Size = new System.Drawing.Size(230, 40);
-            this.iconButton4.TabIndex = 3;
-            this.iconButton4.Tag = "   Giao Dịch";
-            this.iconButton4.Text = "   Giao Dịch";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.btnTransaction.BackColor = System.Drawing.Color.Transparent;
+            this.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransaction.FlatAppearance.BorderSize = 0;
+            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnTransaction.IconChar = FontAwesome.Sharp.IconChar.Wallet;
+            this.btnTransaction.IconColor = System.Drawing.Color.White;
+            this.btnTransaction.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTransaction.IconSize = 30;
+            this.btnTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaction.Location = new System.Drawing.Point(0, 180);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnTransaction.Size = new System.Drawing.Size(230, 40);
+            this.btnTransaction.TabIndex = 3;
+            this.btnTransaction.Tag = "   Giao Dịch";
+            this.btnTransaction.Text = "   Giao Dịch";
+            this.btnTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTransaction.UseVisualStyleBackColor = false;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
             // 
             // btnClose2
             // 
@@ -216,57 +254,6 @@
             this.btnClose2.UseVisualStyleBackColor = false;
             this.btnClose2.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.IndianRed;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(902, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 25);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.ExpandAlt;
-            this.btnMaximize.IconColor = System.Drawing.Color.White;
-            this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(860, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(45, 25);
-            this.btnMaximize.TabIndex = 1;
-            this.btnMaximize.UseVisualStyleBackColor = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnMinimize.IconColor = System.Drawing.Color.White;
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(819, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
-            this.btnMinimize.TabIndex = 1;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.Transparent;
@@ -291,6 +278,46 @@
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
+            // btnDeposit
+            // 
+            this.btnDeposit.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeposit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeposit.FlatAppearance.BorderSize = 0;
+            this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeposit.ForeColor = System.Drawing.Color.White;
+            this.btnDeposit.IconChar = FontAwesome.Sharp.IconChar.Wallet;
+            this.btnDeposit.IconColor = System.Drawing.Color.White;
+            this.btnDeposit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDeposit.IconSize = 30;
+            this.btnDeposit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeposit.Location = new System.Drawing.Point(0, 220);
+            this.btnDeposit.Name = "btnDeposit";
+            this.btnDeposit.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnDeposit.Size = new System.Drawing.Size(230, 40);
+            this.btnDeposit.TabIndex = 6;
+            this.btnDeposit.Tag = "   Nạp Tiền";
+            this.btnDeposit.Text = "   Nạp Tiền";
+            this.btnDeposit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeposit.UseVisualStyleBackColor = false;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panelMenu.Controls.Add(this.btnDeposit);
+            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.btnClose2);
+            this.panelMenu.Controls.Add(this.btnTransaction);
+            this.panelMenu.Controls.Add(this.iconButton3);
+            this.panelMenu.Controls.Add(this.btnHome);
+            this.panelMenu.Controls.Add(this.panel1);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(230, 572);
+            this.panelMenu.TabIndex = 0;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -300,31 +327,32 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Resize += new System.EventHandler(this.Form2_Resize);
-            this.panelMenu.ResumeLayout(false);
             this.panelTitle.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Panel panelDesktop;
-        private FontAwesome.Sharp.IconButton btnMenu;
-        private FontAwesome.Sharp.IconButton btnClose2;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btnMenu;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnHome;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnTransaction;
+        private FontAwesome.Sharp.IconButton btnClose2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnDeposit;
+        private System.Windows.Forms.Panel panelMenu;
     }
 }

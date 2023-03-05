@@ -12,7 +12,7 @@ namespace BankManagement
 {
     public partial class Login : Form
     {
-        private Boolean check = false;
+
         public Login()
         {
             InitializeComponent();
@@ -28,17 +28,85 @@ namespace BankManagement
             txtMK.UseSystemPasswordChar = false;
         }
 
-        private void rjButton1_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            if (check)
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (Check())
             {
+                this.Hide();
                 Form2 form2 = new Form2();
                 form2.ShowDialog();
-                this.Hide();
             }
             else
             {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ");
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
+            }
+
+        }
+        private Boolean Check()
+        {
+            if (txtTK.Text == "admin" && txtMK.Text == "admin")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void lblSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Signup signup = new Signup();
+            signup.ShowDialog();
+        }
+
+        private void txtTK_Enter(object sender, EventArgs e)
+        {
+            HintTextNormal(txtTK);
+        }
+        private void txtTK_Leave(object sender, EventArgs e)
+        {
+            HintTextNormal(txtTK);
+        }
+        private void txtMK_Leave(object sender, EventArgs e)
+        {
+            HintTextPW(txtMK);
+        }
+        private void txtMK_Enter(object sender, EventArgs e)
+        {
+            HintTextPW(txtMK);
+        }
+        private void HintTextPW(TextBox tbx)
+        {
+            tbx.PasswordChar = '\0';
+            if (tbx.Text == tbx.Tag.ToString())
+            {
+                tbx.Text = "";
+                tbx.ForeColor = Color.Black;
+                tbx.PasswordChar = '●';
+            }
+            else if (tbx.Text == "")
+            {
+                tbx.Text = tbx.Tag.ToString();
+                tbx.ForeColor = Color.Silver;
+            }
+            else
+            {
+                tbx.PasswordChar = '●';
+            }
+        }
+        private void HintTextNormal(TextBox tbx)
+        {
+            if (tbx.Text == tbx.Tag.ToString())
+            {
+                tbx.Text = "";
+                tbx.ForeColor = Color.Black;
+            }
+            else if (tbx.Text == "")
+            {
+                tbx.Text = tbx.Tag.ToString();
+                tbx.ForeColor = Color.Silver;
             }
         }
     }
