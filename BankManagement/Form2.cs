@@ -202,7 +202,11 @@ namespace BankManagement
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Cảnh báo!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -228,6 +232,26 @@ namespace BankManagement
         {
             NapTien napTien = new NapTien();
             napTien.ShowDialog();
+        }
+
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (panelTimKiem.Visible == true)
+            {
+                panelTimKiem.Visible = false;
+                tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            }
+            else
+            {
+                panelTimKiem.Visible = true;
+                txtTimKiem.Focus();
+                tìmKiếmToolStripMenuItem.Text = "Ẩn thanh tìm kiếm";
+            }
         }
     }
 }

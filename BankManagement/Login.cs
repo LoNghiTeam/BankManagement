@@ -14,8 +14,6 @@ namespace BankManagement
 {
     public partial class Login : Form
     {
-        DangNhap dangNhap = new DangNhap();
-        DBConnection DBConnection = new DBConnection();
         public Login()
         {
             InitializeComponent();
@@ -39,7 +37,7 @@ namespace BankManagement
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            if (dangNhap.ktDangNhap(txtTK.Text.ToString(), txtMK.Text.ToString()))
+            if (txtMK.Text=="Admin" && txtTK.Text=="Admin")
             {
                 this.Hide();
                 Form2 form2 = new Form2();
