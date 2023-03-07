@@ -4,14 +4,16 @@
          Pass varchar(100), 
          HoTen varchar(100),
          NgaySinh date,
+         Cccd varchar(100),
+         Diachi varchar(1000),
+         Sodienthoai varchar(11),
          isAdmin int,
-
          Tien FLOAT,
 );
-INSERT INTO TaiKhoan VALUES ('Admin', '123456', 'Nguyen Van a', '2022-11-16 08:19:41', 2, 0);
-INSERT INTO TaiKhoan VALUES ('Admin2', '123456', 'Nguyen Van a', '2022-11-16 08:19:41',1, 0);
-INSERT INTO TaiKhoan VALUES ('Admin3', '123456', 'Nguyen Van a', '2022-11-16 08:19:41',0, 0);
-INSERT INTO TaiKhoan VALUES ('Admin4', '123456', 'Nguyen Van a', '2022-11-16 08:19:41',0, 0);
+INSERT INTO TaiKhoan VALUES ('Admin', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789', 2, 0);
+INSERT INTO TaiKhoan VALUES ('Admin2', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',1, 0);
+INSERT INTO TaiKhoan VALUES ('Admin3', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0);
+INSERT INTO TaiKhoan VALUES ('Admin4', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0);
 
 CREATE TABLE LaiSuat (
          MaLS INT IDENTITY(1,1) PRIMARY KEY,
@@ -57,3 +59,5 @@ select * from LaiSuat
 select * from KhoanVay
 select * from GiaoDich
 select * from TaiKhoan
+
+

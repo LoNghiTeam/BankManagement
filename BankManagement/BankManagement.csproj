@@ -64,6 +64,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\DangKy.cs" />
     <Compile Include="Controller\DangNhap.cs" />
     <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
