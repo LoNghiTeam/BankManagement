@@ -229,17 +229,5 @@ namespace BankManagement
             NapTien napTien = new NapTien();
             napTien.ShowDialog();
         }
-
-        private void btnTransaction_Click(object sender, EventArgs e)
-        {
-            GiaoDich giaoDich = new GiaoDich();
-            giaoDich.ShowDialog();
-        }
-
-        private void btnDeposit_Click(object sender, EventArgs e)
-        {
-            NapTien napTien = new NapTien();
-            napTien.ShowDialog();
-        }
     }
 }
