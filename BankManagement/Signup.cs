@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankManagement.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace BankManagement
 {
     public partial class Signup : Form
     {
+        DangKy dangKy = new DangKy();
         public Signup()
         {
             InitializeComponent();
@@ -119,22 +121,35 @@ namespace BankManagement
         }
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            if (CheckValid())
+            String check = dangKy.checkAll(txtTK.Text.ToString(), txtMK.Text.ToString(), txtRepeatMK.Text.ToString(),
+                txtTen.Text.ToString(), txtCCCD.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text.ToString());
+            if (check == null)
             {
-                DialogResult result = MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK);
-                if (result == DialogResult.OK)
+                if (dangKy.TaoTK(txtTK.Text.ToString(), txtMK.Text.ToString(), txtTen.Text.ToString(), dtpNgaySinh.Value.Date, txtCCCD.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text.ToString()))
                 {
-                    this.Close();
+                    DialogResult result = MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK);
+                    if (result == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
                 }
+                else
+                    MessageBox.Show("Đăng ký thất bại!", "Thông báo", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show("Đăng ký không thành công!", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show(check, "Thông báo", MessageBoxButtons.OK);
             }
         }
-        private Boolean CheckValid()
+
+        private void Signup_Load(object sender, EventArgs e)
         {
-            return true;
+
+        }
+
+        private void txtTK_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
