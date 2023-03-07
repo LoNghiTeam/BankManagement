@@ -38,6 +38,8 @@
             this.txtMK = new System.Windows.Forms.TextBox();
             this.icpbMK = new FontAwesome.Sharp.IconPictureBox();
             this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblSignup = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,13 +72,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(255, 96);
+            this.label1.Location = new System.Drawing.Point(249, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(321, 38);
+            this.label1.Size = new System.Drawing.Size(420, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Login your account!";
+            this.label1.Text = "Đăng nhập tài khoản của bạn!";
             // 
             // panel2
             // 
@@ -91,10 +93,15 @@
             // txtTK
             // 
             this.txtTK.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTK.ForeColor = System.Drawing.Color.Silver;
             this.txtTK.Location = new System.Drawing.Point(48, 6);
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(361, 36);
             this.txtTK.TabIndex = 0;
+            this.txtTK.Tag = "Tài khoản";
+            this.txtTK.Text = "Tài khoản";
+            this.txtTK.Enter += new System.EventHandler(this.txtTK_Enter);
+            this.txtTK.Leave += new System.EventHandler(this.txtTK_Leave);
             // 
             // iconPictureBox1
             // 
@@ -123,11 +130,15 @@
             // txtMK
             // 
             this.txtMK.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.ForeColor = System.Drawing.Color.Silver;
             this.txtMK.Location = new System.Drawing.Point(48, 6);
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(361, 36);
             this.txtMK.TabIndex = 1;
-            this.txtMK.UseSystemPasswordChar = true;
+            this.txtMK.Tag = "Mật khẩu";
+            this.txtMK.Text = "Mật khẩu";
+            this.txtMK.Enter += new System.EventHandler(this.txtMK_Enter);
+            this.txtMK.Leave += new System.EventHandler(this.txtMK_Leave);
             // 
             // icpbMK
             // 
@@ -164,16 +175,39 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(425, 330);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(0, 16);
+            this.linkLabel1.TabIndex = 3;
+            // 
+            // lblSignup
+            // 
+            this.lblSignup.AutoSize = true;
+            this.lblSignup.Location = new System.Drawing.Point(425, 331);
+            this.lblSignup.Name = "lblSignup";
+            this.lblSignup.Size = new System.Drawing.Size(208, 16);
+            this.lblSignup.TabIndex = 4;
+            this.lblSignup.TabStop = true;
+            this.lblSignup.Text = "Chưa có tài khoản? Đăng ký ngay!";
+            this.lblSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSignup_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 540);
+            this.Controls.Add(this.lblSignup);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -203,5 +237,7 @@
         private System.Windows.Forms.TextBox txtMK;
         private FontAwesome.Sharp.IconPictureBox icpbMK;
         private RJCodeAdvance.RJControls.RJButton btnLogin;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lblSignup;
     }
 }

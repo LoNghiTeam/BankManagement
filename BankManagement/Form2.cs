@@ -17,6 +17,7 @@ namespace BankManagement
         //Fields
         private int borderSize = 2;
         private Size formSize;
+        private UserControl userControl;
         //Constructor
         public Form2()
         {
@@ -24,9 +25,9 @@ namespace BankManagement
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
-            WelcomeControl welcomeControl = new WelcomeControl();
-            welcomeControl.Size = new Size(this.ClientSize.Width, this.ClientSize.Height);
-            panelDesktop.Controls.Add(welcomeControl);
+            userControl = new WelcomeControl();
+            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            panelDesktop.Controls.Add(userControl);
         }
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -43,7 +44,6 @@ namespace BankManagement
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        //Overridden methods
         //Overridden methods
         protected override void WndProc(ref Message m)
         {
@@ -137,6 +137,7 @@ namespace BankManagement
         private void Form2_Resize(object sender, EventArgs e)
         {
             AdjustForm();
+            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
         }
         //Private methods
         private void AdjustForm()
@@ -211,10 +212,22 @@ namespace BankManagement
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            HomeControl homeControl = new HomeControl();
-            homeControl.Size = new Size(this.ClientSize.Width, this.ClientSize.Height);
+            userControl = new HomeControl();
+            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Clear();
-            panelDesktop.Controls.Add(homeControl);
+            panelDesktop.Controls.Add(userControl);
+        }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            GiaoDich giaoDich = new GiaoDich();
+            giaoDich.ShowDialog();
+        }
+
+        private void btnDeposit_Click(object sender, EventArgs e)
+        {
+            NapTien napTien = new NapTien();
+            napTien.ShowDialog();
         }
 
         private void btnTransaction_Click(object sender, EventArgs e)
