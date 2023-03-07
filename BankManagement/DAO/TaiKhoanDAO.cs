@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace BankManagement.DAO
 {
@@ -14,10 +15,10 @@ namespace BankManagement.DAO
 
         }
 
-        public bool KiemtraTK(String taikhoan, String matkhau)
+        public bool KiemtraTK(string taikhoan, string matkhau)
         {
             string SQL = string.Format("select * from TaiKhoan WHERE UserName  = '{0}' and Pass = '{1}'", taikhoan, matkhau);
-            if(conn.searchDN(SQL))
+            if(conn.checkDN(SQL) == true)
             {
                 return true;
             }

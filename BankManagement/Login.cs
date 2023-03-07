@@ -12,7 +12,8 @@ namespace BankManagement
 {
     public partial class Login : Form
     {
-
+        DangNhap dangNhap = new DangNhap();
+        DBConnection DBConnection = new DBConnection();
         public Login()
         {
             InitializeComponent();
@@ -30,11 +31,13 @@ namespace BankManagement
 
         private void Login_Load(object sender, EventArgs e)
         {
+           txtTK.Focus();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (Check())
+
+            if (dangNhap.ktDangNhap(txtTK.Text.ToString(), txtMK.Text.ToString()))
             {
                 this.Hide();
                 Form2 form2 = new Form2();
@@ -45,14 +48,6 @@ namespace BankManagement
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
             }
 
-        }
-        private Boolean Check()
-        {
-            if (txtTK.Text == "admin" && txtMK.Text == "admin")
-            {
-                return true;
-            }
-            return false;
         }
 
         private void lblSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

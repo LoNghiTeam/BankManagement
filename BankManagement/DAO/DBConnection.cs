@@ -12,41 +12,21 @@ namespace BankManagement.DAO
     internal class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        public string thucthi(string Sql)
+      
+        public Boolean checkDN(string Sql)
         {
             try
             {
                 // Ket noi
                 conn.Open();
-
-                SqlCommand cmd = new SqlCommand(Sql, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    return "";
-            }
-            catch (Exception ex)
-            {
-                return ex + "";
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return "";
-        }
-        public bool searchDN(string Sql)
-        {
-            SqlDataReader reader1;
-            try
-            {
-                // Ket noi
-                conn.Open();
-
-                SqlCommand cmd = new SqlCommand(Sql, conn);
-                if (cmd.ExecuteNonQuery() > 0)
+                SqlCommand cmd = new SqlCommand(Sql, conn);   
+               SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
                     return true;
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex + "");
                 return false;
             }
             finally
@@ -55,27 +35,7 @@ namespace BankManagement.DAO
             }
             return false;
         }
-        public DataTable Load(string table)
-        {
-            try
-            {
-                conn.Open();
-                string sqlStr = string.Format("SELECT * FROM {0}", table);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                return dt;
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-                return null;
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+       
     }
 
 }
