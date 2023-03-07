@@ -1,4 +1,5 @@
 ﻿using BankManagement.Controller;
+using BankManagement.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,6 @@ namespace BankManagement
     public partial class GiaoDichForm : Form
     {
         ChuyenTien chuyenTien = new ChuyenTien();
-        private int nguoigui;
-        private int nguoinhan;
-        private DateTime ngayGD;
-        private double tien;
 
         public GiaoDichForm()
         {
@@ -35,16 +32,16 @@ namespace BankManagement
 
         private void btnKiemTra_Click(object sender, EventArgs e)
         {
-            string Ten;
+            TaiKhoan taiKhoan = new TaiKhoan();
             if (tbSoTaiKhoan.Text.ToString() != "")
             {
                 if (int.Parse(tbSoTaiKhoan.Text) != logging.Taikhoan.SoTK)
                 {
-                    Ten = chuyenTien.TimNguoiNhan(int.Parse(tbSoTaiKhoan.Text));
-                    if (Ten != null)
+                    taiKhoan = chuyenTien.TimNguoiNhan(int.Parse(tbSoTaiKhoan.Text));
+                    if (taiKhoan.HoTen != null)
                     {
                         btnChuyenTien.Enabled = true;
-                        lblNguoiNhan.Text = Ten;
+                        lblNguoiNhan.Text = taiKhoan.HoTen;
                     }
                     else
                     {

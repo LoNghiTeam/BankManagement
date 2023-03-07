@@ -95,16 +95,22 @@ namespace BankManagement.DAO
             }
             return null;
         }
-        public string FindSoTK(string Sql)
+        public TaiKhoan FindSoTK(string Sql)
         {
             try
             {
                 // Ket noi
                 conn.Open();
+                TaiKhoan taiKhoan = new TaiKhoan();
                 SqlCommand cmd = new SqlCommand(Sql, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
-                    return reader["HoTen"].ToString();
+                {
+                    taiKhoan.HoTen = reader["HoTen"].ToString();
+                    taiKhoan.Tien = (double)reader["Tien"];
+                    return taiKhoan;
+                }
+                    
             }
             catch (Exception ex)
             {

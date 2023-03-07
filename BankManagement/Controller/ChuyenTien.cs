@@ -13,11 +13,12 @@ namespace BankManagement.Controller
         TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
         GiaoDichDAO GiaoDichDAO = new GiaoDichDAO();
         public ChuyenTien() { }
-        public string TimNguoiNhan(int SoTK)
+        public TaiKhoan TimNguoiNhan(int SoTK)
         {
-            string Ten = taiKhoanDAO.TimSoTK(SoTK);
-            if(Ten != null)
-                return Ten;
+            TaiKhoan taiKhoan = new TaiKhoan();
+            taiKhoan = taiKhoanDAO.TimSoTK(SoTK);
+            if(taiKhoan != null)
+                return taiKhoan;
             return null;
         }
         public string checkSoTien(double Tien)
@@ -42,6 +43,18 @@ namespace BankManagement.Controller
                 tiengui -= tiengiaodich;
                 tiennhan += tiengiaodich;
                 if (taiKhoanDAO.CapNhatTien(nguoigui, tiengui) && taiKhoanDAO.CapNhatTien(nguoinhan, tiennhan))
+                    return true;
+                return false;
+            }
+            return false;
+        }
+        public bool GiaoDichTien(int nguoinhan, double tiengiaodich)
+        {
+            double tiennhan = taiKhoanDAO.TimTien(nguoinhan);
+            if ( tiennhan != -1)
+            {
+                tiennhan += tiengiaodich;
+                if (taiKhoanDAO.CapNhatTien(nguoinhan, tiennhan))
                     return true;
                 return false;
             }

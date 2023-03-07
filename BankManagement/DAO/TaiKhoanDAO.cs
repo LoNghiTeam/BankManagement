@@ -45,10 +45,10 @@ namespace BankManagement.DAO
             }
             return null;
         }
-        public string TimSoTK(int SoTK)
+        public TaiKhoan TimSoTK(int SoTK)
         {
             string SQL = string.Format("select * from TaiKhoan WHERE SoTK  = '{0}'", SoTK);
-            string Ten = conn.FindSoTK(SQL);
+            TaiKhoan Ten = conn.FindSoTK(SQL);
             if (Ten != null)
             {
                 return Ten;

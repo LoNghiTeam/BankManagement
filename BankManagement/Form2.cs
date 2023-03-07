@@ -28,10 +28,15 @@ namespace BankManagement
             userControl = new WelcomeControl();
             userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Add(userControl);
+            if (logging.Taikhoan.IsAdmin != 0)
+                btnDeposit.Enabled = true;
+            else
+                btnDeposit.Enabled = false;
         }
         private void Form2_Load(object sender, EventArgs e)
         {
             formSize = this.ClientSize;
+               
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
