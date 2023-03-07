@@ -49,7 +49,6 @@ namespace BankManagement
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
             }
-
         }
 
         private void lblSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
