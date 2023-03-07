@@ -13,7 +13,7 @@ namespace BankManagement.DAO
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
       
-        public Boolean checkDN(string Sql)
+        public Boolean checkExist(string Sql)
         {
             try
             {
@@ -35,6 +35,29 @@ namespace BankManagement.DAO
             }
             return false;
         }
+        public Boolean Execute(string Sql)
+        {
+            try
+            {
+                // Ket noi
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(Sql, conn);   
+              
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + "");
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return false;
+        }
+
        
     }
 

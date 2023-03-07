@@ -229,5 +229,15 @@ namespace BankManagement
             NapTien napTien = new NapTien();
             napTien.ShowDialog();
         }
+
+        private void panelTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
