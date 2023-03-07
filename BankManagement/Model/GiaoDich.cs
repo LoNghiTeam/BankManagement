@@ -12,50 +12,70 @@ namespace BankManagement.Model
         private int nguoiGui;
         private int nguoiNhan;
         private DateTime ngayGD;
-        private int tien;
+        private double tien;
 
         public GiaoDich()
         {
-            throw new System.NotImplementedException();
+        }
+        public GiaoDich(int maGD, int nguoiGui, int nguoiNhan, DateTime ngayGD, double tien)
+        {
+            this.maGD = maGD;
+            this.nguoiGui = nguoiGui;
+            this.tien = tien;
+            this.ngayGD = ngayGD;
+            this.tien = tien;
+        }
+        public GiaoDich(int nguoiGui, int nguoiNhan, DateTime ngayGD, double tien)
+        {
+            this.nguoiGui = nguoiGui;
+            this.nguoiNhan = nguoiNhan;
+            this.tien = tien;
+            this.ngayGD = ngayGD;
+            
         }
 
         public int MaGD
         {
-            get => default;
+            get { return maGD; }
             set
             {
+                maGD = value;
             }
         }
 
         public int NguoiGui
         {
-            get => default;
+            get { return nguoiGui; }
             set
             {
+                nguoiGui = value;
             }
         }
 
         public int NguoiNhan
         {
-            get => default;
+            get { return nguoiNhan; }
             set
             {
+                nguoiNhan = value;
             }
         }
 
         public DateTime NgayGD
         {
-            get => default;
+            get { return ngayGD; }
             set
             {
+                ngayGD = value;
             }
         }
 
-        public int Tien
+        public double Tien
         {
-            get => default;
+            get { return tien; }
             set
             {
+                tien = value;
             }
         }
     }

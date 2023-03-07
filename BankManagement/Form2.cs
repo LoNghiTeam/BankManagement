@@ -202,11 +202,7 @@ namespace BankManagement
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Cảnh báo!", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            Application.Exit();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -224,7 +220,7 @@ namespace BankManagement
 
         private void btnTransaction_Click(object sender, EventArgs e)
         {
-            GiaoDich giaoDich = new GiaoDich();
+            GiaoDichForm giaoDich = new GiaoDichForm();
             giaoDich.ShowDialog();
         }
 
@@ -234,24 +230,19 @@ namespace BankManagement
             napTien.ShowDialog();
         }
 
-        private void Form2_Load_1(object sender, EventArgs e)
+        private void panelTitle_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
-            if (panelTimKiem.Visible == true)
-            {
-                panelTimKiem.Visible = false;
-                tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
-            }
-            else
-            {
-                panelTimKiem.Visible = true;
-                txtTimKiem.Focus();
-                tìmKiếmToolStripMenuItem.Text = "Ẩn thanh tìm kiếm";
-            }
+
+        }
+
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,6 +41,7 @@ namespace BankManagement
 
             if (dangNhap.ktDangNhap(txtTK.Text.ToString(), txtMK.Text.ToString()))
             {
+                logging.Taikhoan = dangNhap.TimTK(txtTK.Text.ToString());
                 this.Hide();
                 Form2 form2 = new Form2();
                 form2.ShowDialog();
@@ -49,6 +50,7 @@ namespace BankManagement
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
             }
+
         }
 
         private void lblSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

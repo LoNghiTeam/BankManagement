@@ -31,8 +31,7 @@ CREATE TABLE GiaoDich (
          NguoiNhan int,
          NgayGD date,
          Tien FLOAT,
-         FOREIGN KEY (NguoiGui) REFERENCES TaiKhoan(SoTK),
-         FOREIGN KEY (NguoiNhan) REFERENCES TaiKhoan(SoTK),
+
 );
 INSERT INTO GiaoDich VALUES (1, 2, '2022-11-16 08:19:41', 100000);
 INSERT INTO GiaoDich VALUES (2, 3, '2023-4-3 08:19:41',200000);
@@ -48,8 +47,7 @@ CREATE TABLE KhoanVay (
          MaLS INT,
          TinhTrang int,
          Loai int,
-         FOREIGN KEY (SoTK) REFERENCES TaiKhoan(SoTK),
-         FOREIGN KEY (MaLS) REFERENCES LaiSuat(MaLS),
+
 );
 INSERT INTO KhoanVay VALUES (1,'2022-11-16 08:19:41','2023-4-3 08:19:41', 100000, 1,1,0);
 INSERT INTO KhoanVay VALUES (2,'2023-4-3 08:19:41','2024-4-3 08:19:41',200000, 3,0,1);
