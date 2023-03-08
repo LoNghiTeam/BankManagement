@@ -137,6 +137,7 @@
             this.txtMK.TabIndex = 1;
             this.txtMK.Tag = "Mật khẩu";
             this.txtMK.Text = "Mật khẩu";
+            this.txtMK.UseSystemPasswordChar = true;
             this.txtMK.Enter += new System.EventHandler(this.txtMK_Enter);
             this.txtMK.Leave += new System.EventHandler(this.txtMK_Leave);
             // 

@@ -43,8 +43,8 @@ namespace BankManagement
             {
                 logging.Taikhoan = dangNhap.TimTK(txtTK.Text.ToString());
                 this.Hide();
-                Form2 form2 = new Form2();
-                form2.ShowDialog();
+                HomePage homePage = new HomePage();
+                homePage.ShowDialog();
             }
             else
             {
@@ -88,9 +88,6 @@ namespace BankManagement
             {
                 tbx.Text = tbx.Tag.ToString();
                 tbx.ForeColor = Color.Silver;
-            }
-            else
-            {
                 tbx.PasswordChar = '●';
             }
         }

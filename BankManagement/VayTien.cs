@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BankManagement
 {
-    public partial class HomeControl : UserControl
+    public partial class VayTien : Form
     {
-        public HomeControl()
+        public VayTien()
         {
             InitializeComponent();
         }

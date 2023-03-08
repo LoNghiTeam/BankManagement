@@ -237,6 +237,7 @@
             this.Name = "GiaoDich";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GiaoDich";
+            this.Load += new System.EventHandler(this.GiaoDich_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

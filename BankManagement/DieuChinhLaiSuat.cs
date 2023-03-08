@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace BankManagement
 {
-    public partial class GiaoDich : Form
+    public partial class DieuChinhLaiSuat : Form
     {
-        public GiaoDich()
+        public DieuChinhLaiSuat()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void GiaoDich_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

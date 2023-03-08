@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankManagement.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,14 @@ using System.Windows.Forms;
 
 namespace BankManagement
 {
-    public partial class Form2 : Form
+    public partial class HomePage : Form
     {
         //Fields
         private int borderSize = 2;
         private Size formSize;
         private UserControl userControl;
         //Constructor
-        public Form2()
+        public HomePage()
         {
             InitializeComponent();
             CollapseMenu();
@@ -27,11 +28,19 @@ namespace BankManagement
             this.BackColor = Color.FromArgb(98, 102, 244);
             userControl = new WelcomeControl();
             userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(userControl);
             if (logging.Taikhoan.IsAdmin != 0)
-                btnDeposit.Enabled = true;
+            {
+                btnDeposit.Visible = true;
+                btnTaiKhoan.Visible = true;
+            }
             else
-                btnDeposit.Enabled = false;
+            {
+                btnDeposit.Visible = false;
+                btnTaiKhoan.Visible = false;
+            }
+                
         }
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -207,7 +216,11 @@ namespace BankManagement
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Cảnh báo!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -217,12 +230,15 @@ namespace BankManagement
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            userControl = new HomeControl();
+            userControl = new WelcomeControl();
             userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(userControl);
         }
-
+        private void HomeControl_ButtonThemClicked(object sender, EventArgs e)
+        {
+            
+        }
         private void btnTransaction_Click(object sender, EventArgs e)
         {
             GiaoDichForm giaoDich = new GiaoDichForm();
@@ -265,5 +281,17 @@ namespace BankManagement
             }
         }
 
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            userControl = new TaiKhoanControl();
+            TaiKhoanControl taiKhoanControl = userControl as TaiKhoanControl;
+            taiKhoanControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(taiKhoanControl);
+
+            KhachHangDAO khDAO = new KhachHangDAO();
+            taiKhoanControl.DataSource = khDAO.LayDanhSachKH();
+            taiKhoanControl.ButtonClicked += new EventHandler(HomeControl_ButtonThemClicked);
+        }
     }
 }

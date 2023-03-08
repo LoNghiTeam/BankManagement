@@ -13,7 +13,25 @@ namespace BankManagement.DAO
     internal class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-      
+        public DataTable LayDanhSach(string sqlStr)
+        {
+            DataTable dtds = new DataTable();
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                adapter.Fill(dtds);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dtds;
+        }
         public Boolean checkExist(string Sql)
         {
             try
@@ -145,10 +163,6 @@ namespace BankManagement.DAO
             }
             return -1;
         }
-
-
-
-
     }
 
 }

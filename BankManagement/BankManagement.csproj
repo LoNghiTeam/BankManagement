@@ -68,6 +68,19 @@
     <Compile Include="Controller\DangKy.cs" />
     <Compile Include="Controller\DangNhap.cs" />
     <Compile Include="DAO\GiaoDichDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DieuChinhLaiSuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DieuChinhLaiSuat.Designer.cs">
+      <DependentUpon>DieuChinhLaiSuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuiTietKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuiTietKiem.Designer.cs">
+      <DependentUpon>GuiTietKiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="logging.cs" />
     <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
@@ -77,11 +90,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoDichForm.cs">
       <SubType>Form</SubType>
@@ -89,11 +102,11 @@
     <Compile Include="GiaoDichForm.Designer.cs">
       <DependentUpon>GiaoDichForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeControl.cs">
+    <Compile Include="TaiKhoanControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomeControl.Designer.cs">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <Compile Include="TaiKhoanControl.Designer.cs">
+      <DependentUpon>TaiKhoanControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -119,6 +132,12 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="VayTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VayTien.Designer.cs">
+      <DependentUpon>VayTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,14 +147,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDichForm.resx">
       <DependentUpon>GiaoDichForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeControl.resx">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <EmbeddedResource Include="TaiKhoanControl.resx">
+      <DependentUpon>TaiKhoanControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
