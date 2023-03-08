@@ -249,5 +249,21 @@ namespace BankManagement
         {
 
         }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (panelTimKiem.Visible == true)
+            {
+                panelTimKiem.Visible = false;
+                tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            }
+            else
+            {
+                panelTimKiem.Visible = true;
+                txtTimKiem.Focus();
+                tìmKiếmToolStripMenuItem.Text = "Ẩn thanh tìm kiếm";
+            }
+        }
+
     }
 }

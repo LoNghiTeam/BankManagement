@@ -15,7 +15,6 @@ namespace BankManagement
     public partial class GiaoDichForm : Form
     {
         ChuyenTien chuyenTien = new ChuyenTien();
-
         public GiaoDichForm()
         {
             InitializeComponent();

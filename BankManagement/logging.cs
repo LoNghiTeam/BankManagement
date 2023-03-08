@@ -12,5 +12,7 @@ namespace BankManagement
         private static TaiKhoan taikhoan;
 
         internal static TaiKhoan Taikhoan { get => taikhoan; set => taikhoan = value; }
+
     }
+    
 }

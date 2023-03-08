@@ -19,8 +19,6 @@ namespace BankManagement
         {
             InitializeComponent();
         }
-        TaiKhoan taiKhoan = new TaiKhoan();
-
         private void btnNap_Click(object sender, EventArgs e)
         {
             if(tbSoTien.Text.ToString() != "")
@@ -29,8 +27,8 @@ namespace BankManagement
                 {
                     if (chuyenTien.GiaoDichTien(int.Parse(tbSoTK.Text), double.Parse(tbSoTien.Text)))
                     {
-                        taiKhoan.Tien += double.Parse(tbSoTien.Text);
-                        lblSoDu.Text = taiKhoan.Tien.ToString() + " VND";
+                        logging.Taikhoan.Tien += double.Parse(tbSoTien.Text);
+                        lblSoDu.Text = logging.Taikhoan.Tien.ToString() + " VND";
                         MessageBox.Show("Nạp tiền thành công", "Thông báo", MessageBoxButtons.OK);
                     }
                     else
@@ -53,9 +51,9 @@ namespace BankManagement
             
             if (tbSoTK.Text.ToString() != "")
             {
-                taiKhoan = chuyenTien.TimNguoiNhan(int.Parse(tbSoTK.Text));
-                lblNguoiNhan.Text = taiKhoan.HoTen;
-                lblSoDu.Text = taiKhoan.Tien.ToString();
+                logging.Taikhoan = chuyenTien.TimNguoiNhan(int.Parse(tbSoTK.Text));
+                lblNguoiNhan.Text = logging.Taikhoan.HoTen;
+                lblSoDu.Text = logging.Taikhoan.Tien.ToString();
                 btnNap.Enabled = true;
             }
             else
