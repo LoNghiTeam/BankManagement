@@ -20,7 +20,6 @@ namespace BankManagement.Model
         private double tien;
 
 
-        String taikhoan, String matkhau, String matkhaunhaplai, String hoten, String cccd, String diachi, String sdt
         public TaiKhoan()
         {
         }
