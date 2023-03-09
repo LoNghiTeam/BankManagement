@@ -37,7 +37,7 @@ namespace BankManagement
                 if (int.Parse(tbSoTaiKhoan.Text) != logging.Taikhoan.SoTK)
                 {
                     taiKhoan = chuyenTien.TimNguoiNhan(int.Parse(tbSoTaiKhoan.Text));
-                    if (taiKhoan.HoTen != null)
+                    if (taiKhoan != null)
                     {
                         btnChuyenTien.Enabled = true;
                         lblNguoiNhan.Text = taiKhoan.HoTen;
