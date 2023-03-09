@@ -104,5 +104,10 @@ namespace BankManagement
                 tbx.ForeColor = Color.Silver;
             }
         }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

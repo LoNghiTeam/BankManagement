@@ -24,21 +24,26 @@ namespace BankManagement
             get { return _dataSource; }
             set { _dataSource = value; dtgvBank.DataSource = _dataSource; }
         }
-        protected void OnButtonClicked(EventArgs e)
+        protected void OnButtonClicked(object sender, EventArgs e)
         {
             if (ButtonClicked != null)
             {
-                ButtonClicked(this, e);
+                ButtonClicked(sender, e);
             }
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            OnButtonClicked(e);
+            OnButtonClicked(sender,e);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            OnButtonClicked(sender,e);
         }
     }
 }

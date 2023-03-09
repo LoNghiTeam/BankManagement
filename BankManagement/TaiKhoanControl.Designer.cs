@@ -33,7 +33,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnThem = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
+            this.btnSua = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBank)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -75,7 +75,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnThem);
-            this.flowLayoutPanel1.Controls.Add(this.rjButton2);
+            this.flowLayoutPanel1.Controls.Add(this.btnSua);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -101,23 +101,24 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // rjButton2
+            // btnSua
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 0;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(159, 3);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(150, 40);
-            this.rjButton2.TabIndex = 1;
-            this.rjButton2.Text = "rjButton2";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.btnSua.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSua.BorderRadius = 0;
+            this.btnSua.BorderSize = 0;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(159, 3);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(150, 40);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextColor = System.Drawing.Color.White;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // TaiKhoanControl
             // 
@@ -139,7 +140,7 @@
 
         private System.Windows.Forms.DataGridView dtgvBank;
         private System.Windows.Forms.GroupBox groupBox1;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton btnSua;
         private RJCodeAdvance.RJControls.RJButton btnThem;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;

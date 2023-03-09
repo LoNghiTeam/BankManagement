@@ -21,24 +21,32 @@ namespace BankManagement
         }
         private void btnNap_Click(object sender, EventArgs e)
         {
-            if(tbSoTien.Text.ToString() != "")
-            {
-                if (chuyenTien.TaoGiaoDich(0, int.Parse(tbSoTK.Text), DateTime.Now, double.Parse(tbSoTien.Text)))
+            double result;
+            if(double.TryParse(tbSoTien.Text,out result)){
+                if (result.ToString() != "" && result>0)
                 {
-                    if (chuyenTien.GiaoDichTien(int.Parse(tbSoTK.Text), double.Parse(tbSoTien.Text)))
+                    if (chuyenTien.TaoGiaoDich(0, int.Parse(tbSoTK.Text), DateTime.Now, result))
                     {
-                        logging.Taikhoan.Tien += double.Parse(tbSoTien.Text);
-                        lblSoDu.Text = logging.Taikhoan.Tien.ToString() + " VND";
-                        MessageBox.Show("Nạp tiền thành công", "Thông báo", MessageBoxButtons.OK);
+                        if (chuyenTien.GiaoDichTien(int.Parse(tbSoTK.Text), result))
+                        {
+                            logging.Taikhoan.Tien += result;
+                            lblSoDu.Text = logging.Taikhoan.Tien.ToString() + " VND";
+                            MessageBox.Show("Nạp tiền thành công", "Thông báo", MessageBoxButtons.OK);
+                        }
+                        else
+                            MessageBox.Show("Nạp tiền thất bại!", "Thông báo", MessageBoxButtons.OK);
                     }
                     else
                         MessageBox.Show("Nạp tiền thất bại!", "Thông báo", MessageBoxButtons.OK);
                 }
                 else
-                    MessageBox.Show("Nạp tiền thất bại!", "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Yêu cầu nhập số tiền nạp! (>0)", "Thông báo", MessageBoxButtons.OK);
             }
             else
-                MessageBox.Show("Yêu cầu nhập số tiền nạp!", "Thông báo", MessageBoxButtons.OK);
+            {
+                MessageBox.Show("Dữ liệu nhập vào không hợp lệ!", "Thông báo", MessageBoxButtons.OK);
+            }
+            
         }
 
         private void NapTien_Load(object sender, EventArgs e)

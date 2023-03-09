@@ -19,6 +19,8 @@ namespace BankManagement.Model
         private int isAdmin;
         private double tien;
 
+
+        String taikhoan, String matkhau, String matkhaunhaplai, String hoten, String cccd, String diachi, String sdt
         public TaiKhoan()
         {
         }
