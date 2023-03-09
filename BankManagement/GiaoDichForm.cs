@@ -56,31 +56,40 @@ namespace BankManagement
         }
         private void btnChuyenTien_Click(object sender, EventArgs e)
         {
-            if (tbSoTien.Text.ToString() != ""){ 
-                string check = chuyenTien.checkSoTien(double.Parse(tbSoTien.Text));
-                if (check == null)
+            double result;
+            if(double.TryParse(tbSoTien.Text, out result))
+            {
+                if (result.ToString() != "" && result > 0)
                 {
-                    if(chuyenTien.TaoGiaoDich(logging.Taikhoan.SoTK ,int.Parse(tbSoTaiKhoan.Text), DateTime.Now, double.Parse(tbSoTien.Text)))
+                    string check = chuyenTien.checkSoTien(result);
+                    if (check == null)
                     {
-                        if(chuyenTien.GiaoDichTien(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoan.Text), double.Parse(tbSoTien.Text)))
+                        if (chuyenTien.TaoGiaoDich(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoan.Text), DateTime.Now, result))
                         {
-                            logging.Taikhoan.Tien -= double.Parse(tbSoTien.Text);
-                            lblSoDu.Text = logging.Taikhoan.Tien.ToString() + " VND";
-                            MessageBox.Show("Chuyển tiền thành công", "Thông báo", MessageBoxButtons.OK);
+                            if (chuyenTien.GiaoDichTien(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoan.Text), result))
+                            {
+                                logging.Taikhoan.Tien -= result;
+                                lblSoDu.Text = logging.Taikhoan.Tien.ToString() + " VND";
+                                MessageBox.Show("Chuyển tiền thành công", "Thông báo", MessageBoxButtons.OK);
+                            }
+                            else
+                                MessageBox.Show("Chuyển tiền thất bại!", "Thông báo", MessageBoxButtons.OK);
                         }
                         else
                             MessageBox.Show("Chuyển tiền thất bại!", "Thông báo", MessageBoxButtons.OK);
-                    }   
+                    }
                     else
-                        MessageBox.Show("Chuyển tiền thất bại!", "Thông báo", MessageBoxButtons.OK);
+                    {
+                        MessageBox.Show(check, "Thông báo", MessageBoxButtons.OK);
+                    }
                 }
                 else
-                {
-                    MessageBox.Show(check, "Thông báo", MessageBoxButtons.OK);
-                }
+                    MessageBox.Show("Yêu cầu nhập số tiền cần chuyển (>0)!", "Thông báo", MessageBoxButtons.OK);
             }
             else
-                MessageBox.Show("Yêu cầu nhập số tiền cần chuyển!", "Thông báo", MessageBoxButtons.OK);
+            {
+                MessageBox.Show("Dữ liệu nhập vào không hợp lệ!", "Thông báo", MessageBoxButtons.OK);
+            }
         }
     }
 }

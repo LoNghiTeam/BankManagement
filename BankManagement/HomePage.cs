@@ -235,10 +235,7 @@ namespace BankManagement
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(userControl);
         }
-        private void HomeControl_ButtonThemClicked(object sender, EventArgs e)
-        {
-            
-        }
+
         private void btnTransaction_Click(object sender, EventArgs e)
         {
             GiaoDichForm giaoDich = new GiaoDichForm();
@@ -291,7 +288,49 @@ namespace BankManagement
 
             KhachHangDAO khDAO = new KhachHangDAO();
             taiKhoanControl.DataSource = khDAO.LayDanhSachKH();
-            taiKhoanControl.ButtonClicked += new EventHandler(HomeControl_ButtonThemClicked);
+            taiKhoanControl.ButtonClicked += new EventHandler(HomeControl_ButtonClicked);
+        }
+        private void HomeControl_ButtonClicked(object sender, EventArgs e)
+        {
+            // Xử lý sự kiện cho tất cả các nút
+            Button clickedButton = sender as Button;
+            if (clickedButton != null)
+            {
+                // Xử lý cho từng nút tùy theo tên hoặc tag của nút
+                if (clickedButton.Name == "btnThem")
+                {
+                    HomeControl_ButtonThemClicked();
+                }
+                else if (clickedButton.Name == "btnSua")
+                {
+                    HomeControl_ButtonSuaClicked();
+                }
+                else
+                {
+                    // Xử lý cho các nút khác
+                }
+            }
+        }
+        private void HomeControl_ButtonThemClicked()
+        {
+            MessageBox.Show("Button Them");
+        }
+        private void HomeControl_ButtonSuaClicked()
+        {
+            MessageBox.Show("Button Sua");
+        }
+
+        private void tsmiSignin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+            logging.Taikhoan = null;
+        }
+
+        private void panelTitle_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

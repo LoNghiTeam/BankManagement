@@ -38,6 +38,8 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnDeposit = new FontAwesome.Sharp.IconButton();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnGuiTietKiem = new FontAwesome.Sharp.IconButton();
+            this.btnRutTien = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
@@ -45,18 +47,15 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngNhậpTàiKhoảnKhácToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSignin = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imenuRate = new FontAwesome.Sharp.IconMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTimKiem = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.txtTimKiem = new RJCodeAdvance.RJControls.RJTextBox();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btnVayTien = new FontAwesome.Sharp.IconButton();
-            this.btnGuiTietKiem = new FontAwesome.Sharp.IconButton();
-            this.imenuRate = new FontAwesome.Sharp.IconMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -249,8 +248,9 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.panelMenu.Controls.Add(this.btnGuiTietKiem);
             this.panelMenu.Controls.Add(this.btnVayTien);
+            this.panelMenu.Controls.Add(this.btnGuiTietKiem);
+            this.panelMenu.Controls.Add(this.btnRutTien);
             this.panelMenu.Controls.Add(this.btnDeposit);
             this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.btnClose2);
@@ -263,6 +263,52 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 547);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnGuiTietKiem
+            // 
+            this.btnGuiTietKiem.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuiTietKiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGuiTietKiem.FlatAppearance.BorderSize = 0;
+            this.btnGuiTietKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuiTietKiem.ForeColor = System.Drawing.Color.White;
+            this.btnGuiTietKiem.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
+            this.btnGuiTietKiem.IconColor = System.Drawing.Color.White;
+            this.btnGuiTietKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuiTietKiem.IconSize = 30;
+            this.btnGuiTietKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuiTietKiem.Location = new System.Drawing.Point(0, 300);
+            this.btnGuiTietKiem.Name = "btnGuiTietKiem";
+            this.btnGuiTietKiem.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnGuiTietKiem.Size = new System.Drawing.Size(230, 40);
+            this.btnGuiTietKiem.TabIndex = 8;
+            this.btnGuiTietKiem.Tag = "   Gửi Tiết Kiệm";
+            this.btnGuiTietKiem.Text = "   Gửi Tiết Kiệm";
+            this.btnGuiTietKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuiTietKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuiTietKiem.UseVisualStyleBackColor = false;
+            // 
+            // btnRutTien
+            // 
+            this.btnRutTien.BackColor = System.Drawing.Color.Transparent;
+            this.btnRutTien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRutTien.FlatAppearance.BorderSize = 0;
+            this.btnRutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRutTien.ForeColor = System.Drawing.Color.White;
+            this.btnRutTien.IconChar = FontAwesome.Sharp.IconChar.LiraSign;
+            this.btnRutTien.IconColor = System.Drawing.Color.White;
+            this.btnRutTien.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRutTien.IconSize = 30;
+            this.btnRutTien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutTien.Location = new System.Drawing.Point(0, 260);
+            this.btnRutTien.Name = "btnRutTien";
+            this.btnRutTien.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnRutTien.Size = new System.Drawing.Size(230, 40);
+            this.btnRutTien.TabIndex = 9;
+            this.btnRutTien.Tag = "   Rút Tiền";
+            this.btnRutTien.Text = "   Rút Tiền";
+            this.btnRutTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutTien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRutTien.UseVisualStyleBackColor = false;
             // 
             // btnClose
             // 
@@ -326,15 +372,16 @@
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(1177, 25);
             this.panelTitle.TabIndex = 1;
+            this.panelTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitle_Paint_1);
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.SystemColors.Control;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 91);
+            this.panelDesktop.Location = new System.Drawing.Point(230, 93);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(947, 481);
+            this.panelDesktop.Size = new System.Drawing.Size(947, 479);
             this.panelDesktop.TabIndex = 0;
             // 
             // menuStrip1
@@ -348,37 +395,24 @@
             this.tìmKiếmToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(230, 25);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(947, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(947, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đăngNhậpTàiKhoảnKhácToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem1});
+            this.tsmiSignin});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.fileToolStripMenuItem.Text = "Tài liệu";
             // 
-            // đăngNhậpTàiKhoảnKhácToolStripMenuItem
+            // tsmiSignin
             // 
-            this.đăngNhậpTàiKhoảnKhácToolStripMenuItem.Name = "đăngNhậpTàiKhoảnKhácToolStripMenuItem";
-            this.đăngNhậpTàiKhoảnKhácToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
-            this.đăngNhậpTàiKhoảnKhácToolStripMenuItem.Text = "Đăng nhập tài khoản khác";
-            // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng ký tài khoản mới";
-            // 
-            // đăngXuấtToolStripMenuItem1
-            // 
-            this.đăngXuấtToolStripMenuItem1.Name = "đăngXuấtToolStripMenuItem1";
-            this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(264, 26);
-            this.đăngXuấtToolStripMenuItem1.Text = "Đăng xuất";
+            this.tsmiSignin.Name = "tsmiSignin";
+            this.tsmiSignin.Size = new System.Drawing.Size(264, 26);
+            this.tsmiSignin.Text = "Đăng nhập tài khoản khác";
+            this.tsmiSignin.Click += new System.EventHandler(this.tsmiSignin_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -387,6 +421,15 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
             this.editToolStripMenuItem.Text = "Sửa";
+            // 
+            // imenuRate
+            // 
+            this.imenuRate.IconChar = FontAwesome.Sharp.IconChar.Euro;
+            this.imenuRate.IconColor = System.Drawing.Color.Black;
+            this.imenuRate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.imenuRate.Name = "imenuRate";
+            this.imenuRate.Size = new System.Drawing.Size(224, 26);
+            this.imenuRate.Text = "Điều chỉnh lãi suất";
             // 
             // viewToolStripMenuItem
             // 
@@ -407,26 +450,11 @@
             this.panelTimKiem.Controls.Add(this.txtTimKiem);
             this.panelTimKiem.Controls.Add(this.iconButton2);
             this.panelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTimKiem.Location = new System.Drawing.Point(230, 53);
+            this.panelTimKiem.Location = new System.Drawing.Point(230, 55);
             this.panelTimKiem.Name = "panelTimKiem";
             this.panelTimKiem.Size = new System.Drawing.Size(947, 38);
             this.panelTimKiem.TabIndex = 3;
             this.panelTimKiem.Visible = false;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(808, 0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(139, 38);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.Text = "Tìm kiếm";
-            this.iconButton2.UseVisualStyleBackColor = false;
             // 
             // txtTimKiem
             // 
@@ -451,6 +479,21 @@
             this.txtTimKiem.Texts = "";
             this.txtTimKiem.UnderlinedStyle = false;
             // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(808, 0);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(139, 38);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.Text = "Tìm kiếm";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            // 
             // btnVayTien
             // 
             this.btnVayTien.BackColor = System.Drawing.Color.Transparent;
@@ -458,53 +501,21 @@
             this.btnVayTien.FlatAppearance.BorderSize = 0;
             this.btnVayTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVayTien.ForeColor = System.Drawing.Color.White;
-            this.btnVayTien.IconChar = FontAwesome.Sharp.IconChar.LiraSign;
+            this.btnVayTien.IconChar = FontAwesome.Sharp.IconChar.LandMineOn;
             this.btnVayTien.IconColor = System.Drawing.Color.White;
             this.btnVayTien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVayTien.IconSize = 30;
             this.btnVayTien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVayTien.Location = new System.Drawing.Point(0, 260);
+            this.btnVayTien.Location = new System.Drawing.Point(0, 340);
             this.btnVayTien.Name = "btnVayTien";
             this.btnVayTien.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnVayTien.Size = new System.Drawing.Size(230, 40);
-            this.btnVayTien.TabIndex = 7;
+            this.btnVayTien.TabIndex = 10;
             this.btnVayTien.Tag = "   Vay Tiền";
             this.btnVayTien.Text = "   Vay Tiền";
             this.btnVayTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVayTien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVayTien.UseVisualStyleBackColor = false;
-            // 
-            // btnGuiTietKiem
-            // 
-            this.btnGuiTietKiem.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuiTietKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGuiTietKiem.FlatAppearance.BorderSize = 0;
-            this.btnGuiTietKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuiTietKiem.ForeColor = System.Drawing.Color.White;
-            this.btnGuiTietKiem.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
-            this.btnGuiTietKiem.IconColor = System.Drawing.Color.White;
-            this.btnGuiTietKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuiTietKiem.IconSize = 30;
-            this.btnGuiTietKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuiTietKiem.Location = new System.Drawing.Point(0, 300);
-            this.btnGuiTietKiem.Name = "btnGuiTietKiem";
-            this.btnGuiTietKiem.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnGuiTietKiem.Size = new System.Drawing.Size(230, 40);
-            this.btnGuiTietKiem.TabIndex = 8;
-            this.btnGuiTietKiem.Tag = "   Gửi Tiết Kiệm";
-            this.btnGuiTietKiem.Text = "   Gửi Tiết Kiệm";
-            this.btnGuiTietKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuiTietKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuiTietKiem.UseVisualStyleBackColor = false;
-            // 
-            // imenuRate
-            // 
-            this.imenuRate.IconChar = FontAwesome.Sharp.IconChar.Euro;
-            this.imenuRate.IconColor = System.Drawing.Color.Black;
-            this.imenuRate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imenuRate.Name = "imenuRate";
-            this.imenuRate.Size = new System.Drawing.Size(224, 26);
-            this.imenuRate.Text = "Điều chỉnh lãi suất";
             // 
             // HomePage
             // 
@@ -551,17 +562,16 @@
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngNhậpTàiKhoảnKhácToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSignin;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
         private System.Windows.Forms.Panel panelTimKiem;
         private FontAwesome.Sharp.IconButton iconButton2;
         private RJCodeAdvance.RJControls.RJTextBox txtTimKiem;
         private FontAwesome.Sharp.IconButton btnGuiTietKiem;
-        private FontAwesome.Sharp.IconButton btnVayTien;
+        private FontAwesome.Sharp.IconButton btnRutTien;
         private FontAwesome.Sharp.IconMenuItem imenuRate;
+        private FontAwesome.Sharp.IconButton btnVayTien;
     }
 }
