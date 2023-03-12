@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace BankManagement
 {
-    public partial class Signup : Form
+    public partial class FSignup : Form
     {
         DangKy dangKy = new DangKy();
-        public Signup()
+        public FSignup()
         {
             InitializeComponent();
         }
@@ -116,7 +116,7 @@ namespace BankManagement
         private void lblSignin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Login login = new Login();
+            FLogin login = new FLogin();
             login.ShowDialog();
         }
         private void btnSignup_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace BankManagement
 {
-    partial class Signup
+    partial class FSignup
     {
         /// <summary>
         /// Required designer variable.

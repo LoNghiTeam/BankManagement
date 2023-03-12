@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BankManagement
+namespace BankManagement.UI
 {
-    public partial class GuiTietKiem : Form
+    public partial class FVayTien : Form
     {
-        public GuiTietKiem()
+        public FVayTien()
         {
             InitializeComponent();
         }

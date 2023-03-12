@@ -1,6 +1,6 @@
 ﻿namespace BankManagement
 {
-    partial class GiaoDichForm
+    partial class FGiaoDich
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace BankManagement
 {
-    partial class NapTien
+    partial class FNapTien
     {
         /// <summary>
         /// Required designer variable.
