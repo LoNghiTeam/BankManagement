@@ -1,5 +1,6 @@
 ﻿using BankManagement.Controller;
 using BankManagement.DAO;
+using BankManagement.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,8 +44,16 @@ namespace BankManagement
             {
                 logging.Taikhoan = dangNhap.TimTK(txtTK.Text.ToString());
                 this.Hide();
-                FHome homePage = new FHome();
-                homePage.ShowDialog();
+                if (logging.Taikhoan.IsAdmin != 0)
+                {
+                    FHomeNV fHomeNV = new FHomeNV();
+                    fHomeNV.ShowDialog();
+                }
+                else
+                {
+                    FHomeKH fHomeKH = new FHomeKH();
+                    fHomeKH.ShowDialog();
+                }
             }
             else
             {

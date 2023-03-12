@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\..\..\Desktop\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
-    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -69,6 +66,12 @@
     <Compile Include="Controller\DangNhap.cs" />
     <Compile Include="DAO\GiaoDichDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="UI\FHomeNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FHomeNV.Designer.cs">
+      <DependentUpon>FHomeNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FLaiSuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +93,11 @@
     <Compile Include="logging.cs" />
     <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
-    <Compile Include="UI\FHome.cs">
+    <Compile Include="UI\FHomeKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FHome.Designer.cs">
-      <DependentUpon>FHome.cs</DependentUpon>
+    <Compile Include="UI\FHomeKH.Designer.cs">
+      <DependentUpon>FHomeKH.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FGiaoDich.cs">
       <SubType>Form</SubType>
@@ -144,11 +147,14 @@
     <Compile Include="UI\WelcomeControl.Designer.cs">
       <DependentUpon>WelcomeControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\FHome.resx">
-      <DependentUpon>FHome.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FHomeKH.resx">
+      <DependentUpon>FHomeKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FGiaoDich.resx">
       <DependentUpon>FGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FHomeNV.resx">
+      <DependentUpon>FHomeNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FLaiSuat.resx">
       <DependentUpon>FLaiSuat.cs</DependentUpon>

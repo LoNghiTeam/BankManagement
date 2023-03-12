@@ -1,27 +1,25 @@
 ﻿using BankManagement.DAO;
-using BankManagement.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO.Packaging;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BankManagement
+namespace BankManagement.UI
 {
-    public partial class FHome : Form
+    public partial class FHomeNV : Form
     {
         //Fields
         private int borderSize = 2;
         private Size formSize;
         private UserControl userControl;
         //Constructor
-        public FHome()
+        public FHomeNV()
         {
             InitializeComponent();
             CollapseMenu();
@@ -31,22 +29,11 @@ namespace BankManagement
             userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(userControl);
-            if (logging.Taikhoan.IsAdmin != 0)
-            {
-                btnDeposit.Visible = true;
-                btnTaiKhoan.Visible = true;
-            }
-            else
-            {
-                btnDeposit.Visible = false;
-                btnTaiKhoan.Visible = false;
-            }
-                
         }
         private void Form2_Load(object sender, EventArgs e)
         {
             formSize = this.ClientSize;
-               
+
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -194,7 +181,7 @@ namespace BankManagement
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                 }
             }
-        } 
+        }
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             formSize = this.ClientSize;
@@ -259,7 +246,7 @@ namespace BankManagement
 
         }
 
-        private void Form2_Load_1(object sender, EventArgs e)
+        private void FHomeNV_Load(object sender, EventArgs e)
         {
 
         }
