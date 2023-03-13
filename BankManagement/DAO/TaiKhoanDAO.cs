@@ -55,29 +55,28 @@ namespace BankManagement.DAO
             }
             return null;
         }
-        public bool TaoTK(String taikhoan, String matkhau, String hoten, DateTime ngaysinh, String cccd, String diachi, String sdt)
-        {
-            string SQL = string.Format("INSERT INTO TaiKhoan(UserName, Pass, HoTen, NgaySinh, Cccd, Diachi, Sodienthoai, isAdmin, Tien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}', {7}, {8});", 
-                taikhoan, matkhau, hoten, ngaysinh, cccd, diachi, sdt, 0, 0);
+        public bool TaoTK(TaiKhoan taiKhoan, int role) { 
+            string SQL = string.Format("INSERT INTO TaiKhoan(UserName, Pass, HoTen, NgaySinh, Cccd, Diachi, Sodienthoai, isAdmin, Tien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}', {7}, {8});",
+                taiKhoan.UserName, taiKhoan.Pass, taiKhoan.HoTen, taiKhoan.NgaySinh, taiKhoan.Cccd, taiKhoan.DiaChi, taiKhoan.SoDienThoai, role, 0);
             if (conn.Execute(SQL))
             {
                 return true;
             }
             return false;
         }
-        public double TimTien(int SoTK)
+        public double TimTien(int soTK)
         {
-            string SQL = string.Format("select * from TaiKhoan WHERE SoTK  = '{0}'", SoTK);
-            double Ten = conn.FindTien(SQL);
-            if (Ten != -1)
+            string SQL = string.Format("select * from TaiKhoan WHERE SoTK  = '{0}'", soTK);
+            double tien = conn.FindTien(SQL);
+            if (tien != -1)
             {
-                return Ten;
+                return tien;
             }
             return -1;
         }
-        public bool CapNhatTien(int SoTK, double Tien)
+        public bool CapNhatTien(int soTK, double tien)
         {
-            string SQL = string.Format("UPDATE TaiKhoan SET Tien = {1} where SoTK ='{0}'", SoTK, Tien);
+            string SQL = string.Format("UPDATE TaiKhoan SET Tien = {1} where SoTK ='{0}'", soTK, tien);
             if (conn.Execute(SQL))
             {
                 return true;

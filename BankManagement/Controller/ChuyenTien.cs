@@ -11,7 +11,7 @@ namespace BankManagement.Controller
     internal class ChuyenTien
     {
         TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
-        GiaoDichDAO GiaoDichDAO = new GiaoDichDAO();
+        GiaoDichDAO giaoDichDAO = new GiaoDichDAO();
         public ChuyenTien() { }
         public TaiKhoan TimNguoiNhan(int SoTK)
         {
@@ -21,28 +21,28 @@ namespace BankManagement.Controller
                 return taiKhoan;
             return null;
         }
-        public string checkSoTien(double Tien)
+        public string checkSoTien(double tien)
         {
-            if (Tien <= logging.Taikhoan.Tien)
+            if (tien <= logging.Taikhoan.Tien)
                 return null;
             else
                 return "Số dư trong tài khoản không đủ!";
         }
         public bool TaoGiaoDich(int nguoigui, int nguoinhan, DateTime ngayGD, double tien) {
             GiaoDich giaoDich = new GiaoDich(nguoigui, nguoinhan, ngayGD, tien);
-            if(GiaoDichDAO.TaoGD(giaoDich))
+            if(giaoDichDAO.TaoGD(giaoDich))
                 return true;
             return false;
         }
-        public bool GiaoDichTien(int nguoigui, int nguoinhan, double tiengiaodich)
+        public bool GiaoDichTien(int nguoiGui, int nguoiNhan, double tienGiaoGich)
         {
-            double tiengui = taiKhoanDAO.TimTien(nguoigui);
-            double tiennhan = taiKhoanDAO.TimTien(nguoinhan);
-            if (tiengui != -1 && tiennhan != -1)
+            double tienGui = taiKhoanDAO.TimTien(nguoiGui);
+            double tieNhan = taiKhoanDAO.TimTien(nguoiNhan);
+            if (tienGui != -1 && tieNhan != -1)
             {
-                tiengui -= tiengiaodich;
-                tiennhan += tiengiaodich;
-                if (taiKhoanDAO.CapNhatTien(nguoigui, tiengui) && taiKhoanDAO.CapNhatTien(nguoinhan, tiennhan))
+                tienGui -= tienGiaoGich;
+                tieNhan += tienGiaoGich;
+                if (taiKhoanDAO.CapNhatTien(nguoiGui, tienGui) && taiKhoanDAO.CapNhatTien(nguoiNhan, tieNhan))
                     return true;
                 return false;
             }

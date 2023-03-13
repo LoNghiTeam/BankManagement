@@ -141,7 +141,7 @@ namespace BankManagement
         private void Form2_Resize(object sender, EventArgs e)
         {
             AdjustForm();
-            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            //userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
         }
         //Private methods
         private void AdjustForm()

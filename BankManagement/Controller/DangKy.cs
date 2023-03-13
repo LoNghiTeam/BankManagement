@@ -1,4 +1,5 @@
 ﻿using BankManagement.DAO;
+using BankManagement.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,34 +34,34 @@ namespace BankManagement.Controller
             string pattern = @"^\d{3}-?\d{3}-?\d{4}$";
             return Regex.IsMatch(Sdt, pattern);
         }
-        public String CheckNull(String taikhoan, String matkhau, String matkhaunhaplai, String hoten, String cccd, String diachi, String sdt)
+        public String CheckNull(TaiKhoan taiKhoan, String matKhauNhapLai)
         {
             String result = "Ô đang bị trống: ";
-            if (taikhoan.Length == 0 || taikhoan == "Tài khoản") result += "Tài khoản, ";
-            if (matkhau.Length == 0 || matkhau == "Mật khẩu") result += "Mật khẩu, ";
-            if (matkhaunhaplai.Length == 0 ||  matkhaunhaplai == "Nhập lại mật khẩu") result += "Nhập lại mật khẩu, ";
-            if (hoten.Length == 0 || hoten == "Họ và tên") result += "Họ và tên , ";
-            if (cccd.Length == 0 || cccd == "CCCD") result += "CCCD, ";
-            if (diachi.Length == 0 || diachi == "Địa chỉ") result += "Địa chỉ, ";
-            if (sdt.Length == 0 || sdt == "Số điện thoại") result += "Số điện thoại, ";
+            if (taiKhoan.UserName.Length == 0 || taiKhoan.UserName == "Tài khoản") result += "Tài khoản, ";
+            if (taiKhoan.Pass.Length == 0 || taiKhoan.Pass == "Mật khẩu") result += "Mật khẩu, ";
+            if (matKhauNhapLai.Length == 0 || matKhauNhapLai == "Nhập lại mật khẩu") result += "Nhập lại mật khẩu, ";
+            if (taiKhoan.HoTen.Length == 0 || taiKhoan.HoTen == "Họ và tên") result += "Họ và tên , ";
+            if (taiKhoan.Cccd.Length == 0 || taiKhoan.Cccd == "CCCD") result += "CCCD, ";
+            if (taiKhoan.DiaChi.Length == 0 || taiKhoan.DiaChi == "Địa chỉ") result += "Địa chỉ, ";
+            if (taiKhoan.SoDienThoai.Length == 0 || taiKhoan.SoDienThoai == "Số điện thoại") result += "Số điện thoại, ";
             return result = result.Substring(0, result.Length - 2);
 
         }
-        public String checkAll(String taikhoan, String matkhau, String matkhaunhaplai, String hoten, String cccd, String diachi, String sdt)
+        public String checkAll(TaiKhoan taiKhoan, String matKhauNhapLai)
         {
-            if (CheckNull(taikhoan, matkhau, matkhaunhaplai, hoten, cccd, diachi, sdt).Length > 15)
-                return CheckNull(taikhoan, matkhau, matkhaunhaplai, hoten, cccd, diachi, sdt);
-            if (!ktMatKhau(matkhau, matkhaunhaplai))
+            if (CheckNull(taiKhoan, matKhauNhapLai).Length > 15)
+                return CheckNull(taiKhoan, matKhauNhapLai);
+            if (!ktMatKhau(taiKhoan.Pass, matKhauNhapLai))
                 return "Mật khẩu không trùng khớp";
-            if (!IsValidPhone(sdt))
+            if (!IsValidPhone(taiKhoan.SoDienThoai))
                 return "Số điện thoại không hợp lệ";
-            if (!ktTaikhoan(taikhoan))
+            if (!ktTaikhoan(taiKhoan.UserName))
                 return "Tài khoản đã tồn tại vui lòng chọn tên tài khoản khác";
             return null;
         }
-        public bool TaoTK (String taikhoan, String matkhau, String hoten, DateTime ngaysinh, String cccd, String diachi, String sdt)
+        public bool TaoTKKH(TaiKhoan taiKhoan)
         {
-            if (taiKhoanDAO.TaoTK(taikhoan, matkhau, hoten, ngaysinh, cccd, diachi, sdt))
+            if (taiKhoanDAO.TaoTK(taiKhoan, 0))
                 return true;
             return false;
         }

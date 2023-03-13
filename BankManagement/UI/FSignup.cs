@@ -1,4 +1,5 @@
 ﻿using BankManagement.Controller;
+using BankManagement.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -121,11 +122,12 @@ namespace BankManagement
         }
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            String check = dangKy.checkAll(txtTK.Text.ToString(), txtMK.Text.ToString(), txtRepeatMK.Text.ToString(),
-                txtTen.Text.ToString(), txtCCCD.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text.ToString());
+            TaiKhoan taiKhoan = new TaiKhoan(txtTK.Text.ToString(), txtMK.Text.ToString(),
+                txtTen.Text.ToString(), dtpNgaySinh.Value.Date, txtCCCD.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text.ToString());
+            String check = dangKy.checkAll(taiKhoan, txtRepeatMK.Text.ToString());
             if (check == null)
             {
-                if (dangKy.TaoTK(txtTK.Text.ToString(), txtMK.Text.ToString(), txtTen.Text.ToString(), dtpNgaySinh.Value.Date, txtCCCD.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text.ToString()))
+                if (dangKy.TaoTKKH(taiKhoan))
                 {
                     DialogResult result = MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK);
                     if (result == DialogResult.OK)

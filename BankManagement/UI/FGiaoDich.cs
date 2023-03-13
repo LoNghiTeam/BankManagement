@@ -26,17 +26,22 @@ namespace BankManagement
             btnChuyenTien.Enabled = false;
             lblNguoiChuyen.Text = logging.Taikhoan.HoTen;
             lblSoDu.Text = logging.Taikhoan.Tien.ToString()+ " VND";
-            lblSotaiKhoan.Text = logging.Taikhoan.SoTK.ToString();
+            if(logging.Taikhoan.IsAdmin < 1)
+            {
+                tbSoTaiKhoanGui.Text = logging.Taikhoan.SoTK.ToString();
+                tbSoTaiKhoanGui.Enabled = false;
+            }
+            
         }
 
         private void btnKiemTra_Click(object sender, EventArgs e)
         {
             TaiKhoan taiKhoan = new TaiKhoan();
-            if (tbSoTaiKhoan.Text.ToString() != "")
+            if (tbSoTaiKhoanNhan.Text.ToString() != "")
             {
-                if (int.Parse(tbSoTaiKhoan.Text) != logging.Taikhoan.SoTK)
+                if (int.Parse(tbSoTaiKhoanNhan.Text) != logging.Taikhoan.SoTK)
                 {
-                    taiKhoan = chuyenTien.TimNguoiNhan(int.Parse(tbSoTaiKhoan.Text));
+                    taiKhoan = chuyenTien.TimNguoiNhan(int.Parse(tbSoTaiKhoanNhan.Text));
                     if (taiKhoan != null)
                     {
                         btnChuyenTien.Enabled = true;
@@ -64,9 +69,9 @@ namespace BankManagement
                     string check = chuyenTien.checkSoTien(result);
                     if (check == null)
                     {
-                        if (chuyenTien.TaoGiaoDich(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoan.Text), DateTime.Now, result))
+                        if (chuyenTien.TaoGiaoDich(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoanNhan.Text), DateTime.Now, result))
                         {
-                            if (chuyenTien.GiaoDichTien(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoan.Text), result))
+                            if (chuyenTien.GiaoDichTien(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoanNhan.Text), result))
                             {
                                 logging.Taikhoan.Tien -= result;
                                 lblSoDu.Text = logging.Taikhoan.Tien.ToString() + " VND";
