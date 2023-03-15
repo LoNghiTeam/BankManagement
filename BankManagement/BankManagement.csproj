@@ -64,6 +64,7 @@
     <Compile Include="Controller\ChuyenTien.cs" />
     <Compile Include="Controller\DangKy.cs" />
     <Compile Include="Controller\DangNhap.cs" />
+    <Compile Include="Controller\RutTien.cs" />
     <Compile Include="DAO\GiaoDichDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="UI\FHomeNV.cs">
