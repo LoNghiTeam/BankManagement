@@ -1,6 +1,6 @@
 ﻿namespace BankManagement
 {
-    partial class WelcomeControl
+    partial class CXinChao
     {
         /// <summary> 
         /// Required designer variable.

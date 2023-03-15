@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BankManagement
 {
-    public partial class WelcomeControl : UserControl
+    public partial class CXinChao : UserControl
     {
-        public WelcomeControl()
+        public CXinChao()
         {
             InitializeComponent();
         }

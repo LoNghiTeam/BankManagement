@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtTimKiem = new RJCodeAdvance.RJControls.RJTextBox();
+            this.tbxTimKiem = new RJCodeAdvance.RJControls.RJTextBox();
             this.panelTimKiem = new System.Windows.Forms.Panel();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,9 +40,14 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnTransHis = new FontAwesome.Sharp.IconButton();
+            this.btnVayTien = new FontAwesome.Sharp.IconButton();
+            this.btnGuiTietKiem = new FontAwesome.Sharp.IconButton();
+            this.btnRutTien = new FontAwesome.Sharp.IconButton();
             this.btnDeposit = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnClose2 = new FontAwesome.Sharp.IconButton();
+            this.btnTransaction = new FontAwesome.Sharp.IconButton();
             this.btnTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,10 +57,6 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.btnTransaction = new FontAwesome.Sharp.IconButton();
-            this.btnRutTien = new FontAwesome.Sharp.IconButton();
-            this.btnGuiTietKiem = new FontAwesome.Sharp.IconButton();
-            this.btnVayTien = new FontAwesome.Sharp.IconButton();
             this.panelTimKiem.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -64,33 +65,33 @@
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtTimKiem
+            // tbxTimKiem
             // 
-            this.txtTimKiem.BackColor = System.Drawing.SystemColors.Window;
-            this.txtTimKiem.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtTimKiem.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTimKiem.BorderRadius = 0;
-            this.txtTimKiem.BorderSize = 2;
-            this.txtTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(0, 0);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTimKiem.Multiline = false;
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtTimKiem.PasswordChar = false;
-            this.txtTimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTimKiem.PlaceholderText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(793, 35);
-            this.txtTimKiem.TabIndex = 0;
-            this.txtTimKiem.Texts = "";
-            this.txtTimKiem.UnderlinedStyle = false;
+            this.tbxTimKiem.BackColor = System.Drawing.SystemColors.Window;
+            this.tbxTimKiem.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.tbxTimKiem.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbxTimKiem.BorderRadius = 0;
+            this.tbxTimKiem.BorderSize = 2;
+            this.tbxTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbxTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxTimKiem.Location = new System.Drawing.Point(0, 0);
+            this.tbxTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxTimKiem.Multiline = false;
+            this.tbxTimKiem.Name = "tbxTimKiem";
+            this.tbxTimKiem.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbxTimKiem.PasswordChar = false;
+            this.tbxTimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbxTimKiem.PlaceholderText = "";
+            this.tbxTimKiem.Size = new System.Drawing.Size(793, 35);
+            this.tbxTimKiem.TabIndex = 0;
+            this.tbxTimKiem.Texts = "";
+            this.tbxTimKiem.UnderlinedStyle = false;
             // 
             // panelTimKiem
             // 
             this.panelTimKiem.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelTimKiem.Controls.Add(this.txtTimKiem);
+            this.panelTimKiem.Controls.Add(this.tbxTimKiem);
             this.panelTimKiem.Controls.Add(this.btnTimKiem);
             this.panelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTimKiem.Location = new System.Drawing.Point(230, 53);
@@ -113,12 +114,14 @@
             this.btnTimKiem.TabIndex = 1;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // tìmKiếmToolStripMenuItem
             // 
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
             this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            this.tìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -140,7 +143,7 @@
             this.imenuRate.IconColor = System.Drawing.Color.Black;
             this.imenuRate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.imenuRate.Name = "imenuRate";
-            this.imenuRate.Size = new System.Drawing.Size(224, 26);
+            this.imenuRate.Size = new System.Drawing.Size(213, 26);
             this.imenuRate.Text = "Điều chỉnh lãi suất";
             this.imenuRate.Click += new System.EventHandler(this.imenuRate_Click);
             // 
@@ -163,9 +166,9 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.SystemColors.Control;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 53);
+            this.panelDesktop.Location = new System.Drawing.Point(230, 91);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(932, 535);
+            this.panelDesktop.Size = new System.Drawing.Size(932, 497);
             this.panelDesktop.TabIndex = 4;
             // 
             // menuStrip1
@@ -186,6 +189,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panelMenu.Controls.Add(this.btnTransHis);
             this.panelMenu.Controls.Add(this.btnVayTien);
             this.panelMenu.Controls.Add(this.btnGuiTietKiem);
             this.panelMenu.Controls.Add(this.btnRutTien);
@@ -201,6 +205,102 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 563);
             this.panelMenu.TabIndex = 5;
+            // 
+            // btnTransHis
+            // 
+            this.btnTransHis.BackColor = System.Drawing.Color.Transparent;
+            this.btnTransHis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransHis.FlatAppearance.BorderSize = 0;
+            this.btnTransHis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransHis.ForeColor = System.Drawing.Color.White;
+            this.btnTransHis.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.btnTransHis.IconColor = System.Drawing.Color.White;
+            this.btnTransHis.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTransHis.IconSize = 30;
+            this.btnTransHis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransHis.Location = new System.Drawing.Point(0, 380);
+            this.btnTransHis.Name = "btnTransHis";
+            this.btnTransHis.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnTransHis.Size = new System.Drawing.Size(230, 40);
+            this.btnTransHis.TabIndex = 11;
+            this.btnTransHis.Tag = "   Tra cứu giao dịch";
+            this.btnTransHis.Text = "   Tra cứu giao dịch";
+            this.btnTransHis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransHis.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTransHis.UseVisualStyleBackColor = false;
+            this.btnTransHis.Click += new System.EventHandler(this.btnTransHis_Click);
+            // 
+            // btnVayTien
+            // 
+            this.btnVayTien.BackColor = System.Drawing.Color.Transparent;
+            this.btnVayTien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVayTien.FlatAppearance.BorderSize = 0;
+            this.btnVayTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVayTien.ForeColor = System.Drawing.Color.White;
+            this.btnVayTien.IconChar = FontAwesome.Sharp.IconChar.LandMineOn;
+            this.btnVayTien.IconColor = System.Drawing.Color.White;
+            this.btnVayTien.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVayTien.IconSize = 30;
+            this.btnVayTien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVayTien.Location = new System.Drawing.Point(0, 340);
+            this.btnVayTien.Name = "btnVayTien";
+            this.btnVayTien.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnVayTien.Size = new System.Drawing.Size(230, 40);
+            this.btnVayTien.TabIndex = 10;
+            this.btnVayTien.Tag = "   Vay Tiền";
+            this.btnVayTien.Text = "   Vay Tiền";
+            this.btnVayTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVayTien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVayTien.UseVisualStyleBackColor = false;
+            this.btnVayTien.Click += new System.EventHandler(this.btnVayTien_Click);
+            // 
+            // btnGuiTietKiem
+            // 
+            this.btnGuiTietKiem.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuiTietKiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGuiTietKiem.FlatAppearance.BorderSize = 0;
+            this.btnGuiTietKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuiTietKiem.ForeColor = System.Drawing.Color.White;
+            this.btnGuiTietKiem.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
+            this.btnGuiTietKiem.IconColor = System.Drawing.Color.White;
+            this.btnGuiTietKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuiTietKiem.IconSize = 30;
+            this.btnGuiTietKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuiTietKiem.Location = new System.Drawing.Point(0, 300);
+            this.btnGuiTietKiem.Name = "btnGuiTietKiem";
+            this.btnGuiTietKiem.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnGuiTietKiem.Size = new System.Drawing.Size(230, 40);
+            this.btnGuiTietKiem.TabIndex = 8;
+            this.btnGuiTietKiem.Tag = "   Gửi Tiết Kiệm";
+            this.btnGuiTietKiem.Text = "   Gửi Tiết Kiệm";
+            this.btnGuiTietKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuiTietKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuiTietKiem.UseVisualStyleBackColor = false;
+            this.btnGuiTietKiem.Click += new System.EventHandler(this.btnGuiTietKiem_Click);
+            // 
+            // btnRutTien
+            // 
+            this.btnRutTien.BackColor = System.Drawing.Color.Transparent;
+            this.btnRutTien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRutTien.FlatAppearance.BorderSize = 0;
+            this.btnRutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRutTien.ForeColor = System.Drawing.Color.White;
+            this.btnRutTien.IconChar = FontAwesome.Sharp.IconChar.LiraSign;
+            this.btnRutTien.IconColor = System.Drawing.Color.White;
+            this.btnRutTien.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRutTien.IconSize = 30;
+            this.btnRutTien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutTien.Location = new System.Drawing.Point(0, 260);
+            this.btnRutTien.Name = "btnRutTien";
+            this.btnRutTien.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnRutTien.Size = new System.Drawing.Size(230, 40);
+            this.btnRutTien.TabIndex = 9;
+            this.btnRutTien.Tag = "   Rút Tiền";
+            this.btnRutTien.Text = "   Rút Tiền";
+            this.btnRutTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutTien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRutTien.UseVisualStyleBackColor = false;
+            this.btnRutTien.Click += new System.EventHandler(this.btnRutTien_Click);
             // 
             // btnDeposit
             // 
@@ -275,6 +375,30 @@
             this.btnClose2.UseVisualStyleBackColor = false;
             this.btnClose2.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnTransaction
+            // 
+            this.btnTransaction.BackColor = System.Drawing.Color.Transparent;
+            this.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransaction.FlatAppearance.BorderSize = 0;
+            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnTransaction.IconChar = FontAwesome.Sharp.IconChar.Unity;
+            this.btnTransaction.IconColor = System.Drawing.Color.White;
+            this.btnTransaction.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTransaction.IconSize = 30;
+            this.btnTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaction.Location = new System.Drawing.Point(0, 180);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnTransaction.Size = new System.Drawing.Size(230, 40);
+            this.btnTransaction.TabIndex = 3;
+            this.btnTransaction.Tag = "   Chuyển Tiền";
+            this.btnTransaction.Text = "   Chuyển Tiền";
+            this.btnTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTransaction.UseVisualStyleBackColor = false;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
+            // 
             // btnTaiKhoan
             // 
             this.btnTaiKhoan.BackColor = System.Drawing.Color.Transparent;
@@ -292,8 +416,8 @@
             this.btnTaiKhoan.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnTaiKhoan.Size = new System.Drawing.Size(230, 40);
             this.btnTaiKhoan.TabIndex = 2;
-            this.btnTaiKhoan.Tag = "   Tài Khoản";
-            this.btnTaiKhoan.Text = "   Tài Khoản";
+            this.btnTaiKhoan.Tag = "   Quản lý khách hàng";
+            this.btnTaiKhoan.Text = "   Quản lý khách hàng";
             this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaiKhoan.UseVisualStyleBackColor = false;
@@ -423,109 +547,13 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnTransaction
-            // 
-            this.btnTransaction.BackColor = System.Drawing.Color.Transparent;
-            this.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransaction.FlatAppearance.BorderSize = 0;
-            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnTransaction.IconChar = FontAwesome.Sharp.IconChar.Unity;
-            this.btnTransaction.IconColor = System.Drawing.Color.White;
-            this.btnTransaction.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTransaction.IconSize = 30;
-            this.btnTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaction.Location = new System.Drawing.Point(0, 180);
-            this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnTransaction.Size = new System.Drawing.Size(230, 40);
-            this.btnTransaction.TabIndex = 3;
-            this.btnTransaction.Tag = "   Chuyển Tiền";
-            this.btnTransaction.Text = "   Chuyển Tiền";
-            this.btnTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTransaction.UseVisualStyleBackColor = false;
-            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
-            // 
-            // btnRutTien
-            // 
-            this.btnRutTien.BackColor = System.Drawing.Color.Transparent;
-            this.btnRutTien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRutTien.FlatAppearance.BorderSize = 0;
-            this.btnRutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRutTien.ForeColor = System.Drawing.Color.White;
-            this.btnRutTien.IconChar = FontAwesome.Sharp.IconChar.LiraSign;
-            this.btnRutTien.IconColor = System.Drawing.Color.White;
-            this.btnRutTien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRutTien.IconSize = 30;
-            this.btnRutTien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutTien.Location = new System.Drawing.Point(0, 260);
-            this.btnRutTien.Name = "btnRutTien";
-            this.btnRutTien.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnRutTien.Size = new System.Drawing.Size(230, 40);
-            this.btnRutTien.TabIndex = 9;
-            this.btnRutTien.Tag = "   Rút Tiền";
-            this.btnRutTien.Text = "   Rút Tiền";
-            this.btnRutTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutTien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRutTien.UseVisualStyleBackColor = false;
-            this.btnRutTien.Click += new System.EventHandler(this.btnRutTien_Click);
-            // 
-            // btnGuiTietKiem
-            // 
-            this.btnGuiTietKiem.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuiTietKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGuiTietKiem.FlatAppearance.BorderSize = 0;
-            this.btnGuiTietKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuiTietKiem.ForeColor = System.Drawing.Color.White;
-            this.btnGuiTietKiem.IconChar = FontAwesome.Sharp.IconChar.PiggyBank;
-            this.btnGuiTietKiem.IconColor = System.Drawing.Color.White;
-            this.btnGuiTietKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuiTietKiem.IconSize = 30;
-            this.btnGuiTietKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuiTietKiem.Location = new System.Drawing.Point(0, 300);
-            this.btnGuiTietKiem.Name = "btnGuiTietKiem";
-            this.btnGuiTietKiem.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnGuiTietKiem.Size = new System.Drawing.Size(230, 40);
-            this.btnGuiTietKiem.TabIndex = 8;
-            this.btnGuiTietKiem.Tag = "   Gửi Tiết Kiệm";
-            this.btnGuiTietKiem.Text = "   Gửi Tiết Kiệm";
-            this.btnGuiTietKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuiTietKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuiTietKiem.UseVisualStyleBackColor = false;
-            this.btnGuiTietKiem.Click += new System.EventHandler(this.btnGuiTietKiem_Click);
-            // 
-            // btnVayTien
-            // 
-            this.btnVayTien.BackColor = System.Drawing.Color.Transparent;
-            this.btnVayTien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVayTien.FlatAppearance.BorderSize = 0;
-            this.btnVayTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVayTien.ForeColor = System.Drawing.Color.White;
-            this.btnVayTien.IconChar = FontAwesome.Sharp.IconChar.LandMineOn;
-            this.btnVayTien.IconColor = System.Drawing.Color.White;
-            this.btnVayTien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVayTien.IconSize = 30;
-            this.btnVayTien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVayTien.Location = new System.Drawing.Point(0, 340);
-            this.btnVayTien.Name = "btnVayTien";
-            this.btnVayTien.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnVayTien.Size = new System.Drawing.Size(230, 40);
-            this.btnVayTien.TabIndex = 10;
-            this.btnVayTien.Tag = "   Vay Tiền";
-            this.btnVayTien.Text = "   Vay Tiền";
-            this.btnVayTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVayTien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVayTien.UseVisualStyleBackColor = false;
-            this.btnVayTien.Click += new System.EventHandler(this.btnVayTien_Click);
-            // 
             // FHomeNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 588);
-            this.Controls.Add(this.panelTimKiem);
             this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.panelTimKiem);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelTitle);
@@ -533,6 +561,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FHomeNV";
             this.Load += new System.EventHandler(this.FHomeNV_Load);
+            this.Resize += new System.EventHandler(this.FHomeNV_Resize);
             this.panelTimKiem.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -557,7 +586,7 @@
         private FontAwesome.Sharp.IconButton btnTaiKhoan;
         private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconMenuItem imenuRate;
-        private RJCodeAdvance.RJControls.RJTextBox txtTimKiem;
+        private RJCodeAdvance.RJControls.RJTextBox tbxTimKiem;
         private FontAwesome.Sharp.IconButton btnTimKiem;
         private System.Windows.Forms.Panel panelTimKiem;
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
@@ -575,5 +604,6 @@
         private FontAwesome.Sharp.IconButton btnTransaction;
         private FontAwesome.Sharp.IconButton btnVayTien;
         private FontAwesome.Sharp.IconButton btnGuiTietKiem;
+        private FontAwesome.Sharp.IconButton btnTransHis;
     }
 }

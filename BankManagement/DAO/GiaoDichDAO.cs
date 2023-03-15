@@ -1,6 +1,7 @@
 ﻿using BankManagement.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,21 @@ namespace BankManagement.DAO
                 return true;
             }
             return false;
+        }
+        public DataTable LayDanhSachGD()
+        {
+            string sqlStr = string.Format("SELECT * FROM GiaoDich");
+            return conn.LayDanhSach(sqlStr);
+        }
+        public DataTable TimKiemGDCB(string text, string option)
+        {
+            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE "+option, text);
+            return conn.LayDanhSach(sqlStr);
+        }
+        public DataTable TimKiemGDNC(string option)
+        {
+            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE " + option);
+            return conn.LayDanhSach(sqlStr);
         }
     }
 }

@@ -25,15 +25,10 @@ namespace BankManagement.UI
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
-            userControl = new WelcomeControl();
+            userControl = new CXinChao();
             userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(userControl);
-        }
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            formSize = this.ClientSize;
-
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -136,11 +131,7 @@ namespace BankManagement.UI
             base.WndProc(ref m);
         }
         //Event Methods
-        private void Form2_Resize(object sender, EventArgs e)
-        {
-            AdjustForm();
-            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
-        }
+
         //Private methods
         private void AdjustForm()
         {
@@ -218,7 +209,7 @@ namespace BankManagement.UI
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            userControl = new WelcomeControl();
+            userControl = new CXinChao();
             userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(userControl);
@@ -248,7 +239,7 @@ namespace BankManagement.UI
 
         private void FHomeNV_Load(object sender, EventArgs e)
         {
-
+            formSize = this.ClientSize;
         }
 
         private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
@@ -261,52 +252,50 @@ namespace BankManagement.UI
             else
             {
                 panelTimKiem.Visible = true;
-                txtTimKiem.Focus();
+                tbxTimKiem.Focus();
                 tìmKiếmToolStripMenuItem.Text = "Ẩn thanh tìm kiếm";
             }
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
-            userControl = new TaiKhoanControl();
-            TaiKhoanControl taiKhoanControl = userControl as TaiKhoanControl;
+            userControl = new CTaiKhoan();
+            CTaiKhoan taiKhoanControl = userControl as CTaiKhoan;
             taiKhoanControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(taiKhoanControl);
 
-            KhachHangDAO khDAO = new KhachHangDAO();
-            taiKhoanControl.DataSource = khDAO.LayDanhSachKH();
-            taiKhoanControl.ButtonClicked += new EventHandler(HomeControl_ButtonClicked);
+            //taiKhoanControl.ButtonClicked += new EventHandler(HomeControl_ButtonClicked);
         }
-        private void HomeControl_ButtonClicked(object sender, EventArgs e)
-        {
-            // Xử lý sự kiện cho tất cả các nút
-            Button clickedButton = sender as Button;
-            if (clickedButton != null)
-            {
-                // Xử lý cho từng nút tùy theo tên hoặc tag của nút
-                if (clickedButton.Name == "btnThem")
-                {
-                    HomeControl_ButtonThemClicked();
-                }
-                else if (clickedButton.Name == "btnSua")
-                {
-                    HomeControl_ButtonSuaClicked();
-                }
-                else
-                {
-                    // Xử lý cho các nút khác
-                }
-            }
-        }
-        private void HomeControl_ButtonThemClicked()
-        {
-            MessageBox.Show("Button Them");
-        }
-        private void HomeControl_ButtonSuaClicked()
-        {
-            MessageBox.Show("Button Sua");
-        }
+        //private void HomeControl_ButtonClicked(object sender, EventArgs e)
+        //{
+        //    // Xử lý sự kiện cho tất cả các nút
+        //    Button clickedButton = sender as Button;
+        //    if (clickedButton != null)
+        //    {
+        //        // Xử lý cho từng nút tùy theo tên hoặc tag của nút
+        //        if (clickedButton.Name == "btnThem")
+        //        {
+        //            HomeControl_ButtonThemClicked();
+        //        }
+        //        else if (clickedButton.Name == "btnSua")
+        //        {
+        //            HomeControl_ButtonSuaClicked();
+        //        }
+        //        else
+        //        {
+        //            // Xử lý cho các nút khác
+        //        }
+        //    }
+        //}
+        //private void HomeControl_ButtonThemClicked()
+        //{
+        //    MessageBox.Show("Button Them");
+        //}
+        //private void HomeControl_ButtonSuaClicked()
+        //{
+        //    MessageBox.Show("Button Sua");
+        //}
 
         private void tsmiSignin_Click(object sender, EventArgs e)
         {
@@ -343,6 +332,34 @@ namespace BankManagement.UI
         {
             FTietKiem fTietKiem = new FTietKiem();
             fTietKiem.ShowDialog();
+        }
+
+        private void FHomeNV_Resize(object sender, EventArgs e)
+        {
+            AdjustForm();
+            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+        }
+
+        private void btnTransHis_Click(object sender, EventArgs e)
+        {
+            panelTimKiem.Visible = true;
+            tbxTimKiem.Focus();
+            tìmKiếmToolStripMenuItem.Text = "Ẩn thanh tìm kiếm";
+            userControl = new CTrans();
+            CTrans transControl = userControl as CTrans;
+            transControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(transControl);
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (userControl is CTrans)
+            {
+                GiaoDichDAO gdDAO = new GiaoDichDAO();
+                CTrans transControl = userControl as CTrans;
+                transControl.TimKiemGD(tbxTimKiem.Texts);
+            }
         }
     }
 }
