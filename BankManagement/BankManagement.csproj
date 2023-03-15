@@ -64,8 +64,12 @@
     <Compile Include="Controller\ChuyenTien.cs" />
     <Compile Include="Controller\DangKy.cs" />
     <Compile Include="Controller\DangNhap.cs" />
+    <Compile Include="Controller\RutTien.cs" />
+    <Compile Include="Controller\VayTien.cs" />
     <Compile Include="DAO\GiaoDichDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\KhoanVayDAO.cs" />
+    <Compile Include="DAO\LaiSuatDAO.cs" />
     <Compile Include="UI\CTrans.cs">
       <SubType>UserControl</SubType>
     </Compile>

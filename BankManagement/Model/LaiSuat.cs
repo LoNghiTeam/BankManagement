@@ -9,44 +9,47 @@ namespace BankManagement.Model
     internal class LaiSuat
     {
         private int maLS;
-        private float laiGui;
-        private float laiVay;
+        private double laiGui;
+        private double laiVay;
         private DateTime ngayApDung;
 
         public LaiSuat()
         {
-            throw new System.NotImplementedException();
         }
 
         public int MaLS
         {
-            get => default;
+            get { return maLS; }
             set
             {
+                maLS = value;
             }
         }
 
-        public float LaiGui
+        public double LaiGui
         {
-            get => default;
+            get { return laiGui; }
             set
             {
+                laiGui = value;
             }
         }
 
-        public float LaiVay
+        public double LaiVay
         {
-            get => default;
+            get { return laiVay; }
             set
             {
+                laiVay = value;
             }
         }
 
         public DateTime NgayApDung
         {
-            get => default;
+            get { return ngayApDung; }
             set
             {
+                ngayApDung = value;
             }
         }
     }
