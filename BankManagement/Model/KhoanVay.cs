@@ -9,79 +9,98 @@ namespace BankManagement.Model
     internal class KhoanVay
     {
         private int maKV;
+        private int soTK;
         private DateTime ngayVay;
         private DateTime ngayHan;
-        private float tien;
+        private double tien;
         private int maLS;
         private int tinhTrang;
         private int loai;
 
         public KhoanVay()
         {
-            throw new System.NotImplementedException();
+
+        }
+        public KhoanVay(int soTK, DateTime ngayVay, DateTime ngayHan, double tien, int maLS, int tinhTrang, int loai)
+        {
+            this.soTK = soTK;
+            this.ngayVay = ngayVay;
+            this.tien = tien;
+            this.maLS = maLS;
+            this.ngayHan = ngayHan;
+            this.tinhTrang = tinhTrang;
+            this.loai = loai;
         }
 
         public int MaKV
         {
-            get => default;
+            get => maKV;
             set
             {
+                maKV = value;
             }
         }
 
         public int SoTK
         {
-            get => default;
+            get => soTK;
             set
             {
+                soTK = value;
             }
         }
 
         public DateTime NgayVay
         {
-            get => default;
+            get => ngayVay;
             set
             {
+                ngayVay = value;
             }
         }
 
         public DateTime NgayHan
         {
-            get => default;
+            get => ngayHan;
             set
             {
+                ngayHan = value;
             }
         }
 
-        public float Tien
+        public double Tien
         {
-            get => default;
+            get => tien;
             set
             {
+                tien = value;
             }
         }
 
         public int TinhTrang
         {
-            get => default;
+            get => tinhTrang;
             set
             {
+                tinhTrang = value;
             }
         }
 
         public int Loai
         {
-            get => default;
+            get => loai;
             set
             {
+                loai = value;
             }
         }
 
         public int MaLS
         {
-            get => default;
+            get => maLS;
             set
             {
+                maLS = value;
             }
         }
     }
