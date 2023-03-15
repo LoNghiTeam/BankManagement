@@ -27,7 +27,7 @@ namespace BankManagement
             CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(98, 102, 244);
-            userControl = new WelcomeControl();
+            userControl = new CXinChao();
             userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(userControl);
@@ -220,7 +220,7 @@ namespace BankManagement
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            userControl = new WelcomeControl();
+            userControl = new CXinChao();
             userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(userControl);

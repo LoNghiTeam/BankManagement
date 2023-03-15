@@ -66,6 +66,12 @@
     <Compile Include="Controller\DangNhap.cs" />
     <Compile Include="DAO\GiaoDichDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="UI\CTrans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CTrans.Designer.cs">
+      <DependentUpon>CTrans.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FHomeNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +117,11 @@
     <Compile Include="UI\FVayTien.Designer.cs">
       <DependentUpon>FVayTien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\TaiKhoanControl.cs">
+    <Compile Include="UI\CTaiKhoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\TaiKhoanControl.Designer.cs">
-      <DependentUpon>TaiKhoanControl.cs</DependentUpon>
+    <Compile Include="UI\CTaiKhoan.Designer.cs">
+      <DependentUpon>CTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FLogin.cs">
       <SubType>Form</SubType>
@@ -141,12 +147,15 @@
     <Compile Include="UI\FSignup.Designer.cs">
       <DependentUpon>FSignup.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\WelcomeControl.cs">
+    <Compile Include="UI\CXinChao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\WelcomeControl.Designer.cs">
-      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    <Compile Include="UI\CXinChao.Designer.cs">
+      <DependentUpon>CXinChao.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\CTrans.resx">
+      <DependentUpon>CTrans.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FHomeKH.resx">
       <DependentUpon>FHomeKH.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,8 +177,8 @@
     <EmbeddedResource Include="UI\FVayTien.resx">
       <DependentUpon>FVayTien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\TaiKhoanControl.resx">
-      <DependentUpon>TaiKhoanControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CTaiKhoan.resx">
+      <DependentUpon>CTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
@@ -190,8 +199,8 @@
     <EmbeddedResource Include="UI\FSignup.resx">
       <DependentUpon>FSignup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\WelcomeControl.resx">
-      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\CXinChao.resx">
+      <DependentUpon>CXinChao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <Content Include="fonts\fontawesome-webfont.eot" />

@@ -23,6 +23,15 @@ namespace BankManagement.Model
         public TaiKhoan()
         {
         }
+        public TaiKhoan(string soTK,String hoTen, DateTime ngaySinh, String cccd, String diaChi, String soDienThoai)
+        {
+            this.SoTK = Int32.Parse(soTK);
+            this.hoTen = hoTen;
+            this.ngaySinh = ngaySinh;
+            this.cccd = cccd;
+            this.diaChi = diaChi;
+            this.soDienThoai = soDienThoai;
+        }
 
         public TaiKhoan(String userName, String pass, String hoTen, DateTime ngaySinh, String cccd, String diaChi, String soDienThoai)
         {
