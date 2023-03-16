@@ -188,6 +188,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.panelMenu.Controls.Add(this.btnTransHis);
             this.panelMenu.Controls.Add(this.btnVayTien);

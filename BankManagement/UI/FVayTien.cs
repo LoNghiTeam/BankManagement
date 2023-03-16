@@ -118,32 +118,32 @@ namespace BankManagement.UI
             switch (cbThoiGian.Texts.ToString())
             {
                 case "1 tháng":
-                    lai = laiSuat.MaLS * 0.8 * 100;
+                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 0.8);
                     lblLaiSuat.Text = lai.ToString() + "%";
                     thoigian = 1;
                     break;
                 case "3 tháng":
-                    lai = laiSuat.LaiVay * 0.85 * 100;
+                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 0.85);
                     lblLaiSuat.Text = lai.ToString() + "%";
                     thoigian = 3;
                     break;
                 case "6 tháng":
-                    lai = laiSuat.LaiVay * 0.9 * 100;
+                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 0.9);
                     lblLaiSuat.Text = lai.ToString() + "%";
                     thoigian = 6;
                     break;
                 case "12 tháng":
-                    lai = laiSuat.LaiVay * 1 * 100;
+                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 1);
                     lblLaiSuat.Text = lai.ToString() + "%";
                     thoigian = 12;
                     break;
                 case "24 tháng":
-                    lai = laiSuat.LaiVay * 1.1* 100;
+                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 1.1);
                     lblLaiSuat.Text = lai.ToString() + "%";
                     thoigian = 24;
                     break;                
                 case "36 tháng":
-                    lai = laiSuat.LaiVay * 1.2 * 100;
+                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 1.2);
                     lblLaiSuat.Text = lai.ToString() + "%";
                     thoigian = 36;
                     break;
@@ -167,6 +167,11 @@ namespace BankManagement.UI
                 if(chuyenTien.GiaoDichTien(soTK, tien))
                     if(chuyenTien.TaoGiaoDich(-1, soTK, DateTime.Now, tien))
                         MessageBox.Show("Vay tiền thành công", "Thông báo", MessageBoxButtons.OK);
+
+            if(soTK == logging.Taikhoan.SoTK)
+            {
+                logging.Taikhoan.Tien += tien;
+            }
         }
     }
 }
