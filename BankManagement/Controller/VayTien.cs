@@ -45,5 +45,10 @@ namespace BankManagement.Controller
             { return true; }
             return false;
         }
+
+        public double TinhLaiSuat(double laiSuat, double tiLe)
+        {
+            return laiSuat * tiLe * 100 ;
+        }
     }
 }
