@@ -80,27 +80,7 @@ namespace BankManagement.UI
                 string laiSuat = lblLaiSuat.Text;
                 laiSuat = laiSuat.Remove(laiSuat.IndexOf('%'));
                 double.TryParse(laiSuat, out lai);
-                switch (cbThoiGian.Texts.ToString())
-                {
-                    case "1 tháng":
-                        tien += vayTien.TinhTienLai(tien, lai / 100, 1);
-                        break;
-                    case "3 tháng":
-                        tien += vayTien.TinhTienLai(tien, lai / 100, 3);
-                        break;
-                    case "6 tháng":
-                        tien += vayTien.TinhTienLai(tien, lai / 100, 6);
-                        break;
-                    case "12 tháng":
-                        tien += vayTien.TinhTienLai(tien, lai / 100, 12);
-                        break;
-                    case "24 tháng":
-                        tien += vayTien.TinhTienLai(tien, lai / 100, 24);
-                        break;
-                    case "36 tháng":
-                        tien += vayTien.TinhTienLai(tien, lai / 100, 36);
-                        break;
-                }
+                vayTien.TinhlaichangeTbTien(cbThoiGian.Texts.ToString(), ref tien, ref lai);
                 lblTong.Text = tien.ToString() + "VNĐ";
                 btnVayTien.Enabled = true;
             }
@@ -115,39 +95,8 @@ namespace BankManagement.UI
             
             laiSuat = vayTien.GetLaiSuat();
             double lai = 0;
-            switch (cbThoiGian.Texts.ToString())
-            { 
-                case "1 tháng":
-                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 0.8);
-                    lblLaiSuat.Text = lai.ToString() + "%";
-                    thoigian = 1;
-                    break;
-                case "3 tháng":
-                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 0.85);
-                    lblLaiSuat.Text = lai.ToString() + "%";
-                    thoigian = 3;
-                    break;
-                case "6 tháng":
-                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 0.9);
-                    lblLaiSuat.Text = lai.ToString() + "%";
-                    thoigian = 6;
-                    break;
-                case "12 tháng":
-                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 1);
-                    lblLaiSuat.Text = lai.ToString() + "%";
-                    thoigian = 12;
-                    break;
-                case "24 tháng":
-                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 1.1);
-                    lblLaiSuat.Text = lai.ToString() + "%";
-                    thoigian = 24;
-                    break;                
-                case "36 tháng":
-                    lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 1.2);
-                    lblLaiSuat.Text = lai.ToString() + "%";
-                    thoigian = 36;
-                    break;
-            }
+            vayTien.TinhlaichangecbThoiGian(ref thoigian, cbThoiGian.Texts.ToString(), ref lai);
+            lblLaiSuat.Text = lai.ToString() + "%";
             if (lblTong != null)
             {
 
@@ -156,7 +105,6 @@ namespace BankManagement.UI
                 lblTong.Text = tien.ToString() + "VNĐ";
                 btnVayTien.Enabled = true;
             }
-
         }
 
         private void btnVayTien_Click(object sender, EventArgs e)
