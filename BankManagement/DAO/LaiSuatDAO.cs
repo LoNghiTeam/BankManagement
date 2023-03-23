@@ -25,8 +25,8 @@ namespace BankManagement.DAO
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read()) {
                     laiSuat.MaLS = (int)reader["MaLS"];
-                    laiSuat.LaiVay = (double)reader["LaiGui"];
-                    laiSuat.LaiGui = (double)reader["LaiVay"];
+                    laiSuat.LaiVay = (double)reader["LaiVay"];
+                    laiSuat.LaiGui = (double)reader["LaiGui"];
                     laiSuat.NgayApDung = (DateTime)reader["NgayApDung"];
                     return laiSuat;
                 }

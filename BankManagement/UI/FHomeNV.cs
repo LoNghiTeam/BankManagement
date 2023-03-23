@@ -337,7 +337,7 @@ namespace BankManagement.UI
         private void FHomeNV_Resize(object sender, EventArgs e)
         {
             AdjustForm();
-            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+    //        userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
         }
 
         private void btnTransHis_Click(object sender, EventArgs e)
