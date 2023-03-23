@@ -116,7 +116,7 @@ namespace BankManagement.UI
             laiSuat = vayTien.GetLaiSuat();
             double lai = 0;
             switch (cbThoiGian.Texts.ToString())
-            {
+            { 
                 case "1 tháng":
                     lai = vayTien.TinhLaiSuat(laiSuat.LaiVay, 0.8);
                     lblLaiSuat.Text = lai.ToString() + "%";
