@@ -1,6 +1,7 @@
 ﻿using BankManagement.DAO;
 using BankManagement.Model;
 using BankManagement.UI;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -148,12 +149,23 @@ namespace BankManagement
                 panel2.Enabled = true;
             }
         }
-        private List<GiaoDich> lstTransaction;
+        ReportDataSource rs = new ReportDataSource();
         private void btnPrintAllGD_Click(object sender, EventArgs e)
         {
-            if (dtgvTrans.SelectedRows.Count < 1) return;
-            GiaoDich temp = lstTransaction.Find(t => t.MaGD == int.Parse(dtgvTrans.SelectedRows[0].Cells[0].Value.ToString()));
-            FPrintTrans print = new FPrintTrans(temp);
+            List<GiaoDich> giaoDiches = new List<GiaoDich>();
+            giaoDiches.Clear();
+            for( int i  = 0; i < dtgvTrans.Rows.Count - 1; i++)
+            {
+                giaoDiches.Add(new GiaoDich
+                {
+                    MaGD =int.Parse(dtgvTrans.Rows[i].Cells[0].Value.ToString()),
+                    NguoiGui = int.Parse(dtgvTrans.Rows[i].Cells[1].Value.ToString()),
+                    NguoiNhan = int.Parse(dtgvTrans.Rows[i].Cells[2].Value.ToString()),
+                    NgayGD = (DateTime)dtgvTrans.Rows[i].Cells[3].Value,
+                    Tien = double.Parse(dtgvTrans.Rows[i].Cells[4].Value.ToString())
+                });
+            }
+            FPrintTrans print = new FPrintTrans(giaoDiches);
             print.ShowDialog();
         }
     }

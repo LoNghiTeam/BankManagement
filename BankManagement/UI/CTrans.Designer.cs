@@ -94,6 +94,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cbDate);
+            this.groupBox2.Controls.Add(this.btnPrintAllGD);
             this.groupBox2.Controls.Add(this.btnTimKiem);
             this.groupBox2.Controls.Add(this.dpNgayGD);
             this.groupBox2.Controls.Add(this.tbxMaGD);
@@ -369,7 +370,6 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.btnDetailGD);
-            this.flowLayoutPanel2.Controls.Add(this.btnPrintAllGD);
             this.flowLayoutPanel2.Controls.Add(this.btnPrintGD);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 49);
@@ -405,9 +405,9 @@
             this.btnPrintAllGD.FlatAppearance.BorderSize = 0;
             this.btnPrintAllGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintAllGD.ForeColor = System.Drawing.Color.White;
-            this.btnPrintAllGD.Location = new System.Drawing.Point(228, 3);
+            this.btnPrintAllGD.Location = new System.Drawing.Point(131, 311);
             this.btnPrintAllGD.Name = "btnPrintAllGD";
-            this.btnPrintAllGD.Size = new System.Drawing.Size(211, 40);
+            this.btnPrintAllGD.Size = new System.Drawing.Size(280, 40);
             this.btnPrintAllGD.TabIndex = 1;
             this.btnPrintAllGD.Text = "In toàn bộ giao dịch";
             this.btnPrintAllGD.TextColor = System.Drawing.Color.White;
@@ -424,7 +424,7 @@
             this.btnPrintGD.FlatAppearance.BorderSize = 0;
             this.btnPrintGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintGD.ForeColor = System.Drawing.Color.White;
-            this.btnPrintGD.Location = new System.Drawing.Point(445, 3);
+            this.btnPrintGD.Location = new System.Drawing.Point(228, 3);
             this.btnPrintGD.Name = "btnPrintGD";
             this.btnPrintGD.Size = new System.Drawing.Size(216, 40);
             this.btnPrintGD.TabIndex = 2;
