@@ -1,4 +1,6 @@
 ﻿using BankManagement.DAO;
+using BankManagement.Model;
+using BankManagement.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace BankManagement
@@ -115,7 +118,7 @@ namespace BankManagement
                 }
                 option += " NguoiNhan = "+tbxNgNhan.Texts;
             }
-            if (!string.IsNullOrWhiteSpace(dpNgayGD.Value.ToString()))
+            if (!string.IsNullOrWhiteSpace(dpNgayGD.Value.ToString()) && cbDate.Checked==true)
             {
                 if (!string.IsNullOrWhiteSpace(option))
                 {
@@ -132,6 +135,26 @@ namespace BankManagement
                 option += " Tien = "+tbxTienGD.Texts;
             }
             return option;
+        }
+
+        private void dtgvTrans_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dtgvTrans.Rows[e.RowIndex];
+
+                lbMaGD.Text = row.Cells[0].Value.ToString();
+
+                panel2.Enabled = true;
+            }
+        }
+        private List<GiaoDich> lstTransaction;
+        private void btnPrintAllGD_Click(object sender, EventArgs e)
+        {
+            if (dtgvTrans.SelectedRows.Count < 1) return;
+            GiaoDich temp = lstTransaction.Find(t => t.MaGD == int.Parse(dtgvTrans.SelectedRows[0].Cells[0].Value.ToString()));
+            FPrintTrans print = new FPrintTrans(temp);
+            print.ShowDialog();
         }
     }
 }

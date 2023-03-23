@@ -83,5 +83,16 @@ namespace BankManagement.DAO
             }
             return false;
         }
+
+        public bool DoiMatKhau(string mk)
+        {
+            string SQL = string.Format("UPDATE TaiKhoan SET Pass = {1} where SoTK ='{0}'", 
+                logging.Taikhoan.SoTK, mk);
+            if (conn.Execute(SQL))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

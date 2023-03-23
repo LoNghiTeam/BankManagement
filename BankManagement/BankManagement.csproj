@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +38,9 @@
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -76,6 +82,12 @@
     <Compile Include="UI\CTrans.Designer.cs">
       <DependentUpon>CTrans.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FChangePass.Designer.cs">
+      <DependentUpon>FChangePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FHomeNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     </Compile>
     <Compile Include="UI\FLaiSuat.Designer.cs">
       <DependentUpon>FLaiSuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FPrintTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FPrintTrans.Designer.cs">
+      <DependentUpon>FPrintTrans.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FRutTien.cs">
       <SubType>Form</SubType>
@@ -160,6 +178,9 @@
     <EmbeddedResource Include="UI\CTrans.resx">
       <DependentUpon>CTrans.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FChangePass.resx">
+      <DependentUpon>FChangePass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FHomeKH.resx">
       <DependentUpon>FHomeKH.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FLaiSuat.resx">
       <DependentUpon>FLaiSuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FPrintTrans.resx">
+      <DependentUpon>FPrintTrans.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FRutTien.resx">
       <DependentUpon>FRutTien.cs</DependentUpon>
@@ -242,4 +266,10 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
 </Project>

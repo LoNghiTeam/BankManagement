@@ -240,6 +240,7 @@ namespace BankManagement.UI
         private void FHomeNV_Load(object sender, EventArgs e)
         {
             formSize = this.ClientSize;
+            lblName.Text = lblName.Tag+logging.Taikhoan.HoTen;
         }
 
         private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
@@ -360,6 +361,12 @@ namespace BankManagement.UI
                 CTrans transControl = userControl as CTrans;
                 transControl.TimKiemGD(tbxTimKiem.Texts);
             }
+        }
+
+        private void tsmiChangePass_Click(object sender, EventArgs e)
+        {
+            FChangePass fChangePass = new FChangePass();
+            fChangePass.ShowDialog();
         }
     }
 }

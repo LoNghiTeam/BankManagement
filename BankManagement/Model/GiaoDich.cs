@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankManagement.Model
 {
-    internal class GiaoDich
+    public class GiaoDich
     {
         private int maGD;
         private int nguoiGui;

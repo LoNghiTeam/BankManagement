@@ -30,13 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvTrans = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cbMaGD = new System.Windows.Forms.CheckBox();
-            this.cbNgGui = new System.Windows.Forms.CheckBox();
-            this.cbNgNhan = new System.Windows.Forms.CheckBox();
-            this.cbTien = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbDate = new System.Windows.Forms.CheckBox();
+            this.btnTimKiem = new RJCodeAdvance.RJControls.RJButton();
             this.dpNgayGD = new RJCodeAdvance.RJControls.RJDatePicker();
             this.tbxMaGD = new RJCodeAdvance.RJControls.RJTextBox();
             this.tbxNgGui = new RJCodeAdvance.RJControls.RJTextBox();
@@ -47,12 +43,28 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnTimKiem = new RJCodeAdvance.RJControls.RJButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbMaGD = new System.Windows.Forms.CheckBox();
+            this.cbNgGui = new System.Windows.Forms.CheckBox();
+            this.cbNgNhan = new System.Windows.Forms.CheckBox();
+            this.cbTien = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnDetailGD = new RJCodeAdvance.RJControls.RJButton();
+            this.btnPrintAllGD = new RJCodeAdvance.RJControls.RJButton();
+            this.btnPrintGD = new RJCodeAdvance.RJControls.RJButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbMaGD = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTrans)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,10 +72,11 @@
             this.panel1.Controls.Add(this.dtgvTrans);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(869, 431);
+            this.panel1.Size = new System.Drawing.Size(863, 549);
             this.panel1.TabIndex = 4;
             // 
             // dtgvTrans
@@ -74,76 +87,13 @@
             this.dtgvTrans.Name = "dtgvTrans";
             this.dtgvTrans.RowHeadersWidth = 51;
             this.dtgvTrans.RowTemplate.Height = 24;
-            this.dtgvTrans.Size = new System.Drawing.Size(430, 376);
+            this.dtgvTrans.Size = new System.Drawing.Size(424, 381);
             this.dtgvTrans.TabIndex = 3;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(869, 55);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tìm kiếm tuỳ chọn";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.cbMaGD);
-            this.flowLayoutPanel1.Controls.Add(this.cbNgGui);
-            this.flowLayoutPanel1.Controls.Add(this.cbNgNhan);
-            this.flowLayoutPanel1.Controls.Add(this.cbTien);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(863, 34);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // cbMaGD
-            // 
-            this.cbMaGD.AutoSize = true;
-            this.cbMaGD.Checked = true;
-            this.cbMaGD.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbMaGD.Location = new System.Drawing.Point(3, 3);
-            this.cbMaGD.Name = "cbMaGD";
-            this.cbMaGD.Size = new System.Drawing.Size(193, 20);
-            this.cbMaGD.TabIndex = 2;
-            this.cbMaGD.Text = "Tìm kiếm theo mã giao dịch";
-            this.cbMaGD.UseVisualStyleBackColor = true;
-            // 
-            // cbNgGui
-            // 
-            this.cbNgGui.AutoSize = true;
-            this.cbNgGui.Location = new System.Drawing.Point(202, 3);
-            this.cbNgGui.Name = "cbNgGui";
-            this.cbNgGui.Size = new System.Drawing.Size(192, 20);
-            this.cbNgGui.TabIndex = 1;
-            this.cbNgGui.Text = "Tìm kiếm theo mã người gửi";
-            this.cbNgGui.UseVisualStyleBackColor = true;
-            // 
-            // cbNgNhan
-            // 
-            this.cbNgNhan.AutoSize = true;
-            this.cbNgNhan.Location = new System.Drawing.Point(400, 3);
-            this.cbNgNhan.Name = "cbNgNhan";
-            this.cbNgNhan.Size = new System.Drawing.Size(203, 20);
-            this.cbNgNhan.TabIndex = 0;
-            this.cbNgNhan.Text = "Tìm kiếm theo mã người nhận";
-            this.cbNgNhan.UseVisualStyleBackColor = true;
-            // 
-            // cbTien
-            // 
-            this.cbTien.AutoSize = true;
-            this.cbTien.Location = new System.Drawing.Point(609, 3);
-            this.cbTien.Name = "cbTien";
-            this.cbTien.Size = new System.Drawing.Size(213, 20);
-            this.cbTien.TabIndex = 4;
-            this.cbTien.Text = "Tìm kiếm theo số tiền giao dịch";
-            this.cbTien.UseVisualStyleBackColor = true;
+            this.dtgvTrans.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTrans_CellClick);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbDate);
             this.groupBox2.Controls.Add(this.btnTimKiem);
             this.groupBox2.Controls.Add(this.dpNgayGD);
             this.groupBox2.Controls.Add(this.tbxMaGD);
@@ -158,10 +108,40 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(0, 55);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(439, 376);
+            this.groupBox2.Size = new System.Drawing.Size(439, 381);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm nâng cao";
+            // 
+            // cbDate
+            // 
+            this.cbDate.AutoSize = true;
+            this.cbDate.Checked = true;
+            this.cbDate.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbDate.Location = new System.Drawing.Point(393, 175);
+            this.cbDate.Name = "cbDate";
+            this.cbDate.Size = new System.Drawing.Size(18, 17);
+            this.cbDate.TabIndex = 16;
+            this.cbDate.UseVisualStyleBackColor = true;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTimKiem.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimKiem.BorderRadius = 0;
+            this.btnTimKiem.BorderSize = 0;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(131, 265);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(280, 40);
+            this.btnTimKiem.TabIndex = 15;
+            this.btnTimKiem.Text = "Tìm kiếm nâng cao";
+            this.btnTimKiem.TextColor = System.Drawing.Color.White;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // dpNgayGD
             // 
@@ -171,10 +151,11 @@
             this.dpNgayGD.Location = new System.Drawing.Point(131, 166);
             this.dpNgayGD.MinimumSize = new System.Drawing.Size(4, 35);
             this.dpNgayGD.Name = "dpNgayGD";
-            this.dpNgayGD.Size = new System.Drawing.Size(280, 35);
+            this.dpNgayGD.Size = new System.Drawing.Size(256, 35);
             this.dpNgayGD.SkinColor = System.Drawing.Color.MediumSlateBlue;
             this.dpNgayGD.TabIndex = 14;
             this.dpNgayGD.TextColor = System.Drawing.Color.White;
+            this.dpNgayGD.Value = new System.DateTime(2023, 3, 22, 18, 2, 33, 0);
             // 
             // tbxMaGD
             // 
@@ -298,7 +279,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Ngày giao dịch;";
+            this.label4.Text = "Ngày giao dịch:";
             // 
             // label3
             // 
@@ -309,24 +290,175 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Số tiền giao dịch:";
             // 
-            // btnTimKiem
+            // groupBox1
             // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTimKiem.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTimKiem.BorderRadius = 0;
-            this.btnTimKiem.BorderSize = 0;
-            this.btnTimKiem.FlatAppearance.BorderSize = 0;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(131, 265);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(280, 40);
-            this.btnTimKiem.TabIndex = 15;
-            this.btnTimKiem.Text = "Tìm kiếm nâng cao";
-            this.btnTimKiem.TextColor = System.Drawing.Color.White;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.groupBox1.Controls.Add(this.flowLayoutPanel1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(863, 55);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tìm kiếm tuỳ chọn";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.cbMaGD);
+            this.flowLayoutPanel1.Controls.Add(this.cbNgGui);
+            this.flowLayoutPanel1.Controls.Add(this.cbNgNhan);
+            this.flowLayoutPanel1.Controls.Add(this.cbTien);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(857, 34);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // cbMaGD
+            // 
+            this.cbMaGD.AutoSize = true;
+            this.cbMaGD.Checked = true;
+            this.cbMaGD.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbMaGD.Location = new System.Drawing.Point(3, 3);
+            this.cbMaGD.Name = "cbMaGD";
+            this.cbMaGD.Size = new System.Drawing.Size(193, 20);
+            this.cbMaGD.TabIndex = 2;
+            this.cbMaGD.Text = "Tìm kiếm theo mã giao dịch";
+            this.cbMaGD.UseVisualStyleBackColor = true;
+            // 
+            // cbNgGui
+            // 
+            this.cbNgGui.AutoSize = true;
+            this.cbNgGui.Location = new System.Drawing.Point(202, 3);
+            this.cbNgGui.Name = "cbNgGui";
+            this.cbNgGui.Size = new System.Drawing.Size(192, 20);
+            this.cbNgGui.TabIndex = 1;
+            this.cbNgGui.Text = "Tìm kiếm theo mã người gửi";
+            this.cbNgGui.UseVisualStyleBackColor = true;
+            // 
+            // cbNgNhan
+            // 
+            this.cbNgNhan.AutoSize = true;
+            this.cbNgNhan.Location = new System.Drawing.Point(400, 3);
+            this.cbNgNhan.Name = "cbNgNhan";
+            this.cbNgNhan.Size = new System.Drawing.Size(203, 20);
+            this.cbNgNhan.TabIndex = 0;
+            this.cbNgNhan.Text = "Tìm kiếm theo mã người nhận";
+            this.cbNgNhan.UseVisualStyleBackColor = true;
+            // 
+            // cbTien
+            // 
+            this.cbTien.AutoSize = true;
+            this.cbTien.Location = new System.Drawing.Point(609, 3);
+            this.cbTien.Name = "cbTien";
+            this.cbTien.Size = new System.Drawing.Size(213, 20);
+            this.cbTien.TabIndex = 4;
+            this.cbTien.Text = "Tìm kiếm theo số tiền giao dịch";
+            this.cbTien.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.flowLayoutPanel2);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Enabled = false;
+            this.panel2.Location = new System.Drawing.Point(0, 436);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(863, 113);
+            this.panel2.TabIndex = 6;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btnDetailGD);
+            this.flowLayoutPanel2.Controls.Add(this.btnPrintAllGD);
+            this.flowLayoutPanel2.Controls.Add(this.btnPrintGD);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 49);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(863, 64);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // btnDetailGD
+            // 
+            this.btnDetailGD.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDetailGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDetailGD.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDetailGD.BorderRadius = 0;
+            this.btnDetailGD.BorderSize = 0;
+            this.btnDetailGD.FlatAppearance.BorderSize = 0;
+            this.btnDetailGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailGD.ForeColor = System.Drawing.Color.White;
+            this.btnDetailGD.Location = new System.Drawing.Point(3, 3);
+            this.btnDetailGD.Name = "btnDetailGD";
+            this.btnDetailGD.Size = new System.Drawing.Size(219, 40);
+            this.btnDetailGD.TabIndex = 0;
+            this.btnDetailGD.Text = "Xem chi tiết giao dịch";
+            this.btnDetailGD.TextColor = System.Drawing.Color.White;
+            this.btnDetailGD.UseVisualStyleBackColor = false;
+            // 
+            // btnPrintAllGD
+            // 
+            this.btnPrintAllGD.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPrintAllGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPrintAllGD.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPrintAllGD.BorderRadius = 0;
+            this.btnPrintAllGD.BorderSize = 0;
+            this.btnPrintAllGD.FlatAppearance.BorderSize = 0;
+            this.btnPrintAllGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintAllGD.ForeColor = System.Drawing.Color.White;
+            this.btnPrintAllGD.Location = new System.Drawing.Point(228, 3);
+            this.btnPrintAllGD.Name = "btnPrintAllGD";
+            this.btnPrintAllGD.Size = new System.Drawing.Size(211, 40);
+            this.btnPrintAllGD.TabIndex = 1;
+            this.btnPrintAllGD.Text = "In toàn bộ giao dịch";
+            this.btnPrintAllGD.TextColor = System.Drawing.Color.White;
+            this.btnPrintAllGD.UseVisualStyleBackColor = false;
+            this.btnPrintAllGD.Click += new System.EventHandler(this.btnPrintAllGD_Click);
+            // 
+            // btnPrintGD
+            // 
+            this.btnPrintGD.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPrintGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPrintGD.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPrintGD.BorderRadius = 0;
+            this.btnPrintGD.BorderSize = 0;
+            this.btnPrintGD.FlatAppearance.BorderSize = 0;
+            this.btnPrintGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintGD.ForeColor = System.Drawing.Color.White;
+            this.btnPrintGD.Location = new System.Drawing.Point(445, 3);
+            this.btnPrintGD.Name = "btnPrintGD";
+            this.btnPrintGD.Size = new System.Drawing.Size(216, 40);
+            this.btnPrintGD.TabIndex = 2;
+            this.btnPrintGD.Text = "In giao dịch được chọn";
+            this.btnPrintGD.TextColor = System.Drawing.Color.White;
+            this.btnPrintGD.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lbMaGD);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(863, 49);
+            this.panel3.TabIndex = 3;
+            // 
+            // lbMaGD
+            // 
+            this.lbMaGD.AutoSize = true;
+            this.lbMaGD.Location = new System.Drawing.Point(138, 16);
+            this.lbMaGD.Name = "lbMaGD";
+            this.lbMaGD.Size = new System.Drawing.Size(16, 16);
+            this.lbMaGD.TabIndex = 1;
+            this.lbMaGD.Text = "...";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã giao dịch:";
             // 
             // CTrans
             // 
@@ -334,14 +466,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "CTrans";
-            this.Size = new System.Drawing.Size(869, 431);
+            this.Size = new System.Drawing.Size(863, 549);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTrans)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -367,5 +503,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private RJCodeAdvance.RJControls.RJButton btnTimKiem;
+        private System.Windows.Forms.CheckBox cbDate;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private RJCodeAdvance.RJControls.RJButton btnDetailGD;
+        private RJCodeAdvance.RJControls.RJButton btnPrintAllGD;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lbMaGD;
+        private System.Windows.Forms.Label label1;
+        private RJCodeAdvance.RJControls.RJButton btnPrintGD;
     }
 }

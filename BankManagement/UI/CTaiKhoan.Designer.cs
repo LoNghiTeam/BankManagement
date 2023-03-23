@@ -45,8 +45,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSua = new RJCodeAdvance.RJControls.RJButton();
             this.btnThem = new RJCodeAdvance.RJControls.RJButton();
+            this.btnSua = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBank)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,6 +58,7 @@
             // 
             this.dtgvBank.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvBank.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvBank.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgvBank.Location = new System.Drawing.Point(431, 0);
             this.dtgvBank.Name = "dtgvBank";
             this.dtgvBank.RowHeadersWidth = 51;
@@ -295,25 +296,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(830, 191);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSua.BorderRadius = 0;
-            this.btnSua.BorderSize = 0;
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(159, 3);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(150, 40);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextColor = System.Drawing.Color.White;
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -333,13 +315,32 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // TaiKhoanControl
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSua.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSua.BorderRadius = 0;
+            this.btnSua.BorderSize = 0;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(159, 3);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(150, 40);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextColor = System.Drawing.Color.White;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // CTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "TaiKhoanControl";
+            this.Name = "CTaiKhoan";
             this.Size = new System.Drawing.Size(836, 572);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBank)).EndInit();
             this.panel1.ResumeLayout(false);
