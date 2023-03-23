@@ -30,19 +30,16 @@
         {
             this.tbxTimKiem = new RJCodeAdvance.RJControls.RJTextBox();
             this.panelTimKiem = new System.Windows.Forms.Panel();
+            this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imenuRate = new FontAwesome.Sharp.IconMenuItem();
             this.tsmiSignin = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiChangePass = new System.Windows.Forms.ToolStripMenuItem();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.tsmiChangePass = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnTimKiem = new FontAwesome.Sharp.IconButton();
-            this.imenuRate = new FontAwesome.Sharp.IconMenuItem();
             this.btnTransHis = new FontAwesome.Sharp.IconButton();
             this.btnVayTien = new FontAwesome.Sharp.IconButton();
             this.btnGuiTietKiem = new FontAwesome.Sharp.IconButton();
@@ -53,8 +50,11 @@
             this.btnTransaction = new FontAwesome.Sharp.IconButton();
             this.btnTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
+            this.panelTitle = new System.Windows.Forms.Panel();
+            this.lblName = new System.Windows.Forms.Label();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
@@ -62,8 +62,8 @@
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbxTimKiem
@@ -95,11 +95,27 @@
             this.panelTimKiem.Controls.Add(this.tbxTimKiem);
             this.panelTimKiem.Controls.Add(this.btnTimKiem);
             this.panelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTimKiem.Location = new System.Drawing.Point(230, 53);
+            this.panelTimKiem.Location = new System.Drawing.Point(230, 55);
             this.panelTimKiem.Name = "panelTimKiem";
             this.panelTimKiem.Size = new System.Drawing.Size(932, 38);
             this.panelTimKiem.TabIndex = 8;
             this.panelTimKiem.Visible = false;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnTimKiem.IconColor = System.Drawing.Color.Black;
+            this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTimKiem.Location = new System.Drawing.Point(793, 0);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(139, 38);
+            this.btnTimKiem.TabIndex = 1;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // tìmKiếmToolStripMenuItem
             // 
@@ -115,6 +131,16 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
             this.editToolStripMenuItem.Text = "Sửa";
+            // 
+            // imenuRate
+            // 
+            this.imenuRate.IconChar = FontAwesome.Sharp.IconChar.Euro;
+            this.imenuRate.IconColor = System.Drawing.Color.Black;
+            this.imenuRate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.imenuRate.Name = "imenuRate";
+            this.imenuRate.Size = new System.Drawing.Size(213, 26);
+            this.imenuRate.Text = "Điều chỉnh lãi suất";
+            this.imenuRate.Click += new System.EventHandler(this.imenuRate_Click);
             // 
             // tsmiSignin
             // 
@@ -132,13 +158,20 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.fileToolStripMenuItem.Text = "Tài khoản";
             // 
+            // tsmiChangePass
+            // 
+            this.tsmiChangePass.Name = "tsmiChangePass";
+            this.tsmiChangePass.Size = new System.Drawing.Size(264, 26);
+            this.tsmiChangePass.Text = "Đổi mật khẩu";
+            this.tsmiChangePass.Click += new System.EventHandler(this.tsmiChangePass_Click);
+            // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.SystemColors.Control;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 91);
+            this.panelDesktop.Location = new System.Drawing.Point(230, 93);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(932, 497);
+            this.panelDesktop.Size = new System.Drawing.Size(932, 495);
             this.panelDesktop.TabIndex = 4;
             // 
             // menuStrip1
@@ -151,7 +184,7 @@
             this.tìmKiếmToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(230, 25);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(932, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(932, 30);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -175,75 +208,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 563);
             this.panelMenu.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnMenu);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 100);
-            this.panel1.TabIndex = 0;
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panelTitle.Controls.Add(this.lblName);
-            this.panelTitle.Controls.Add(this.btnMinimize);
-            this.panelTitle.Controls.Add(this.btnMaximize);
-            this.panelTitle.Controls.Add(this.btnClose);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1162, 25);
-            this.panelTitle.TabIndex = 6;
-            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblName.Location = new System.Drawing.Point(3, 4);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(46, 16);
-            this.lblName.TabIndex = 2;
-            this.lblName.Tag = "Welcome ";
-            this.lblName.Text = "Client";
-            // 
-            // tsmiChangePass
-            // 
-            this.tsmiChangePass.Name = "tsmiChangePass";
-            this.tsmiChangePass.Size = new System.Drawing.Size(264, 26);
-            this.tsmiChangePass.Text = "Đổi mật khẩu";
-            this.tsmiChangePass.Click += new System.EventHandler(this.tsmiChangePass_Click);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnTimKiem.IconColor = System.Drawing.Color.Black;
-            this.btnTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTimKiem.Location = new System.Drawing.Point(793, 0);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(139, 38);
-            this.btnTimKiem.TabIndex = 1;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // imenuRate
-            // 
-            this.imenuRate.IconChar = FontAwesome.Sharp.IconChar.Euro;
-            this.imenuRate.IconColor = System.Drawing.Color.Black;
-            this.imenuRate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.imenuRate.Name = "imenuRate";
-            this.imenuRate.Size = new System.Drawing.Size(224, 26);
-            this.imenuRate.Text = "Điều chỉnh lãi suất";
-            this.imenuRate.Click += new System.EventHandler(this.imenuRate_Click);
             // 
             // btnTransHis
             // 
@@ -486,6 +450,16 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnMenu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 100);
+            this.panel1.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BankManagement.Properties.Resources.Asset_2_4x;
@@ -511,6 +485,32 @@
             this.btnMenu.TabIndex = 1;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // panelTitle
+            // 
+            this.panelTitle.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panelTitle.Controls.Add(this.lblName);
+            this.panelTitle.Controls.Add(this.btnMinimize);
+            this.panelTitle.Controls.Add(this.btnMaximize);
+            this.panelTitle.Controls.Add(this.btnClose);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(1162, 25);
+            this.panelTitle.TabIndex = 6;
+            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblName.Location = new System.Drawing.Point(3, 4);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(46, 16);
+            this.lblName.TabIndex = 2;
+            this.lblName.Tag = "Welcome ";
+            this.lblName.Text = "Client";
             // 
             // btnMinimize
             // 
@@ -583,9 +583,9 @@
             this.menuStrip1.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

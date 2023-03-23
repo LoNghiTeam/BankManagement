@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankManagement.Model;
+using Microsoft.Reporting.WinForms;
 
 namespace BankManagement.UI
 {
     public partial class FPrintTrans : Form
     {
-        private GiaoDich _data;
-        public FPrintTrans(GiaoDich data)
+        private List<GiaoDich> _data;
+        public FPrintTrans(List<GiaoDich> data)
         {
             InitializeComponent();
             _data = data;
@@ -22,7 +23,12 @@ namespace BankManagement.UI
 
         private void FPrintTrans_Load(object sender, EventArgs e)
         {
-            
+            ReportDataSource datasource = new ReportDataSource("DataSet1", _data);
+            rpvTrans.LocalReport.DataSources.Clear();
+            rpvTrans.LocalReport.DataSources.Add(datasource);
+            rpvTrans.LocalReport.ReportPath = "RTrans.rdlc";
+            rpvTrans.LocalReport.ReportEmbeddedResource = "RTrans.rdlc";
+            this.rpvTrans.RefreshReport();
         }
     }
 }
