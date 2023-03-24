@@ -52,5 +52,6 @@ namespace BankManagement.Model
                 ngayApDung = value;
             }
         }
+
     }
 }
