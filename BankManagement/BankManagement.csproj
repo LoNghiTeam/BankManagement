@@ -64,6 +64,7 @@
     <Compile Include="Controller\ChuyenTien.cs" />
     <Compile Include="Controller\DangKy.cs" />
     <Compile Include="Controller\DangNhap.cs" />
+    <Compile Include="Controller\DieuChinhLaiSuat.cs" />
     <Compile Include="Controller\RutTien.cs" />
     <Compile Include="Controller\VayTien.cs" />
     <Compile Include="DAO\GiaoDichDAO.cs" />
