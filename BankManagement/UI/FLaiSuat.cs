@@ -17,6 +17,7 @@ namespace BankManagement
         int type;
         LaiSuat laiSuat = new LaiSuat();
         VayTien vayTien = new VayTien();
+        DieuChinhLaiSuat dieuChinh = new DieuChinhLaiSuat();
         public FLaiSuat()
         {
             InitializeComponent();
@@ -50,14 +51,44 @@ namespace BankManagement
 
             else
             {
+                type = 0;
                 tbxNewRate.Enabled = false;
-                lblRate.Text = String.Empty;
+                lblRate.Text = String.Empty; 
             }
         }
 
         private void tbxNewRate__TextChanged(object sender, EventArgs e)
         {
+             double rate;
+            
+            if(double.TryParse(tbxNewRate.Texts, out rate))
+            {
+                btnChange.Enabled = true;
+            }
+            else
+            {
+                btnChange.Enabled = false;
+            }
+        }
 
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            if(dieuChinh.dieuchinh(type, laiSuat, double.Parse(tbxNewRate.Texts)))
+            {
+                MessageBox.Show("Điều chỉnh thành công", "Thông báo", MessageBoxButtons.OK);
+                laiSuat = vayTien.GetLaiSuat();
+                if(type == 2)
+                {
+                    lblRate.Text = (laiSuat.LaiGui * 100).ToString() + "%";
+                }
+                else
+                {
+                    lblRate.Text = (laiSuat.LaiVay * 100).ToString() + "%";
+                }
+            }
+
+            else
+                MessageBox.Show("Điều chỉnh thất bại", "Thông báo", MessageBoxButtons.OK);
         }
     }
 }
