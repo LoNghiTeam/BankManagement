@@ -1,4 +1,5 @@
 ﻿using BankManagement.Controller;
+using BankManagement.DAO;
 using BankManagement.Model;
 using System;
 using System.Collections.Generic;
@@ -17,9 +18,12 @@ namespace BankManagement.UI
     {
         TaiKhoan taiKhoan = new TaiKhoan();
         VayTien vayTien = new VayTien();
+        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();    
+        LaiSuatDAO laiSuatDAO = new LaiSuatDAO();
         int thoigian;
         double tien;
         LaiSuat laiSuat = new LaiSuat();
+        TinhLai tinhLai = new TinhLai();
         ChuyenTien chuyenTien = new ChuyenTien();
         public FVayTien()
         {
@@ -53,7 +57,7 @@ namespace BankManagement.UI
             int.TryParse(tbSoTK.Texts.Trim(), out soTK);
 
             btnVayTien.Enabled = false;
-            taiKhoan = vayTien.TimNguoiNhan(soTK);
+            taiKhoan = taiKhoanDAO.TimSoTK(soTK);
             if (taiKhoan != null)
             {
                 if (lblTong.Text != "")
@@ -93,15 +97,14 @@ namespace BankManagement.UI
         private void cbThoiGian_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             
-            laiSuat = vayTien.GetLaiSuat();
+            laiSuat = laiSuatDAO.find();
             double lai = 0;
             vayTien.TinhlaichangecbThoiGian(ref thoigian, cbThoiGian.Texts.ToString(), ref lai);
             lblLaiSuat.Text = lai.ToString() + "%";
             if (lblTong != null)
             {
-
                 double.TryParse(tbTien.Texts.Trim(), out tien);
-                tien += vayTien.TinhTienLai(tien, lai / 100, thoigian);
+                tien += tinhLai.TinhTienLai(tien, lai / 100, thoigian);
                 lblTong.Text = tien.ToString() + "VNĐ";
                 btnVayTien.Enabled = true;
             }
@@ -112,7 +115,7 @@ namespace BankManagement.UI
             int soTK = -1;
             int.TryParse(tbSoTK.Texts.Trim(), out soTK);
             if (vayTien.TaoKhoanVay(soTK, DateTime.Now, thoigian, tien, laiSuat.MaLS, 0, 1))
-                if(chuyenTien.GiaoDichTien(soTK, tien))
+                if(chuyenTien.GiaoDichTienNhan(soTK, tien))
                     if(chuyenTien.TaoGiaoDich(-1, soTK, DateTime.Now, tien))
                         MessageBox.Show("Vay tiền thành công", "Thông báo", MessageBoxButtons.OK);
 
@@ -121,5 +124,6 @@ namespace BankManagement.UI
                 logging.Taikhoan.Tien += tien;
             }
         }
+
     }
 }

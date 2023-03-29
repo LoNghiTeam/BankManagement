@@ -48,13 +48,25 @@ namespace BankManagement.Controller
             }
             return false;
         }
-        public bool GiaoDichTien(int nguoinhan, double tiengiaodich)
+        public bool GiaoDichTienNhan(int nguoinhan, double tiengiaodich)
         {
             double tiennhan = taiKhoanDAO.TimTien(nguoinhan);
             if ( tiennhan != -1)
             {
                 tiennhan += tiengiaodich;
                 if (taiKhoanDAO.CapNhatTien(nguoinhan, tiennhan))
+                    return true;
+                return false;
+            }
+            return false;
+        }
+        public bool GiaoDichTienGui(int nguoigui, double tiengiaodich)
+        {
+            double tiennhan = taiKhoanDAO.TimTien(nguoigui);
+            if (tiennhan != -1)
+            {
+                tiennhan -= tiengiaodich;
+                if (taiKhoanDAO.CapNhatTien(nguoigui, tiennhan))
                     return true;
                 return false;
             }

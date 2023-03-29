@@ -52,6 +52,21 @@ CREATE TABLE KhoanVay (
 INSERT INTO KhoanVay VALUES (1,'2022-11-16 08:19:41','2023-4-3 08:19:41', 100000, 1,1,0);
 INSERT INTO KhoanVay VALUES (2,'2023-4-3 08:19:41','2024-4-3 08:19:41',200000, 3,0,1);
 
+CREATE TABLE SoTietKiem (
+         MaSTK INT IDENTITY(1,1) PRIMARY KEY,
+         SoTK int,
+         TenSo varchar(1000),
+         NgayVay date,
+         Ngayhan date,
+         Tien FLOAT,
+         MaLS INT,
+         TinhTrang int
+);
+
+INSERT INTO SoTietKiem (SoTK,TenSo, NgayVay, Ngayhan, Tien, MaLS, TinhTrang) VALUES (1,'','2022-11-16','2023-4-3', 100000, 1,0);
+INSERT INTO SoTietKiem (SoTK,TenSo, NgayVay, Ngayhan, Tien, MaLS, TinhTrang) VALUES (1,'','2022-11-15','2023-4-3', 100000, 1,0);
+INSERT INTO SoTietKiem (SoTK,TenSo, NgayVay, Ngayhan, Tien, MaLS, TinhTrang) VALUES (1,'','2022-11-13','2023-4-3', 100000, 1,0);
+
 
 select * from LaiSuat
 select * from KhoanVay

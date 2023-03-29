@@ -27,7 +27,7 @@ namespace BankManagement
                 {
                     if (chuyenTien.TaoGiaoDich(0, int.Parse(tbSoTK.Text), DateTime.Now, result))
                     {
-                        if (chuyenTien.GiaoDichTien(int.Parse(tbSoTK.Text), result))
+                        if (chuyenTien.GiaoDichTienNhan(int.Parse(tbSoTK.Text), result))
                         {
                             logging.Taikhoan.Tien += result;
                             lblSoDu.Text = logging.Taikhoan.Tien.ToString() + " VND";

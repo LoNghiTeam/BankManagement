@@ -98,7 +98,6 @@ namespace BankManagement.DAO
                     taiKhoan.IsAdmin = (int)reader["isAdmin"];
                     taiKhoan.Tien = (double)reader["Tien"];
                     return taiKhoan;
-                    reader.Close();
                 }
             }
             catch (Exception ex)
@@ -124,7 +123,15 @@ namespace BankManagement.DAO
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
+                    taiKhoan.SoTK = (int)reader["SoTK"];
+                    taiKhoan.UserName = reader["UserName"].ToString();
+                    taiKhoan.Pass = reader["Pass"].ToString();
                     taiKhoan.HoTen = reader["HoTen"].ToString();
+                    taiKhoan.NgaySinh = (DateTime)reader["NgaySinh"];
+                    taiKhoan.Cccd = (string)reader["Cccd"];
+                    taiKhoan.DiaChi = reader["Diachi"].ToString();
+                    taiKhoan.SoDienThoai = reader["Sodienthoai"].ToString();
+                    taiKhoan.IsAdmin = (int)reader["isAdmin"];
                     taiKhoan.Tien = (double)reader["Tien"];
                     return taiKhoan;
                 }
