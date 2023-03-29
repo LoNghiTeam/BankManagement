@@ -368,5 +368,11 @@ namespace BankManagement.UI
             FChangePass fChangePass = new FChangePass();
             fChangePass.ShowDialog();
         }
+
+        private void btnQLSTK_Click(object sender, EventArgs e)
+        {
+            FChiTietGTK chiTietGTK = new FChiTietGTK();
+            chiTietGTK.ShowDialog();
+        }
     }
 }

@@ -24,19 +24,22 @@ namespace BankManagement.DAO
         }
         public DataTable LayDanhSachGD()
         {
-            string sqlStr = string.Format("Select * from GiaoDich where NguoiGui >= 0 and NguoiNhan >= 0");
+            string sqlStr = string.Format("Select * from GiaoDich");
             return conn.LayDanhSach(sqlStr);
+        }
+        public string LayTenKH(int maTK)
+        {
+            string sqlStr = string.Format("Select HoTen from TaiKhoan WHERE SoTk = '{0}'",maTK);
+            return conn.LayTen(sqlStr);
         }
         public DataTable TimKiemGDCB(string text, string option)
         {
-            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE "+option+
-                " and NguoiGui >= 0 and NguoiNhan >= 0", text);
+            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE "+option, text);
             return conn.LayDanhSach(sqlStr);
         }
         public DataTable TimKiemGDNC(string option)
-        {
-            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE " + option+
-                " and NguoiGui >= 0 and NguoiNhan >= 0");
+        { 
+            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE " + option);
             return conn.LayDanhSach(sqlStr);
         }
     }

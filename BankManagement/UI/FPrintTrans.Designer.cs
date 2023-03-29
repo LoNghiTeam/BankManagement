@@ -28,32 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.giaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bankDataSet = new BankManagement.UI.bankDataSet();
-            this.giaoDichTableAdapter = new BankManagement.UI.bankDataSetTableAdapters.GiaoDichTableAdapter();
             this.rpvTrans = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.giaoDichBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // giaoDichBindingSource
-            // 
-            this.giaoDichBindingSource.DataMember = "GiaoDich";
-            this.giaoDichBindingSource.DataSource = this.bankDataSet;
-            // 
-            // bankDataSet
-            // 
-            this.bankDataSet.DataSetName = "bankDataSet";
-            this.bankDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // giaoDichTableAdapter
-            // 
-            this.giaoDichTableAdapter.ClearBeforeFill = true;
             // 
             // rpvTrans
             // 
+            this.rpvTrans.AutoScroll = true;
+            this.rpvTrans.AutoSize = true;
             this.rpvTrans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpvTrans.LocalReport.ReportEmbeddedResource = "BankManagement.RTrans.rdlc";
             this.rpvTrans.Location = new System.Drawing.Point(0, 0);
             this.rpvTrans.Name = "rpvTrans";
             this.rpvTrans.ServerReport.BearerToken = null;
@@ -69,17 +52,15 @@
             this.Name = "FPrintTrans";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FPrintTrans";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FPrintTrans_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.giaoDichBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bankDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private bankDataSet bankDataSet;
-        private System.Windows.Forms.BindingSource giaoDichBindingSource;
-        private bankDataSetTableAdapters.GiaoDichTableAdapter giaoDichTableAdapter;
+
         private Microsoft.Reporting.WinForms.ReportViewer rpvTrans;
     }
 }

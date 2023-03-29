@@ -82,11 +82,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bankDataSet.cs">
+      <DependentUpon>bankDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controller\GuiTien.cs" />
     <Compile Include="Controller\TinhLai.cs" />
     <Compile Include="DAO\SoTietKiemDAO.cs" />
     <Compile Include="Model\SoTietKiem.cs" />
-    <Compile Include="UI\bankDataSet.Designer.cs">
+    <Compile Include="bankDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>bankDataSet.xsd</DependentUpon>
@@ -112,6 +115,18 @@
     </Compile>
     <Compile Include="UI\FChangePass.Designer.cs">
       <DependentUpon>FChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FChiTietGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FChiTietGD.Designer.cs">
+      <DependentUpon>FChiTietGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FChiTietGTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FChiTietGTK.Designer.cs">
+      <DependentUpon>FChiTietGTK.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FHomeNV.cs">
       <SubType>Form</SubType>
@@ -200,12 +215,20 @@
     <Compile Include="UI\CXinChao.Designer.cs">
       <DependentUpon>CXinChao.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\RTrans.rdlc" />
+    <EmbeddedResource Include="RTrans.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\CTrans.resx">
       <DependentUpon>CTrans.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FChangePass.resx">
       <DependentUpon>FChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FChiTietGD.resx">
+      <DependentUpon>FChiTietGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FChiTietGTK.resx">
+      <DependentUpon>FChiTietGTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FHomeKH.resx">
       <DependentUpon>FHomeKH.cs</DependentUpon>
@@ -256,16 +279,15 @@
     <EmbeddedResource Include="UI\CXinChao.resx">
       <DependentUpon>CXinChao.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\BankManagement.Model.GiaoDich.datasource" />
-    <None Include="UI\bankDataSet.xsc">
+    <None Include="bankDataSet.xsc">
       <DependentUpon>bankDataSet.xsd</DependentUpon>
     </None>
-    <None Include="UI\bankDataSet.xsd">
+    <None Include="bankDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>bankDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="UI\bankDataSet.xss">
+    <None Include="bankDataSet.xss">
       <DependentUpon>bankDataSet.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram1.cd" />

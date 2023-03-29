@@ -61,6 +61,7 @@
             this.dtgvBank.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgvBank.Location = new System.Drawing.Point(431, 0);
             this.dtgvBank.Name = "dtgvBank";
+            this.dtgvBank.ReadOnly = true;
             this.dtgvBank.RowHeadersWidth = 51;
             this.dtgvBank.RowTemplate.Height = 24;
             this.dtgvBank.Size = new System.Drawing.Size(405, 360);

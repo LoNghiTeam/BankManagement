@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace BankManagement.UI {
+namespace BankManagement {
     
     
     /// <summary>
@@ -763,7 +763,7 @@ namespace BankManagement.UI {
         }
     }
 }
-namespace BankManagement.UI.bankDataSetTableAdapters {
+namespace BankManagement.bankDataSetTableAdapters {
     
     
     /// <summary>
@@ -950,7 +950,7 @@ SELECT MaGD, NguoiGui, NguoiNhan, NgayGD, Tien FROM GiaoDich WHERE (MaGD = @MaGD
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MaGD, NguoiGui, NguoiNhan, NgayGD, Tien FROM dbo.GiaoDich";
+            this._commandCollection[0].CommandText = "SELECT MaGD, NguoiGui, NguoiNhan, NgayGD, Tien FROM GiaoDich";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

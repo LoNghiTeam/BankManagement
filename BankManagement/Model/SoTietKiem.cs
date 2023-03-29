@@ -8,17 +8,6 @@ namespace BankManagement.Model
 {
     internal class SoTietKiem
     {
-        public SoTietKiem() { }
-
-        public SoTietKiem(int soTK, string tenSo, DateTime ngayVay, DateTime ngayHan, double tien, int maLS, int tinhTrang) {
-            this.soTK = soTK;
-            this.tenSo = tenSo;
-            this.ngayVay = ngayVay;
-            this.ngayHan = ngayHan;
-            this.tien = tien;
-            this.maLS = maLS;
-            this.tinhTrang = tinhTrang;
-        }
         private int maSTK;
         private int soTK;
         private string tenSo;
@@ -27,6 +16,31 @@ namespace BankManagement.Model
         private double tien;
         private int maLS;
         private int tinhTrang;
+        public SoTietKiem() { }
+
+        public SoTietKiem(int maSTK, int soTK, string tenSo, DateTime ngayVay, DateTime ngayHan, double tien, int maLS, int tinhTrang)
+        {
+            this.MaSTK = maSTK;
+            this.SoTK = soTK;
+            this.TenSo = tenSo;
+            this.NgayVay = ngayVay;
+            this.NgayHan = ngayHan;
+            this.Tien = tien;
+            this.MaLS = maLS;
+            this.TinhTrang = tinhTrang;
+        }
+
+        public SoTietKiem(int soTK, string tenSo, DateTime ngayVay, DateTime ngayHan, double tien, int maLS, int tinhTrang)
+        {
+            this.soTK = soTK;
+            this.tenSo = tenSo;
+            this.ngayVay = ngayVay;
+            this.ngayHan = ngayHan;
+            this.tien = tien;
+            this.maLS = maLS;
+            this.tinhTrang = tinhTrang;
+        }
+        
 
         public int MaSTK
         {
@@ -99,8 +113,8 @@ namespace BankManagement.Model
 
     }
 }
-    
 
-    
+
+
 
 
