@@ -21,7 +21,7 @@ namespace BankManagement.Model
         {
             this.maGD = maGD;
             this.nguoiGui = nguoiGui;
-            this.tien = tien;
+            this.NguoiNhan = nguoiNhan;
             this.ngayGD = ngayGD;
             this.tien = tien;
         }
@@ -31,7 +31,6 @@ namespace BankManagement.Model
             this.nguoiNhan = nguoiNhan;
             this.tien = tien;
             this.ngayGD = ngayGD;
-            
         }
 
         public int MaGD

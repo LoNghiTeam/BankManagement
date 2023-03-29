@@ -1,6 +1,7 @@
 ﻿using BankManagement.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,18 @@ namespace BankManagement.DAO
                 return true;
             }
             return false;
+        }
+        public void Sua(SoTietKiem stk)
+        {
+            string sqlStr = string.Format(
+                "UPDATE SoTietKiem SET SoTK = '{0}', TenSo='{1}', NgayVay='{2}', Ngayhan='{3}', Tien='{4}', MaLS='{5}', TinhTrang='{6}' WHERE MaSTK = '{7}'",
+                stk.SoTK, stk.TenSo, stk.NgayVay, stk.NgayHan, stk.Tien, stk.MaLS, stk.TinhTrang, stk.MaSTK);
+            conn.Execute(sqlStr);
+        }
+        public DataTable LayDanhSachSTK()
+        {
+            string sqlStr = string.Format("SELECT * FROM SoTietKiem");
+            return conn.LayDanhSach(sqlStr);
         }
     }
 }

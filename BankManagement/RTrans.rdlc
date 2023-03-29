@@ -6,19 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
+              <Width>0.936in</Width>
+            </TablixColumn>
+            <TablixColumn>
               <Width>0.836in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16933in</Width>
+              <Width>0.94433in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16933in</Width>
+              <Width>1.27767in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.50267in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.16933in</Width>
+              <Width>1.336in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -34,8 +34,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ma GD</Value>
-                              <Style />
+                              <Value>Mã giao dịch</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -47,6 +50,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -64,8 +68,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nguoi Gui</Value>
-                              <Style />
+                              <Value>Người gửi</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -77,6 +84,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -94,8 +102,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nguoi Nhan</Value>
-                              <Style />
+                              <Value>Người nhận</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -107,6 +118,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -124,8 +136,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ngay GD</Value>
-                              <Style />
+                              <Value>Ngày giao dịch</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -137,6 +152,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -154,8 +170,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tien</Value>
-                              <Style />
+                              <Value>Số tiền giao dịch</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -167,6 +186,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -354,19 +374,26 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Height>0.69667in</Height>
-        <Width>5.84667in</Width>
+        <Top>0.25833in</Top>
+        <Left>0.13833in</Left>
+        <Height>0.69668in</Height>
+        <Width>5.33in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <TextAlign>Center</TextAlign>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.68333in</Height>
-    <Style />
+    <Height>2.72167in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
   </Body>
-  <Width>5.84667in</Width>
+  <Width>6.91833in</Width>
   <Page>
     <PageHeader>
       <Height>0.70833in</Height>
@@ -445,9 +472,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>0.06944in</Top>
-          <Left>2.00533in</Left>
+          <Left>2.397in</Left>
           <Height>0.25in</Height>
-          <Width>2.03567in</Width>
+          <Width>1.76912in</Width>
           <Style>
             <Border>
               <Style>None</Style>

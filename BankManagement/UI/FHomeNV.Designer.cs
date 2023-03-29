@@ -58,6 +58,7 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.btnQLSTK = new FontAwesome.Sharp.IconButton();
             this.panelTimKiem.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -95,7 +96,7 @@
             this.panelTimKiem.Controls.Add(this.tbxTimKiem);
             this.panelTimKiem.Controls.Add(this.btnTimKiem);
             this.panelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTimKiem.Location = new System.Drawing.Point(230, 55);
+            this.panelTimKiem.Location = new System.Drawing.Point(230, 53);
             this.panelTimKiem.Name = "panelTimKiem";
             this.panelTimKiem.Size = new System.Drawing.Size(932, 38);
             this.panelTimKiem.TabIndex = 8;
@@ -169,9 +170,9 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.SystemColors.Control;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 93);
+            this.panelDesktop.Location = new System.Drawing.Point(230, 91);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(932, 495);
+            this.panelDesktop.Size = new System.Drawing.Size(932, 497);
             this.panelDesktop.TabIndex = 4;
             // 
             // menuStrip1
@@ -184,7 +185,7 @@
             this.tìmKiếmToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(230, 25);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(932, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(932, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -192,6 +193,7 @@
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panelMenu.Controls.Add(this.btnQLSTK);
             this.panelMenu.Controls.Add(this.btnTransHis);
             this.panelMenu.Controls.Add(this.btnVayTien);
             this.panelMenu.Controls.Add(this.btnGuiTietKiem);
@@ -563,6 +565,30 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnQLSTK
+            // 
+            this.btnQLSTK.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLSTK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLSTK.FlatAppearance.BorderSize = 0;
+            this.btnQLSTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLSTK.ForeColor = System.Drawing.Color.White;
+            this.btnQLSTK.IconChar = FontAwesome.Sharp.IconChar.SackDollar;
+            this.btnQLSTK.IconColor = System.Drawing.Color.White;
+            this.btnQLSTK.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLSTK.IconSize = 30;
+            this.btnQLSTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSTK.Location = new System.Drawing.Point(0, 420);
+            this.btnQLSTK.Name = "btnQLSTK";
+            this.btnQLSTK.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnQLSTK.Size = new System.Drawing.Size(230, 40);
+            this.btnQLSTK.TabIndex = 12;
+            this.btnQLSTK.Tag = "   Quản lý sổ tiết kiệm";
+            this.btnQLSTK.Text = "   Quản lý sổ tiết kiệm";
+            this.btnQLSTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSTK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLSTK.UseVisualStyleBackColor = false;
+            this.btnQLSTK.Click += new System.EventHandler(this.btnQLSTK_Click);
+            // 
             // FHomeNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -623,5 +649,6 @@
         private FontAwesome.Sharp.IconButton btnTransHis;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.ToolStripMenuItem tsmiChangePass;
+        private FontAwesome.Sharp.IconButton btnQLSTK;
     }
 }
