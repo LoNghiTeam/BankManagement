@@ -145,6 +145,9 @@ namespace BankManagement.UI
                         this.Padding = new Padding(borderSize);
                     break;
             }
+            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+
+
         }
         private void CollapseMenu()
         {
@@ -191,6 +194,7 @@ namespace BankManagement.UI
                 this.WindowState = FormWindowState.Normal;
                 this.Size = formSize;
             }
+            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -371,8 +375,11 @@ namespace BankManagement.UI
 
         private void btnQLSTK_Click(object sender, EventArgs e)
         {
-            FChiTietGTK chiTietGTK = new FChiTietGTK();
-            chiTietGTK.ShowDialog();
+            userControl = new CSoTietKiem();
+            CSoTietKiem cSoTK = userControl as CSoTietKiem;
+            cSoTK.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(cSoTK);
         }
     }
 }

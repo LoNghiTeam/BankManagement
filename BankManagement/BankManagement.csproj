@@ -215,7 +215,19 @@
     <Compile Include="UI\CXinChao.Designer.cs">
       <DependentUpon>CXinChao.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CSoTietKiem.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UI\CSoTietKiem.Designer.cs">
+      <DependentUpon>CSoTietKiem.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <EmbeddedResource Include="RTrans.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CSoTietKiem.resx">
+      <DependentUpon>CSoTietKiem.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CTrans.resx">

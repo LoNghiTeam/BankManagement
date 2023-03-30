@@ -52,6 +52,10 @@
             this.cbNgNhan = new System.Windows.Forms.CheckBox();
             this.cbTien = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnDSLoaiGD = new RJCodeAdvance.RJControls.RJButton();
+            this.btnPrintAllGD = new RJCodeAdvance.RJControls.RJButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDetailGD = new RJCodeAdvance.RJControls.RJButton();
@@ -59,25 +63,22 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbMaGD = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDSLoaiGD = new RJCodeAdvance.RJControls.RJButton();
-            this.btnPrintAllGD = new RJCodeAdvance.RJControls.RJButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTrans)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.dtgvTrans);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
@@ -406,6 +407,68 @@
             this.panel2.Size = new System.Drawing.Size(863, 139);
             this.panel2.TabIndex = 6;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.flowLayoutPanel3);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(439, 139);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Hành động khác";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Controls.Add(this.btnDSLoaiGD);
+            this.flowLayoutPanel3.Controls.Add(this.btnPrintAllGD);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 18);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(433, 118);
+            this.flowLayoutPanel3.TabIndex = 0;
+            // 
+            // btnDSLoaiGD
+            // 
+            this.btnDSLoaiGD.AutoSize = true;
+            this.btnDSLoaiGD.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDSLoaiGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDSLoaiGD.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDSLoaiGD.BorderRadius = 0;
+            this.btnDSLoaiGD.BorderSize = 0;
+            this.btnDSLoaiGD.FlatAppearance.BorderSize = 0;
+            this.btnDSLoaiGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDSLoaiGD.ForeColor = System.Drawing.Color.White;
+            this.btnDSLoaiGD.Location = new System.Drawing.Point(3, 3);
+            this.btnDSLoaiGD.Name = "btnDSLoaiGD";
+            this.btnDSLoaiGD.Size = new System.Drawing.Size(427, 40);
+            this.btnDSLoaiGD.TabIndex = 1;
+            this.btnDSLoaiGD.Tag = "Danh sách ";
+            this.btnDSLoaiGD.TextColor = System.Drawing.Color.White;
+            this.btnDSLoaiGD.UseVisualStyleBackColor = false;
+            this.btnDSLoaiGD.Visible = false;
+            this.btnDSLoaiGD.Click += new System.EventHandler(this.btnDSLoaiGD_Click);
+            // 
+            // btnPrintAllGD
+            // 
+            this.btnPrintAllGD.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPrintAllGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPrintAllGD.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPrintAllGD.BorderRadius = 0;
+            this.btnPrintAllGD.BorderSize = 0;
+            this.btnPrintAllGD.FlatAppearance.BorderSize = 0;
+            this.btnPrintAllGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintAllGD.ForeColor = System.Drawing.Color.White;
+            this.btnPrintAllGD.Location = new System.Drawing.Point(3, 49);
+            this.btnPrintAllGD.Name = "btnPrintAllGD";
+            this.btnPrintAllGD.Size = new System.Drawing.Size(427, 40);
+            this.btnPrintAllGD.TabIndex = 1;
+            this.btnPrintAllGD.Text = "In danh sách giao dịch";
+            this.btnPrintAllGD.TextColor = System.Drawing.Color.White;
+            this.btnPrintAllGD.UseVisualStyleBackColor = false;
+            this.btnPrintAllGD.Click += new System.EventHandler(this.btnPrintAllGD_Click);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.GhostWhite;
@@ -422,7 +485,6 @@
             this.flowLayoutPanel2.Controls.Add(this.btnPrintGD);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Enabled = false;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 28);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(424, 97);
@@ -494,69 +556,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã giao dịch:";
             // 
-            // btnDSLoaiGD
-            // 
-            this.btnDSLoaiGD.AutoSize = true;
-            this.btnDSLoaiGD.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDSLoaiGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDSLoaiGD.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDSLoaiGD.BorderRadius = 0;
-            this.btnDSLoaiGD.BorderSize = 0;
-            this.btnDSLoaiGD.FlatAppearance.BorderSize = 0;
-            this.btnDSLoaiGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDSLoaiGD.ForeColor = System.Drawing.Color.White;
-            this.btnDSLoaiGD.Location = new System.Drawing.Point(3, 3);
-            this.btnDSLoaiGD.Name = "btnDSLoaiGD";
-            this.btnDSLoaiGD.Size = new System.Drawing.Size(430, 40);
-            this.btnDSLoaiGD.TabIndex = 1;
-            this.btnDSLoaiGD.Tag = "Danh sách ";
-            this.btnDSLoaiGD.TextColor = System.Drawing.Color.White;
-            this.btnDSLoaiGD.UseVisualStyleBackColor = false;
-            this.btnDSLoaiGD.Visible = false;
-            this.btnDSLoaiGD.Click += new System.EventHandler(this.btnDSLoaiGD_Click);
-            // 
-            // btnPrintAllGD
-            // 
-            this.btnPrintAllGD.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPrintAllGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPrintAllGD.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPrintAllGD.BorderRadius = 0;
-            this.btnPrintAllGD.BorderSize = 0;
-            this.btnPrintAllGD.FlatAppearance.BorderSize = 0;
-            this.btnPrintAllGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintAllGD.ForeColor = System.Drawing.Color.White;
-            this.btnPrintAllGD.Location = new System.Drawing.Point(3, 49);
-            this.btnPrintAllGD.Name = "btnPrintAllGD";
-            this.btnPrintAllGD.Size = new System.Drawing.Size(430, 40);
-            this.btnPrintAllGD.TabIndex = 1;
-            this.btnPrintAllGD.Text = "In danh sách giao dịch";
-            this.btnPrintAllGD.TextColor = System.Drawing.Color.White;
-            this.btnPrintAllGD.UseVisualStyleBackColor = false;
-            this.btnPrintAllGD.Click += new System.EventHandler(this.btnPrintAllGD_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.flowLayoutPanel3);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(439, 139);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Hành động khác";
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.Controls.Add(this.btnDSLoaiGD);
-            this.flowLayoutPanel3.Controls.Add(this.btnPrintAllGD);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 18);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(433, 118);
-            this.flowLayoutPanel3.TabIndex = 0;
-            // 
             // CTrans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -573,13 +572,13 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
