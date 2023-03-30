@@ -9,14 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace BankManagement.UI
 {
-    public partial class FChiTietGTK : Form
+    public partial class CSoTietKiem : UserControl
     {
         SoTietKiemDAO stkDAO = new SoTietKiemDAO();
-        public FChiTietGTK()
+        public CSoTietKiem()
         {
             InitializeComponent();
             this.dtgvGuiTK.Size = new Size(Width, Height);
@@ -56,48 +55,6 @@ namespace BankManagement.UI
         {
             FTietKiem tietKiem = new FTietKiem();
             tietKiem.ShowDialog();
-        }
-
-        private void btnSuaSTK_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                SoTietKiem stk = new SoTietKiem(
-                                Int32.Parse(tbxMaSo.Texts),
-                                Int32.Parse(tbxSTK.Texts),
-                                tbxTenSo.Texts,
-                                dpNgayVay.Value,
-                                dpNgayHan.Value,
-                                Double.Parse(tbxTien.Texts),
-                                Int32.Parse(tbxMaLS.Texts),
-                                Int32.Parse(tbxTinhTrang.Texts));
-
-                if (IsValid(stk))
-                {
-                    stkDAO.Sua(stk);
-                }
-
-                HienThiDanhSach();
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Xảy ra lỗi: "+ex);
-            }
-        }
-        bool IsValid(SoTietKiem stk)
-        {
-            if (string.IsNullOrWhiteSpace(stk.MaSTK.ToString()) ||
-                string.IsNullOrWhiteSpace(stk.SoTK.ToString()) ||
-                string.IsNullOrWhiteSpace(stk.TenSo.ToString()) ||
-                string.IsNullOrWhiteSpace(stk.Tien.ToString()) ||
-                string.IsNullOrWhiteSpace(stk.MaLS.ToString()) ||
-                string.IsNullOrWhiteSpace(stk.TinhTrang.ToString()) ||
-                string.IsNullOrWhiteSpace(stk.NgayVay.ToString()) ||
-                string.IsNullOrWhiteSpace(stk.NgayHan.ToString()))
-            {
-                MessageBox.Show("Không được để trống!");
-                return false;
-            }
-            return true;
         }
     }
 }

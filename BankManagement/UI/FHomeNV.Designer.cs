@@ -40,6 +40,7 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnQLSTK = new FontAwesome.Sharp.IconButton();
             this.btnTransHis = new FontAwesome.Sharp.IconButton();
             this.btnVayTien = new FontAwesome.Sharp.IconButton();
             this.btnGuiTietKiem = new FontAwesome.Sharp.IconButton();
@@ -58,7 +59,6 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.btnQLSTK = new FontAwesome.Sharp.IconButton();
             this.panelTimKiem.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -210,6 +210,30 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 563);
             this.panelMenu.TabIndex = 5;
+            // 
+            // btnQLSTK
+            // 
+            this.btnQLSTK.BackColor = System.Drawing.Color.Transparent;
+            this.btnQLSTK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQLSTK.FlatAppearance.BorderSize = 0;
+            this.btnQLSTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLSTK.ForeColor = System.Drawing.Color.White;
+            this.btnQLSTK.IconChar = FontAwesome.Sharp.IconChar.SackDollar;
+            this.btnQLSTK.IconColor = System.Drawing.Color.White;
+            this.btnQLSTK.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnQLSTK.IconSize = 30;
+            this.btnQLSTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSTK.Location = new System.Drawing.Point(0, 420);
+            this.btnQLSTK.Name = "btnQLSTK";
+            this.btnQLSTK.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnQLSTK.Size = new System.Drawing.Size(230, 40);
+            this.btnQLSTK.TabIndex = 12;
+            this.btnQLSTK.Tag = "   Quản lý sổ tiết kiệm";
+            this.btnQLSTK.Text = "   Quản lý sổ tiết kiệm";
+            this.btnQLSTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLSTK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLSTK.UseVisualStyleBackColor = false;
+            this.btnQLSTK.Click += new System.EventHandler(this.btnQLSTK_Click);
             // 
             // btnTransHis
             // 
@@ -564,30 +588,6 @@
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnQLSTK
-            // 
-            this.btnQLSTK.BackColor = System.Drawing.Color.Transparent;
-            this.btnQLSTK.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLSTK.FlatAppearance.BorderSize = 0;
-            this.btnQLSTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQLSTK.ForeColor = System.Drawing.Color.White;
-            this.btnQLSTK.IconChar = FontAwesome.Sharp.IconChar.SackDollar;
-            this.btnQLSTK.IconColor = System.Drawing.Color.White;
-            this.btnQLSTK.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnQLSTK.IconSize = 30;
-            this.btnQLSTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLSTK.Location = new System.Drawing.Point(0, 420);
-            this.btnQLSTK.Name = "btnQLSTK";
-            this.btnQLSTK.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnQLSTK.Size = new System.Drawing.Size(230, 40);
-            this.btnQLSTK.TabIndex = 12;
-            this.btnQLSTK.Tag = "   Quản lý sổ tiết kiệm";
-            this.btnQLSTK.Text = "   Quản lý sổ tiết kiệm";
-            this.btnQLSTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLSTK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnQLSTK.UseVisualStyleBackColor = false;
-            this.btnQLSTK.Click += new System.EventHandler(this.btnQLSTK_Click);
             // 
             // FHomeNV
             // 

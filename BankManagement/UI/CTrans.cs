@@ -267,7 +267,7 @@ namespace BankManagement
         {
             if (cbbLoaiGD.SelectedIndex == 2)
             {
-                FChiTietGTK chiTietGTK = new FChiTietGTK();
+                FSoTietKiem chiTietGTK = new FSoTietKiem();
                 chiTietGTK.ShowDialog();
             }
         }
