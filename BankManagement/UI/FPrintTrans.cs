@@ -23,15 +23,11 @@ namespace BankManagement.UI
 
         private void FPrintTrans_Load(object sender, EventArgs e)
         {
-            rpvTrans.SetDisplayMode(DisplayMode.PrintLayout);
-            rpvTrans.ZoomMode = ZoomMode.Percent;
-            rpvTrans.ZoomPercent = 100;
-            rpvTrans.Show();
             ReportDataSource datasource = new ReportDataSource("DataSet1", _data);
             rpvTrans.LocalReport.DataSources.Clear();
-            rpvTrans.LocalReport.ReportPath = Application.StartupPath + "\\RTrans.rdlc";
-            //rpvTrans.LocalReport.ReportEmbeddedResource = "RTrans.rdlc";
             rpvTrans.LocalReport.DataSources.Add(datasource);
+            rpvTrans.LocalReport.ReportPath = "RTrans.rdlc";
+            rpvTrans.LocalReport.ReportEmbeddedResource = "RTrans.rdlc";
             this.rpvTrans.RefreshReport();
         }
     }

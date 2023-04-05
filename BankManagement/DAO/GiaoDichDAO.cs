@@ -14,8 +14,8 @@ namespace BankManagement.DAO
         public GiaoDichDAO() { }
         public bool TaoGD(GiaoDich giaoDich)
         {
-            string SQL = string.Format("INSERT INTO GiaoDich(NguoiGui, NguoiNhan, NgayGD, Tien) VALUES ('{0}', '{1}', '{2}', '{3}');",
-                giaoDich.NguoiGui, giaoDich.NguoiNhan, giaoDich.NgayGD, giaoDich.Tien);
+            string SQL = string.Format("INSERT INTO GiaoDich(NguoiGui, NguoiNhan, NgayGD, Tien, LoaiGD) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
+                giaoDich.NguoiGui, giaoDich.NguoiNhan, giaoDich.NgayGD, giaoDich.Tien, giaoDich.Loai);
             if (conn.Execute(SQL))
             {
                 return true;
@@ -24,22 +24,19 @@ namespace BankManagement.DAO
         }
         public DataTable LayDanhSachGD()
         {
-            string sqlStr = string.Format("Select * from GiaoDich");
+            string sqlStr = string.Format("Select * from GiaoDich where LoaiGD = 1");
             return conn.LayDanhSach(sqlStr);
-        }
-        public string LayTenKH(int maTK)
-        {
-            string sqlStr = string.Format("Select HoTen from TaiKhoan WHERE SoTk = '{0}'",maTK);
-            return conn.LayTen(sqlStr);
         }
         public DataTable TimKiemGDCB(string text, string option)
         {
-            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE "+option, text);
+            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE "+option+
+                " and LoaiGD = 1", text);
             return conn.LayDanhSach(sqlStr);
         }
         public DataTable TimKiemGDNC(string option)
-        { 
-            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE " + option);
+        {
+            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE " + option+
+                " and LoaiGD = 1");
             return conn.LayDanhSach(sqlStr);
         }
     }

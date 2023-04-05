@@ -20,9 +20,9 @@ namespace BankManagement.Controller
                 return taiKhoan;
             return null;
         }
-        public bool TaoGiaoDich(int nguoigui, int nguoinhan, DateTime ngayGD, double tien)
+        public bool TaoGiaoDich(int nguoigui, int nguoinhan, DateTime ngayGD, double tien, int loai)
         {
-            GiaoDich giaoDich = new GiaoDich(nguoigui, nguoinhan, ngayGD, tien);
+            GiaoDich giaoDich = new GiaoDich(nguoigui, nguoinhan, ngayGD, tien, loai);
             if (giaoDichDAO.TaoGD(giaoDich))
                 return true;
             return false;

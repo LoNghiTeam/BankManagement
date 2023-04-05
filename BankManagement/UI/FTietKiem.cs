@@ -119,10 +119,11 @@ namespace BankManagement
         private void btnGuiTietKiem_Click(object sender, EventArgs e)
         {
             int soTK = -1;
+            double.TryParse(tbTienGui.Texts.Trim(), out tien);
             int.TryParse(tbSoTK.Texts.Trim(), out soTK);
             if (guiTien.TaoSoTietKiem(soTK,tbTenSo.Texts, DateTime.Now, thoigian, tien, laiSuat.MaLS))
                 if (chuyenTien.GiaoDichTienGui(soTK, tien))
-                    if (chuyenTien.TaoGiaoDich(soTK, -2, DateTime.Now, tien))
+                    if (chuyenTien.TaoGiaoDich(soTK, 1, DateTime.Now, tien, 5))
                         MessageBox.Show("Gửi tiết kiệm thành công", "Thông báo", MessageBoxButtons.OK);
 
             if (soTK == logging.Taikhoan.SoTK)

@@ -28,9 +28,16 @@ namespace BankManagement.Controller
             else
                 return "Số dư trong tài khoản không đủ!";
         }
-        public bool TaoGiaoDich(int nguoigui, int nguoinhan, DateTime ngayGD, double tien) {
-            GiaoDich giaoDich = new GiaoDich(nguoigui, nguoinhan, ngayGD, tien);
+        public bool TaoGiaoDich(int nguoigui, int nguoinhan, DateTime ngayGD, double tien, int loai) {
+            GiaoDich giaoDich = new GiaoDich(nguoigui, nguoinhan, ngayGD, tien, loai);
             if(giaoDichDAO.TaoGD(giaoDich))
+                return true;
+            return false;
+        }
+        public bool TaoGiaoDichNap(int nguoinhan, DateTime ngayGD, double tien, int loai)
+        {
+            GiaoDich giaoDich = new GiaoDich(nguoinhan, ngayGD, tien, loai);
+            if (giaoDichDAO.TaoGD(giaoDich))
                 return true;
             return false;
         }

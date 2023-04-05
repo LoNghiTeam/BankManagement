@@ -18,12 +18,12 @@ namespace BankManagement.Model
         private String soDienThoai;
         private int isAdmin;
         private double tien;
-
+        private int diemTD;
 
         public TaiKhoan()
         {
         }
-        public TaiKhoan(string soTK,String hoTen, DateTime ngaySinh, String cccd, String diaChi, String soDienThoai)
+        public TaiKhoan(string soTK,String hoTen, DateTime ngaySinh, String cccd, String diaChi, String soDienThoai, int diemTD)
         {
             this.SoTK = Int32.Parse(soTK);
             this.hoTen = hoTen;
@@ -31,9 +31,11 @@ namespace BankManagement.Model
             this.cccd = cccd;
             this.diaChi = diaChi;
             this.soDienThoai = soDienThoai;
+            this.diemTD = diemTD;
+            this.diemTD = diemTD;
         }
 
-        public TaiKhoan(String userName, String pass, String hoTen, DateTime ngaySinh, String cccd, String diaChi, String soDienThoai)
+        public TaiKhoan(String userName, String pass, String hoTen, DateTime ngaySinh, String cccd, String diaChi, String soDienThoai, int diemTD)
         {
             this.userName = userName;
             this.pass = pass;
@@ -42,9 +44,10 @@ namespace BankManagement.Model
             this.cccd = cccd;
             this.diaChi = diaChi;
             this.soDienThoai = soDienThoai;
+            this.diemTD = diemTD;
         }
 
-        public TaiKhoan(int soTK, String userName, String pass, String hoTen, DateTime ngaySinh, String cccd, String diaChi, String soDienThoai, int isAdmin, float tien)
+        public TaiKhoan(int soTK, String userName, String pass, String hoTen, DateTime ngaySinh, String cccd, String diaChi, String soDienThoai, int isAdmin, float tien, int diemTD)
         {
             this.soTK = soTK;
             this.userName = userName;
@@ -56,6 +59,7 @@ namespace BankManagement.Model
             this.soDienThoai = soDienThoai;
             this.isAdmin = isAdmin;
             this.tien = tien;
+            this.diemTD = diemTD;
         }
 
 
@@ -143,6 +147,14 @@ namespace BankManagement.Model
             set
             {
                 tien = value;
+            }
+        }
+        public int DiemTD
+        {
+            get { return diemTD; }
+            set
+            {
+                diemTD = value;
             }
         }
     }

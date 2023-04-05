@@ -97,6 +97,7 @@ namespace BankManagement.DAO
                     taiKhoan.SoDienThoai = reader["Sodienthoai"].ToString();
                     taiKhoan.IsAdmin = (int)reader["isAdmin"];
                     taiKhoan.Tien = (double)reader["Tien"];
+                    taiKhoan.DiemTD = (int)reader["diemTD"];   
                     return taiKhoan;
                 }
             }
@@ -108,42 +109,6 @@ namespace BankManagement.DAO
             finally
             {
                 
-                conn.Close();
-            }
-            return null;
-        }
-        public TaiKhoan FindSoTK(string Sql)
-        {
-            try
-            {
-                // Ket noi
-                conn.Open();
-                TaiKhoan taiKhoan = new TaiKhoan();
-                SqlCommand cmd = new SqlCommand(Sql, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    taiKhoan.SoTK = (int)reader["SoTK"];
-                    taiKhoan.UserName = reader["UserName"].ToString();
-                    taiKhoan.Pass = reader["Pass"].ToString();
-                    taiKhoan.HoTen = reader["HoTen"].ToString();
-                    taiKhoan.NgaySinh = (DateTime)reader["NgaySinh"];
-                    taiKhoan.Cccd = (string)reader["Cccd"];
-                    taiKhoan.DiaChi = reader["Diachi"].ToString();
-                    taiKhoan.SoDienThoai = reader["Sodienthoai"].ToString();
-                    taiKhoan.IsAdmin = (int)reader["isAdmin"];
-                    taiKhoan.Tien = (double)reader["Tien"];
-                    return taiKhoan;
-                }
-                    
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex + "");
-                return null;
-            }
-            finally
-            {
                 conn.Close();
             }
             return null;
@@ -169,26 +134,6 @@ namespace BankManagement.DAO
                 conn.Close();
             }
             return -1;
-        }
-        public string LayTen(string Sql)
-        {
-            try
-            {
-                // Ket noi
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(Sql, conn);
-                return (string)cmd.ExecuteScalar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex + "");
-                return "";
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return "";
         }
     }
 

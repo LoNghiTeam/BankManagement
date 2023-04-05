@@ -25,10 +25,11 @@ namespace BankManagement
         {
             btnChuyenTien.Enabled = false;
             lblNguoiChuyen.Text = logging.Taikhoan.HoTen;
+            tbSoTaiKhoanGui.Text = logging.Taikhoan.SoTK.ToString();
             lblSoDu.Text = logging.Taikhoan.Tien.ToString()+ " VND";
             if(logging.Taikhoan.IsAdmin < 1)
             {
-                tbSoTaiKhoanGui.Text = logging.Taikhoan.SoTK.ToString();
+                
                 tbSoTaiKhoanGui.Enabled = false;
             }
             
@@ -69,7 +70,7 @@ namespace BankManagement
                     string check = chuyenTien.checkSoTien(result);
                     if (check == null)
                     {
-                        if (chuyenTien.TaoGiaoDich(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoanNhan.Text), DateTime.Now, result))
+                        if (chuyenTien.TaoGiaoDich(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoanNhan.Text), DateTime.Now, result, 1))
                         {
                             if (chuyenTien.GiaoDichTien(logging.Taikhoan.SoTK, int.Parse(tbSoTaiKhoanNhan.Text), result))
                             {

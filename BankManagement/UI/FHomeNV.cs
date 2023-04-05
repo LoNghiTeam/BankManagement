@@ -145,9 +145,6 @@ namespace BankManagement.UI
                         this.Padding = new Padding(borderSize);
                     break;
             }
-            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
-
-
         }
         private void CollapseMenu()
         {
@@ -194,7 +191,6 @@ namespace BankManagement.UI
                 this.WindowState = FormWindowState.Normal;
                 this.Size = formSize;
             }
-            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -329,7 +325,7 @@ namespace BankManagement.UI
 
         private void btnVayTien_Click(object sender, EventArgs e)
         {
-            FVayTien fVayTien = new FVayTien();
+            FVayTienTheChap fVayTien = new FVayTienTheChap();
             fVayTien.ShowDialog();
         }
 
@@ -373,13 +369,10 @@ namespace BankManagement.UI
             fChangePass.ShowDialog();
         }
 
-        private void btnQLSTK_Click(object sender, EventArgs e)
+        private void iconButton2_Click(object sender, EventArgs e)
         {
-            userControl = new CSoTietKiem();
-            CSoTietKiem cSoTK = userControl as CSoTietKiem;
-            cSoTK.Size = new Size(panelDesktop.Width, panelDesktop.Height);
-            panelDesktop.Controls.Clear();
-            panelDesktop.Controls.Add(cSoTK);
+            FVayTienTinDung fVayTien = new FVayTienTinDung();
+            fVayTien.ShowDialog();
         }
     }
 }

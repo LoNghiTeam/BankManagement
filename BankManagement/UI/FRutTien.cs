@@ -59,7 +59,7 @@ namespace BankManagement.UI
 
                     if (result <= taiKhoan.Tien)
                     {
-                        if (rutTien.TaoGiaoDich(int.Parse(tbSoTK.Texts), 0, DateTime.Now, result))
+                        if (rutTien.TaoGiaoDich(int.Parse(tbSoTK.Texts), 1, DateTime.Now, result,3))
                         {
                             if (rutTien.GiaoDichTien(int.Parse(tbSoTK.Texts), result))
                             {

@@ -30,6 +30,8 @@ namespace BankManagement.DAO
                     laiSuat.MaLS = (int)reader["MaLS"];
                     laiSuat.LaiVay = (double)reader["LaiVay"];
                     laiSuat.LaiGui = (double)reader["LaiGui"];
+                    laiSuat.TiLe = (double)reader["TiLe"];
+                    laiSuat.QuyDoiTD = (double)reader["QuyDoiTD"];
                     laiSuat.NgayApDung = (DateTime)reader["NgayApDung"];
                     return laiSuat;
                 }

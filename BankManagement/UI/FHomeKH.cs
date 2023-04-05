@@ -320,7 +320,7 @@ namespace BankManagement
 
         private void btnVayTien_Click(object sender, EventArgs e)
         {
-            FVayTien fVayTien = new FVayTien();
+            FVayTienTinDung fVayTien = new FVayTienTinDung();
             fVayTien.ShowDialog();
         }
 
