@@ -32,13 +32,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnChange = new RJCodeAdvance.RJControls.RJButton();
             this.tbxNewRate = new RJCodeAdvance.RJControls.RJTextBox();
-            this.cbTypeRate = new RJCodeAdvance.RJControls.RJComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblSoDu = new System.Windows.Forms.Label();
             this.lblNguoiNhan = new System.Windows.Forms.Label();
             this.lblRate = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbTypeRate = new RJCodeAdvance.RJControls.RJComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
@@ -108,6 +108,7 @@
             this.tbxNewRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNewRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxNewRate.Location = new System.Drawing.Point(89, 81);
+            this.tbxNewRate.Margin = new System.Windows.Forms.Padding(4);
             this.tbxNewRate.Multiline = false;
             this.tbxNewRate.Name = "tbxNewRate";
             this.tbxNewRate.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
@@ -120,36 +121,15 @@
             this.tbxNewRate.UnderlinedStyle = false;
             this.tbxNewRate._TextChanged += new System.EventHandler(this.tbxNewRate__TextChanged);
             // 
-            // cbTypeRate
-            // 
-            this.cbTypeRate.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cbTypeRate.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbTypeRate.BorderSize = 1;
-            this.cbTypeRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbTypeRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbTypeRate.ForeColor = System.Drawing.Color.DimGray;
-            this.cbTypeRate.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbTypeRate.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbTypeRate.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbTypeRate.Location = new System.Drawing.Point(92, 7);
-            this.cbTypeRate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cbTypeRate.MinimumSize = new System.Drawing.Size(150, 25);
-            this.cbTypeRate.Name = "cbTypeRate";
-            this.cbTypeRate.Padding = new System.Windows.Forms.Padding(1);
-            this.cbTypeRate.Size = new System.Drawing.Size(229, 25);
-            this.cbTypeRate.TabIndex = 3;
-            this.cbTypeRate.Texts = "";
-            this.cbTypeRate.OnSelectedIndexChanged += new System.EventHandler(this.cbTypeRate_OnSelectedIndexChanged);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(4, 88);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 13);
+            this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Lãi suất mới (%):";
+            this.label9.Text = "Giá trị mới:";
             // 
             // lblSoDu
             // 
@@ -185,9 +165,9 @@
             this.label4.Location = new System.Drawing.Point(4, 51);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Lãi suất hiện tại:";
+            this.label4.Text = "Giá trị hiện tại:";
             // 
             // label2
             // 
@@ -195,9 +175,30 @@
             this.label2.Location = new System.Drawing.Point(4, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Chọn loại lãi suất:";
+            this.label2.Text = "Chọn loại:";
+            // 
+            // cbTypeRate
+            // 
+            this.cbTypeRate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbTypeRate.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbTypeRate.BorderSize = 1;
+            this.cbTypeRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbTypeRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbTypeRate.ForeColor = System.Drawing.Color.DimGray;
+            this.cbTypeRate.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbTypeRate.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbTypeRate.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbTypeRate.Location = new System.Drawing.Point(92, 7);
+            this.cbTypeRate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cbTypeRate.MinimumSize = new System.Drawing.Size(150, 25);
+            this.cbTypeRate.Name = "cbTypeRate";
+            this.cbTypeRate.Padding = new System.Windows.Forms.Padding(1);
+            this.cbTypeRate.Size = new System.Drawing.Size(229, 25);
+            this.cbTypeRate.TabIndex = 3;
+            this.cbTypeRate.Texts = "";
+            this.cbTypeRate.OnSelectedIndexChanged += new System.EventHandler(this.cbTypeRate_OnSelectedIndexChanged);
             // 
             // pictureBox1
             // 

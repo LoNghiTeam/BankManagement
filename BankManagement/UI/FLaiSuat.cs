@@ -31,29 +31,38 @@ namespace BankManagement
             tbxNewRate.Enabled = false;
             cbTypeRate.Items.Add("Lãi vay");
             cbTypeRate.Items.Add("Lãi gửi");
+            cbTypeRate.Items.Add("Tỉ lệ");
+            cbTypeRate.Items.Add("Giá trị quy đổi điểm tín dụng");
         }
 
         private void cbTypeRate_OnSelectedIndexChanged(object sender, EventArgs e)
         {
 
             tbxNewRate.Enabled = true;
-            if (cbTypeRate.Texts.Equals("Lãi vay"))
+            switch (cbTypeRate.Texts)
             {
-                type = 1;
-                lblRate.Text = (laiSuat.LaiVay * 100).ToString() + "%";
-            }
+                case ("Lãi vay"):
+                    type = 1;
+                    lblRate.Text = (laiSuat.LaiVay * 100).ToString() + "%";
+                    break;
+                case ("Lãi gửi"):
+                    type = 2;
+                    lblRate.Text = (laiSuat.LaiGui * 100).ToString() + "%";
+                    break;
+                case ("Tỉ lệ"):
+                    type = 3;
+                    lblRate.Text = laiSuat.TiLe.ToString();
+                    break;
+                case ("Giá trị quy đổi điểm tín dụng"):
+                    type = 4;
+                    lblRate.Text = laiSuat.QuyDoiTD.ToString();
+                    break;
+                default:
+                    type = 0;
+                    tbxNewRate.Enabled = false;
+                    lblRate.Text = String.Empty;
+                    break;
 
-            else if (cbTypeRate.Texts.Equals("Lãi gửi"))
-            {
-                type = 2;
-                lblRate.Text = (laiSuat.LaiGui * 100).ToString() + "%";
-            }
-
-            else
-            {
-                type = 0;
-                tbxNewRate.Enabled = false;
-                lblRate.Text = String.Empty; 
             }
         }
 
@@ -77,13 +86,24 @@ namespace BankManagement
             {
                 MessageBox.Show("Điều chỉnh thành công", "Thông báo", MessageBoxButtons.OK);
                 laiSuat = vayTien.GetLaiSuat();
-                if(type == 2)
+                switch (type)
                 {
-                    lblRate.Text = (laiSuat.LaiGui * 100).ToString() + "%";
-                }
-                else
-                {
-                    lblRate.Text = (laiSuat.LaiVay * 100).ToString() + "%";
+                    case (1):
+                        lblRate.Text = (laiSuat.LaiVay * 100).ToString() + "%";
+                        break;
+                    case (2):
+                        lblRate.Text = (laiSuat.LaiGui * 100).ToString() + "%";
+                        break;
+                    case (3):
+                        lblRate.Text = laiSuat.TiLe.ToString();
+                        break;
+                    case (4):
+                        lblRate.Text = laiSuat.QuyDoiTD.ToString();
+                        break;
+                    default:
+                        tbxNewRate.Enabled = false;
+                        lblRate.Text = String.Empty;
+                        break;
                 }
             }
 
