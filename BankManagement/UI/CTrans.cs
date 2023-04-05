@@ -246,7 +246,6 @@ namespace BankManagement
             {
                 btnDSLoaiGD.Visible = false;
             }
-
         }
 
         private void btnDetailGD_Click(object sender, EventArgs e)

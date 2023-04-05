@@ -28,6 +28,7 @@ namespace BankManagement.UI
 
         private void dtgvGuiTK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dtgvGuiTK.Rows[e.RowIndex];
@@ -49,12 +50,33 @@ namespace BankManagement.UI
                 tbxMaLS.Texts = row.Cells[6].Value.ToString();
                 tbxTinhTrang.Texts = row.Cells[7].Value.ToString();
             }
+            if (!btnTatToan.Visible && tbxTinhTrang.Texts == "0")
+            {
+                btnTatToan.Visible = true;
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             FTietKiem tietKiem = new FTietKiem();
             tietKiem.ShowDialog();
+        }
+
+        private void btnTatToan_Click(object sender, EventArgs e)
+        {
+            int index = dtgvGuiTK.CurrentCell.RowIndex;
+            SoTietKiem stk = new SoTietKiem(
+                    int.Parse(dtgvGuiTK.Rows[index].Cells[0].Value.ToString()),
+                    int.Parse(dtgvGuiTK.Rows[index].Cells[1].Value.ToString()),
+                    dtgvGuiTK.Rows[index].Cells[2].Value.ToString(),
+                    (DateTime)dtgvGuiTK.Rows[index].Cells[3].Value,
+                    (DateTime)dtgvGuiTK.Rows[index].Cells[4].Value,
+                    double.Parse(dtgvGuiTK.Rows[index].Cells[5].Value.ToString()),
+                    int.Parse(dtgvGuiTK.Rows[index].Cells[6].Value.ToString()),
+                    int.Parse(dtgvGuiTK.Rows[index].Cells[7].Value.ToString())
+            );
+            FTatToanSTK tatToanSTK = new FTatToanSTK(stk);
+            tatToanSTK.ShowDialog();
         }
     }
 }

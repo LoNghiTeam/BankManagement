@@ -50,6 +50,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnThem = new RJCodeAdvance.RJControls.RJButton();
+            this.btnTatToan = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGuiTK)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -349,6 +350,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnThem);
+            this.flowLayoutPanel1.Controls.Add(this.btnTatToan);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -373,6 +375,26 @@
             this.btnThem.TextColor = System.Drawing.Color.White;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnTatToan
+            // 
+            this.btnTatToan.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTatToan.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTatToan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTatToan.BorderRadius = 0;
+            this.btnTatToan.BorderSize = 0;
+            this.btnTatToan.FlatAppearance.BorderSize = 0;
+            this.btnTatToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTatToan.ForeColor = System.Drawing.Color.White;
+            this.btnTatToan.Location = new System.Drawing.Point(205, 3);
+            this.btnTatToan.Name = "btnTatToan";
+            this.btnTatToan.Size = new System.Drawing.Size(271, 40);
+            this.btnTatToan.TabIndex = 7;
+            this.btnTatToan.Text = "Tất toán giao dịch được chọn";
+            this.btnTatToan.TextColor = System.Drawing.Color.White;
+            this.btnTatToan.UseVisualStyleBackColor = false;
+            this.btnTatToan.Visible = false;
+            this.btnTatToan.Click += new System.EventHandler(this.btnTatToan_Click);
             // 
             // CSoTietKiem
             // 
@@ -416,5 +438,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private RJCodeAdvance.RJControls.RJButton btnThem;
+        private RJCodeAdvance.RJControls.RJButton btnTatToan;
     }
 }

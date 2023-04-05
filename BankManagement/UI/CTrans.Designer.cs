@@ -52,10 +52,6 @@
             this.cbNgNhan = new System.Windows.Forms.CheckBox();
             this.cbTien = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnDSLoaiGD = new RJCodeAdvance.RJControls.RJButton();
-            this.btnPrintAllGD = new RJCodeAdvance.RJControls.RJButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDetailGD = new RJCodeAdvance.RJControls.RJButton();
@@ -63,17 +59,21 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbMaGD = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnDSLoaiGD = new RJCodeAdvance.RJControls.RJButton();
+            this.btnPrintAllGD = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTrans)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,7 +86,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(863, 576);
+            this.panel1.Size = new System.Drawing.Size(1111, 576);
             this.panel1.TabIndex = 4;
             // 
             // dtgvTrans
@@ -97,7 +97,7 @@
             this.dtgvTrans.Name = "dtgvTrans";
             this.dtgvTrans.RowHeadersWidth = 51;
             this.dtgvTrans.RowTemplate.Height = 24;
-            this.dtgvTrans.Size = new System.Drawing.Size(424, 382);
+            this.dtgvTrans.Size = new System.Drawing.Size(672, 382);
             this.dtgvTrans.TabIndex = 3;
             this.dtgvTrans.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTrans_CellClick);
             // 
@@ -338,7 +338,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(863, 55);
+            this.groupBox1.Size = new System.Drawing.Size(1111, 55);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm tuỳ chọn";
@@ -352,7 +352,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(857, 34);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1105, 34);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // cbMaGD
@@ -399,13 +399,101 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.groupBox3);
             this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.groupBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 437);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(863, 139);
+            this.panel2.Size = new System.Drawing.Size(1111, 139);
             this.panel2.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel4.Controls.Add(this.flowLayoutPanel2);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(439, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(672, 139);
+            this.panel4.TabIndex = 4;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btnDetailGD);
+            this.flowLayoutPanel2.Controls.Add(this.btnPrintGD);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Enabled = false;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 28);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(672, 111);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // btnDetailGD
+            // 
+            this.btnDetailGD.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDetailGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDetailGD.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDetailGD.BorderRadius = 0;
+            this.btnDetailGD.BorderSize = 0;
+            this.btnDetailGD.FlatAppearance.BorderSize = 0;
+            this.btnDetailGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailGD.ForeColor = System.Drawing.Color.White;
+            this.btnDetailGD.Location = new System.Drawing.Point(3, 3);
+            this.btnDetailGD.Name = "btnDetailGD";
+            this.btnDetailGD.Size = new System.Drawing.Size(272, 40);
+            this.btnDetailGD.TabIndex = 0;
+            this.btnDetailGD.Text = "Xem chi tiết giao dịch được chọn";
+            this.btnDetailGD.TextColor = System.Drawing.Color.White;
+            this.btnDetailGD.UseVisualStyleBackColor = false;
+            this.btnDetailGD.Click += new System.EventHandler(this.btnDetailGD_Click);
+            // 
+            // btnPrintGD
+            // 
+            this.btnPrintGD.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPrintGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnPrintGD.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPrintGD.BorderRadius = 0;
+            this.btnPrintGD.BorderSize = 0;
+            this.btnPrintGD.FlatAppearance.BorderSize = 0;
+            this.btnPrintGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintGD.ForeColor = System.Drawing.Color.White;
+            this.btnPrintGD.Location = new System.Drawing.Point(281, 3);
+            this.btnPrintGD.Name = "btnPrintGD";
+            this.btnPrintGD.Size = new System.Drawing.Size(271, 40);
+            this.btnPrintGD.TabIndex = 2;
+            this.btnPrintGD.Text = "In giao dịch được chọn";
+            this.btnPrintGD.TextColor = System.Drawing.Color.White;
+            this.btnPrintGD.UseVisualStyleBackColor = false;
+            this.btnPrintGD.Click += new System.EventHandler(this.btnPrintGD_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lbMaGD);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(672, 28);
+            this.panel5.TabIndex = 0;
+            // 
+            // lbMaGD
+            // 
+            this.lbMaGD.AutoSize = true;
+            this.lbMaGD.Location = new System.Drawing.Point(99, 6);
+            this.lbMaGD.Name = "lbMaGD";
+            this.lbMaGD.Size = new System.Drawing.Size(16, 16);
+            this.lbMaGD.TabIndex = 1;
+            this.lbMaGD.Text = "...";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã giao dịch:";
             // 
             // groupBox3
             // 
@@ -469,100 +557,13 @@
             this.btnPrintAllGD.UseVisualStyleBackColor = false;
             this.btnPrintAllGD.Click += new System.EventHandler(this.btnPrintAllGD_Click);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel4.Controls.Add(this.flowLayoutPanel2);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(439, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(424, 125);
-            this.panel4.TabIndex = 4;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.btnDetailGD);
-            this.flowLayoutPanel2.Controls.Add(this.btnPrintGD);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Enabled = false;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 28);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(424, 97);
-            this.flowLayoutPanel2.TabIndex = 2;
-            // 
-            // btnDetailGD
-            // 
-            this.btnDetailGD.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDetailGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDetailGD.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDetailGD.BorderRadius = 0;
-            this.btnDetailGD.BorderSize = 0;
-            this.btnDetailGD.FlatAppearance.BorderSize = 0;
-            this.btnDetailGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetailGD.ForeColor = System.Drawing.Color.White;
-            this.btnDetailGD.Location = new System.Drawing.Point(3, 3);
-            this.btnDetailGD.Name = "btnDetailGD";
-            this.btnDetailGD.Size = new System.Drawing.Size(418, 40);
-            this.btnDetailGD.TabIndex = 0;
-            this.btnDetailGD.Text = "Xem chi tiết giao dịch được chọn";
-            this.btnDetailGD.TextColor = System.Drawing.Color.White;
-            this.btnDetailGD.UseVisualStyleBackColor = false;
-            this.btnDetailGD.Click += new System.EventHandler(this.btnDetailGD_Click);
-            // 
-            // btnPrintGD
-            // 
-            this.btnPrintGD.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPrintGD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnPrintGD.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPrintGD.BorderRadius = 0;
-            this.btnPrintGD.BorderSize = 0;
-            this.btnPrintGD.FlatAppearance.BorderSize = 0;
-            this.btnPrintGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintGD.ForeColor = System.Drawing.Color.White;
-            this.btnPrintGD.Location = new System.Drawing.Point(3, 49);
-            this.btnPrintGD.Name = "btnPrintGD";
-            this.btnPrintGD.Size = new System.Drawing.Size(418, 40);
-            this.btnPrintGD.TabIndex = 2;
-            this.btnPrintGD.Text = "In giao dịch được chọn";
-            this.btnPrintGD.TextColor = System.Drawing.Color.White;
-            this.btnPrintGD.UseVisualStyleBackColor = false;
-            this.btnPrintGD.Click += new System.EventHandler(this.btnPrintGD_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.lbMaGD);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(424, 28);
-            this.panel5.TabIndex = 0;
-            // 
-            // lbMaGD
-            // 
-            this.lbMaGD.AutoSize = true;
-            this.lbMaGD.Location = new System.Drawing.Point(99, 6);
-            this.lbMaGD.Name = "lbMaGD";
-            this.lbMaGD.Size = new System.Drawing.Size(16, 16);
-            this.lbMaGD.TabIndex = 1;
-            this.lbMaGD.Text = "...";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã giao dịch:";
-            // 
             // CTrans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "CTrans";
-            this.Size = new System.Drawing.Size(863, 576);
+            this.Size = new System.Drawing.Size(1111, 576);
             this.Load += new System.EventHandler(this.CTrans_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTrans)).EndInit();
@@ -572,13 +573,13 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

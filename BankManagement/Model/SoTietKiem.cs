@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankManagement.Model
 {
-    internal class SoTietKiem
+    public class SoTietKiem
     {
         private int maSTK;
         private int soTK;

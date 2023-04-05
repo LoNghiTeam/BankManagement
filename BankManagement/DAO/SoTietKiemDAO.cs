@@ -34,5 +34,10 @@ namespace BankManagement.DAO
             string sqlStr = string.Format("SELECT * FROM SoTietKiem");
             return conn.LayDanhSach(sqlStr);
         }
+        public DataTable LaySTK(SoTietKiem stk)
+        {
+            string sqlStr = string.Format("SELECT * FROM SoTietKiem WHERE SoTK = {'0'}",stk.SoTK);
+            return conn.LayDanhSach(sqlStr);
+        }
     }
 }

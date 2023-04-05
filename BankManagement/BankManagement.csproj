@@ -122,11 +122,11 @@
     <Compile Include="UI\FChiTietGD.Designer.cs">
       <DependentUpon>FChiTietGD.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FChiTietGTK.cs">
+    <Compile Include="UI\FSoTietKiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FChiTietGTK.Designer.cs">
-      <DependentUpon>FChiTietGTK.cs</DependentUpon>
+    <Compile Include="UI\FSoTietKiem.Designer.cs">
+      <DependentUpon>FSoTietKiem.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FHomeNV.cs">
       <SubType>Form</SubType>
@@ -151,6 +151,12 @@
     </Compile>
     <Compile Include="UI\FRutTien.Designer.cs">
       <DependentUpon>FRutTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FTatToanSTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FTatToanSTK.Designer.cs">
+      <DependentUpon>FTatToanSTK.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FTietKiem.cs">
       <SubType>Form</SubType>
@@ -239,8 +245,8 @@
     <EmbeddedResource Include="UI\FChiTietGD.resx">
       <DependentUpon>FChiTietGD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FChiTietGTK.resx">
-      <DependentUpon>FChiTietGTK.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FSoTietKiem.resx">
+      <DependentUpon>FSoTietKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FHomeKH.resx">
       <DependentUpon>FHomeKH.cs</DependentUpon>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FRutTien.resx">
       <DependentUpon>FRutTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FTatToanSTK.resx">
+      <DependentUpon>FTatToanSTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FTietKiem.resx">
       <DependentUpon>FTietKiem.cs</DependentUpon>
