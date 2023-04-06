@@ -166,25 +166,25 @@ namespace BankManagement
                 switch (cbbLoaiGD.SelectedIndex)
                 {
                     case 1: //Khoan vay
-                        option += " NguoiGui = -1 " + " AND NguoiNhan > 0 ";
+                        option += " LoaiGD = 4 ";
                         break;
                     case 2: //Gui tiet kiem
-                        option += " NguoiGui > 0 " + " AND NguoiNhan = -2 ";
+                        option += " LoaiGD = 5 ";
                         break;
                     case 3: //Tat toan tiet kiemm
-                        option += " NguoiGui = -2 " + " AND NguoiNhan > 0 ";
+                        option += " LoaiGD = 7 ";
                         break;
                     case 4: //Chuyen tien
-                        option += " NguoiGui > 0 " + " AND NguoiNhan > 0 ";
+                        option += " LoaiGD = 1 ";
                         break;
                     case 5: //Rut tien
-                        option += " NguoiGui > 0 " + " AND NguoiNhan = 0 ";
+                        option += " LoaiGD = 3 ";
                         break;
                     case 6: //Nap tien
-                        option += " NguoiGui = 0 " + " AND NguoiNhan > 0 ";
+                        option += " LoaiGD = 2 ";
                         break;
                     case 7: //Thanh toan no
-                        option += " NguoiGui > 0 " + " AND NguoiNhan = -1 ";
+                        option += " LoaiGD = 6 ";
                         break;
                     default:
                         break;
@@ -269,6 +269,11 @@ namespace BankManagement
             {
                 FSoTietKiem chiTietGTK = new FSoTietKiem();
                 chiTietGTK.ShowDialog();
+            }
+            if (cbbLoaiGD.SelectedIndex == 1)
+            {
+                FKhoanVay chiTietKV = new FKhoanVay();
+                chiTietKV.ShowDialog();
             }
         }
     }

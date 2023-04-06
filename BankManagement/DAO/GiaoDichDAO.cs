@@ -29,8 +29,7 @@ namespace BankManagement.DAO
         }
         public DataTable TimKiemGDCB(string text, string option)
         {
-            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE "+option+
-                " and LoaiGD = 1", text);
+            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE "+option, text);
             return conn.LayDanhSach(sqlStr);
         }
         public string LayTenKH(int maTK)
@@ -40,8 +39,7 @@ namespace BankManagement.DAO
         }
         public DataTable TimKiemGDNC(string option)
         {
-            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE " + option+
-                " and LoaiGD = 1");
+            string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE " + option);
             return conn.LayDanhSach(sqlStr);
         }
     }
