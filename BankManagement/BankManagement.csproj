@@ -161,6 +161,12 @@
     <Compile Include="UI\FRutTien.Designer.cs">
       <DependentUpon>FRutTien.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FTatToanKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FTatToanKV.Designer.cs">
+      <DependentUpon>FTatToanKV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FTatToanSTK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </Compile>
     <EmbeddedResource Include="UI\FKhoanVay.resx">
       <DependentUpon>FKhoanVay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FTatToanKV.resx">
+      <DependentUpon>FTatToanKV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FVayTienTinDung.resx">
       <DependentUpon>FVayTienTinDung.cs</DependentUpon>
