@@ -23,6 +23,13 @@ namespace BankManagement
             this.dtgvBank.Size=new Size(Width,Height);
             HienThiDanhSach();
         }
+        //protected void OnButtonClicked(object sender, EventArgs e)
+        //{
+        //    if (ButtonClicked != null)
+        //    {
+        //        ButtonClicked(sender, e);
+        //    }
+        //}
         private void HienThiDanhSach()
         {
             this.dtgvBank.DataSource = khDAO.LayDanhSachKH();
@@ -41,7 +48,7 @@ namespace BankManagement
                 dpNgaySinh.Value,
                 tbxCCCD.Texts,
                 tbxQueQuan.Texts,
-                tbxSDT.Texts);
+                tbxSDT.Texts, 1);
 
             if (IsValid(tk))
             {
@@ -109,7 +116,7 @@ namespace BankManagement
                 dpNgaySinh.Value,
                 tbxCCCD.Texts,
                 tbxQueQuan.Texts,
-                tbxSDT.Texts);
+                tbxSDT.Texts, 1);
 
             if (IsValid(tk))
             {

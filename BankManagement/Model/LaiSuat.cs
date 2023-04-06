@@ -11,7 +11,10 @@ namespace BankManagement.Model
         private int maLS;
         private double laiGui;
         private double laiVay;
+        private double tiLe;
+        private double quyDoiTD;
         private DateTime ngayApDung;
+
 
         public LaiSuat()
         {
@@ -41,6 +44,23 @@ namespace BankManagement.Model
             set
             {
                 laiVay = value;
+            }
+        }
+        public double TiLe
+        {
+            get { return tiLe; }
+            set
+            {
+                tiLe = value;
+            }
+        }
+
+        public double QuyDoiTD
+        {
+            get { return quyDoiTD; }
+            set
+            {
+                quyDoiTD = value;
             }
         }
 

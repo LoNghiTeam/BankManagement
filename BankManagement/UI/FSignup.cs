@@ -123,7 +123,7 @@ namespace BankManagement
         private void btnSignup_Click(object sender, EventArgs e)
         {
             TaiKhoan taiKhoan = new TaiKhoan(txtTK.Text.ToString(), txtMK.Text.ToString(),
-                txtTen.Text.ToString(), dtpNgaySinh.Value.Date, txtCCCD.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text.ToString());
+                txtTen.Text.ToString(), dtpNgaySinh.Value.Date, txtCCCD.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text.ToString(), 1);
             String check = dangKy.checkAll(taiKhoan, txtRepeatMK.Text.ToString());
             if (check == null)
             {

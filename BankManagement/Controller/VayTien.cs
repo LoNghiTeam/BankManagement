@@ -36,6 +36,11 @@ namespace BankManagement.Controller
             return false;
         }
 
+        public double TienVayTD(int diem)
+        {
+            laiSuat = GetLaiSuat();
+            return diem * laiSuat.QuyDoiTD;
+        }
 
         public void TinhlaichangeTbTien(string thoigian, ref double tien, ref double lai) {
 
@@ -71,27 +76,27 @@ namespace BankManagement.Controller
             {
                 case "1 tháng":
                     double a = laiSuat.LaiVay;
-                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 0.8);
+                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 0.8 * laiSuat.TiLe);
                     thoigian = 1;
                     break;
                 case "3 tháng":
-                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 0.85);
+                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 0.85 * laiSuat.TiLe);
                     thoigian = 3;
                     break;
                 case "6 tháng":
-                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 0.9);
+                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 0.9 * laiSuat.TiLe);
                     thoigian = 6;
                     break;
                 case "12 tháng":
-                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 1);
+                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 1 * laiSuat.TiLe);
                     thoigian = 12;
                     break;
                 case "24 tháng":
-                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 1.1);
+                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 1.1 * laiSuat.TiLe);
                     thoigian = 24;
                     break;
                 case "36 tháng":
-                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 1.2);
+                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 1.2 * laiSuat.TiLe);
                     thoigian = 36;
                     break;
             }

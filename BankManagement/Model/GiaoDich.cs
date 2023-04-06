@@ -13,24 +13,34 @@ namespace BankManagement.Model
         private int nguoiNhan;
         private DateTime ngayGD;
         private double tien;
+        private int loai;
 
-        public GiaoDich()
+        public GiaoDich() { }
+        public GiaoDich(int nguoiNhan, DateTime ngayGD, double tien, int loai)
         {
+            this.nguoiNhan = nguoiNhan;
+            this.tien = tien;
+            this.ngayGD = ngayGD;
+            this.loai = loai;
         }
-        public GiaoDich(int maGD, int nguoiGui, int nguoiNhan, DateTime ngayGD, double tien)
+        
+        public GiaoDich(int maGD, int nguoiGui, int nguoiNhan, DateTime ngayGD, double tien, int loai)
         {
             this.maGD = maGD;
             this.nguoiGui = nguoiGui;
-            this.NguoiNhan = nguoiNhan;
+            this.nguoiNhan = nguoiNhan;
+            this.tien = tien;
             this.ngayGD = ngayGD;
             this.tien = tien;
+            this.loai = loai;
         }
-        public GiaoDich(int nguoiGui, int nguoiNhan, DateTime ngayGD, double tien)
+        public GiaoDich(int nguoiGui, int nguoiNhan, DateTime ngayGD, double tien, int loai)
         {
             this.nguoiGui = nguoiGui;
             this.nguoiNhan = nguoiNhan;
             this.tien = tien;
             this.ngayGD = ngayGD;
+            this.loai = loai;
         }
 
         public int MaGD
@@ -75,6 +85,15 @@ namespace BankManagement.Model
             set
             {
                 tien = value;
+            }
+        }
+
+        public int Loai
+        {
+            get { return loai; }
+            set
+            {
+                loai = value;
             }
         }
     }

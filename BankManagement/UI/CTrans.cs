@@ -270,5 +270,6 @@ namespace BankManagement
                 chiTietGTK.ShowDialog();
             }
         }
+        }
     }
 }

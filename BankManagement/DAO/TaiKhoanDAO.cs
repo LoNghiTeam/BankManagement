@@ -48,7 +48,7 @@ namespace BankManagement.DAO
         public TaiKhoan TimSoTK(int SoTK)
         {
             string SQL = string.Format("select * from TaiKhoan WHERE SoTK  = '{0}'", SoTK);
-            TaiKhoan Ten = conn.FindSoTK(SQL);
+            TaiKhoan Ten = conn.FindTK(SQL);
             if (Ten != null)
             {
                 return Ten;
@@ -56,8 +56,8 @@ namespace BankManagement.DAO
             return null;
         }
         public bool TaoTK(TaiKhoan taiKhoan, int role) { 
-            string SQL = string.Format("INSERT INTO TaiKhoan(UserName, Pass, HoTen, NgaySinh, Cccd, Diachi, Sodienthoai, isAdmin, Tien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}', {7}, {8});",
-                taiKhoan.UserName, taiKhoan.Pass, taiKhoan.HoTen, taiKhoan.NgaySinh, taiKhoan.Cccd, taiKhoan.DiaChi, taiKhoan.SoDienThoai, role, 0);
+            string SQL = string.Format("INSERT INTO TaiKhoan(UserName, Pass, HoTen, NgaySinh, Cccd, Diachi, Sodienthoai, isAdmin, Tien, DiemTD) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}', '{7}', '{8}', '{9}');",
+                taiKhoan.UserName, taiKhoan.Pass, taiKhoan.HoTen, taiKhoan.NgaySinh, taiKhoan.Cccd, taiKhoan.DiaChi, taiKhoan.SoDienThoai, role, 0, taiKhoan.DiemTD);
             if (conn.Execute(SQL))
             {
                 return true;

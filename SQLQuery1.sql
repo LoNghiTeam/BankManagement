@@ -9,21 +9,24 @@
          Sodienthoai varchar(11),
          isAdmin int,
          Tien FLOAT,
+         DiemTD int,
 );
-INSERT INTO TaiKhoan VALUES ('Admin', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789', 2, 0);
-INSERT INTO TaiKhoan VALUES ('Admin2', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',1, 0);
-INSERT INTO TaiKhoan VALUES ('Admin3', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0);
-INSERT INTO TaiKhoan VALUES ('Admin4', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0);
+INSERT INTO TaiKhoan VALUES ('Admin', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789', 2, 10000000000000000, 0);
+INSERT INTO TaiKhoan VALUES ('Admin2', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',1, 0, 0);
+INSERT INTO TaiKhoan VALUES ('Admin3', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0, 0);
+INSERT INTO TaiKhoan VALUES ('Admin4', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0, 0);
 
 CREATE TABLE LaiSuat (
          MaLS INT IDENTITY(1,1) PRIMARY KEY,
          LaiGui FLOAT,
          LaiVay FLOAT,
+         TiLe FLOAT,
+         QuyDoiTD FLOAT,
          NgayApDung date,
 );
-INSERT INTO LaiSuat VALUES (0.08, 0.18, '2022-11-16 08:19:41');
-INSERT INTO LaiSuat VALUES (0.08, 0.18, '2023-4-3 08:19:41');
-INSERT INTO LaiSuat VALUES (0.08, 0.18, '2022-4-3 10:19:41');
+INSERT INTO LaiSuat VALUES (0.08, 0.18,1, 1000000, '2022-11-16 08:19:41');
+INSERT INTO LaiSuat VALUES (0.08, 0.18,1, 2000000, '2023-4-3 08:19:41');
+INSERT INTO LaiSuat VALUES (0.08, 0.18,1, 3000000, '2022-4-3 10:19:41');
 
 CREATE TABLE GiaoDich (
          MaGD INT IDENTITY(1,1) PRIMARY KEY,
@@ -31,11 +34,13 @@ CREATE TABLE GiaoDich (
          NguoiNhan int,
          NgayGD date,
          Tien FLOAT,
-
+         LoaiGD int,
+         FOREIGN KEY (NguoiGui) REFERENCES TaiKhoan(SoTK),
+         FOREIGN KEY (NguoiNhan) REFERENCES TaiKhoan(SoTK)
 );
-INSERT INTO GiaoDich VALUES (1, 2, '2022-11-16 08:19:41', 100000);
-INSERT INTO GiaoDich VALUES (2, 3, '2023-4-3 08:19:41',200000);
-INSERT INTO GiaoDich VALUES (4, 1, '2022-4-3 10:19:41',3000000);
+INSERT INTO GiaoDich VALUES (1, 2, '2022-11-16 08:19:41', 100000, 1);
+INSERT INTO GiaoDich VALUES (2, 3, '2023-4-3 08:19:41',200000, 1);
+INSERT INTO GiaoDich VALUES (4, 1, '2022-4-3 10:19:41',3000000, 2);
 
 
 CREATE TABLE KhoanVay (
@@ -47,6 +52,8 @@ CREATE TABLE KhoanVay (
          MaLS INT,
          TinhTrang int,
          Loai int,
+         FOREIGN KEY (SoTK) REFERENCES TaiKhoan(SoTK),
+         FOREIGN KEY (MaLS) REFERENCES LaiSuat(MaLS),
 
 );
 INSERT INTO KhoanVay VALUES (1,'2022-11-16 08:19:41','2023-4-3 08:19:41', 100000, 1,1,0);
@@ -60,7 +67,9 @@ CREATE TABLE SoTietKiem (
          Ngayhan date,
          Tien FLOAT,
          MaLS INT,
-         TinhTrang int
+         TinhTrang int,
+         FOREIGN KEY (SoTK) REFERENCES TaiKhoan(SoTK),
+         FOREIGN KEY (MaLS) REFERENCES LaiSuat(MaLS),
 );
 
 INSERT INTO SoTietKiem (SoTK,TenSo, NgayVay, Ngayhan, Tien, MaLS, TinhTrang) VALUES (1,'','2022-11-16','2023-4-3', 100000, 1,0);
@@ -72,5 +81,6 @@ select * from LaiSuat
 select * from KhoanVay
 select * from GiaoDich
 select * from TaiKhoan
+select * from SoTietKiem
 
 

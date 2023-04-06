@@ -30,6 +30,8 @@ namespace BankManagement.DAO
                     laiSuat.MaLS = (int)reader["MaLS"];
                     laiSuat.LaiVay = (double)reader["LaiVay"];
                     laiSuat.LaiGui = (double)reader["LaiGui"];
+                    laiSuat.TiLe = (double)reader["TiLe"];
+                    laiSuat.QuyDoiTD = (double)reader["QuyDoiTD"];
                     laiSuat.NgayApDung = (DateTime)reader["NgayApDung"];
                     return laiSuat;
                 }
@@ -50,8 +52,8 @@ namespace BankManagement.DAO
         }
         public bool taoLaiSuat(LaiSuat laiSuat)
         {
-            string SQL = string.Format("INSERT INTO LaiSuat(LaiGui, LaiVay, NgayApDung)  VALUES ('{0}', '{1}', '{2}');",
-                laiSuat.LaiGui, laiSuat.LaiVay, laiSuat.NgayApDung);
+            string SQL = string.Format("INSERT INTO LaiSuat(LaiGui, LaiVay, TiLe, QuyDoiTD, NgayApDung)  VALUES ('{0}', '{1}','{2}','{3}', '{4}');",
+                laiSuat.LaiGui, laiSuat.LaiVay,laiSuat.TiLe, laiSuat.QuyDoiTD, laiSuat.NgayApDung);
             if (dBConnection.Execute(SQL))
             {
                 return true;

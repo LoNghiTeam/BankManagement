@@ -12,15 +12,22 @@ namespace BankManagement.Controller
     {
         LaiSuatDAO laiSuatDAO = new LaiSuatDAO();   
         public DieuChinhLaiSuat(){ }
-        public bool dieuchinh(int type, LaiSuat laiSuat, double laiMoi)
+        public bool dieuchinh(int type, LaiSuat laiSuat, double gtMoi)
         {
-            if(type == 1)
+            switch (type)
             {
-                laiSuat.LaiVay = laiMoi/100;
-            }
-            else if(type == 2)
-            {
-                laiSuat.LaiGui = laiMoi/100;
+                case (1):
+                    laiSuat.LaiVay = gtMoi / 100;
+                    break;
+                case (2):
+                    laiSuat.LaiGui = gtMoi / 100;
+                    break;
+                case (3):
+                    laiSuat.TiLe = gtMoi;
+                    break;
+                case (4):
+                    laiSuat.QuyDoiTD = gtMoi;
+                    break;
             }
             laiSuat.NgayApDung = DateTime.Now;
             if(laiSuatDAO.taoLaiSuat(laiSuat))
