@@ -54,6 +54,26 @@ namespace BankManagement.DAO
             }
             return false;
         }
+        public string LayTen(string Sql)
+        {
+            try
+            {
+                // Ket noi
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(Sql, conn);
+                return (string)cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + "");
+                return "";
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return "";
+        }
         public Boolean Execute(string Sql)
         {
             try

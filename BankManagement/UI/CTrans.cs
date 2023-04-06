@@ -256,7 +256,8 @@ namespace BankManagement
                     int.Parse(dtgvTrans.Rows[index].Cells[1].Value.ToString()),
                     int.Parse(dtgvTrans.Rows[index].Cells[2].Value.ToString()),
                     (DateTime)dtgvTrans.Rows[index].Cells[3].Value,
-                    double.Parse(dtgvTrans.Rows[index].Cells[4].Value.ToString())
+                    double.Parse(dtgvTrans.Rows[index].Cells[4].Value.ToString()),
+                    int.Parse(dtgvTrans.Rows[index].Cells[5].Value.ToString())
             );
             FChiTietGD chiTietGD = new FChiTietGD(giaoDich);
             chiTietGD.ShowDialog();
@@ -269,7 +270,6 @@ namespace BankManagement
                 FSoTietKiem chiTietGTK = new FSoTietKiem();
                 chiTietGTK.ShowDialog();
             }
-        }
         }
     }
 }
