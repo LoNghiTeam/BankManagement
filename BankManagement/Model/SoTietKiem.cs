@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 namespace BankManagement.Model
 {
-    internal class SoTietKiem
+    public class SoTietKiem
     {
         public SoTietKiem() { }
 
-        public SoTietKiem(int soTK, string tenSo, DateTime ngayVay, DateTime ngayHan, double tien, int maLS, int tinhTrang) {
+        public SoTietKiem( int maSTK,int soTK, string tenSo, DateTime ngayVay, DateTime ngayHan, double tien, int maLS, int tinhTrang) {
+            this.maSTK = maSTK;
+            this.soTK = soTK;
+            this.tenSo = tenSo;
+            this.ngayVay = ngayVay;
+            this.ngayHan = ngayHan;
+            this.tien = tien;
+            this.maLS = maLS;
+            this.tinhTrang = tinhTrang;
+        }
+        public SoTietKiem(int soTK, string tenSo, DateTime ngayVay, DateTime ngayHan, double tien, int maLS, int tinhTrang)
+        {
             this.soTK = soTK;
             this.tenSo = tenSo;
             this.ngayVay = ngayVay;

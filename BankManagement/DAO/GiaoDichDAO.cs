@@ -33,6 +33,11 @@ namespace BankManagement.DAO
                 " and LoaiGD = 1", text);
             return conn.LayDanhSach(sqlStr);
         }
+        public string LayTenKH(int maTK)
+        {
+            string sqlStr = string.Format("Select HoTen from TaiKhoan WHERE SoTk = '{0}'", maTK);
+            return conn.LayTen(sqlStr);
+        }
         public DataTable TimKiemGDNC(string option)
         {
             string sqlStr = string.Format("SELECT * FROM GiaoDich WHERE " + option+

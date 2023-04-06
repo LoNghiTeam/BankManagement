@@ -68,18 +68,18 @@
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(172, 81);
+            this.panel1.Size = new System.Drawing.Size(229, 100);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BankManagement.Properties.Resources.Asset_2_4x;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -93,10 +93,10 @@
             this.btnMenu.IconColor = System.Drawing.Color.White;
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 30;
-            this.btnMenu.Location = new System.Drawing.Point(117, 0);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu.Location = new System.Drawing.Point(156, 0);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(56, 70);
+            this.btnMenu.Size = new System.Drawing.Size(75, 86);
             this.btnMenu.TabIndex = 1;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
@@ -114,10 +114,10 @@
             this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 20);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Location = new System.Drawing.Point(0, 25);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(172, 445);
+            this.panelMenu.Size = new System.Drawing.Size(229, 547);
             this.panelMenu.TabIndex = 0;
             // 
             // btnVayTien
@@ -132,11 +132,11 @@
             this.btnVayTien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVayTien.IconSize = 30;
             this.btnVayTien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVayTien.Location = new System.Drawing.Point(0, 241);
-            this.btnVayTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVayTien.Location = new System.Drawing.Point(0, 295);
+            this.btnVayTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVayTien.Name = "btnVayTien";
-            this.btnVayTien.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.btnVayTien.Size = new System.Drawing.Size(172, 32);
+            this.btnVayTien.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnVayTien.Size = new System.Drawing.Size(229, 39);
             this.btnVayTien.TabIndex = 10;
             this.btnVayTien.Tag = "   Vay Tiền";
             this.btnVayTien.Text = "   Vay Tiền Tín dụng";
@@ -157,11 +157,11 @@
             this.btnGuiTietKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuiTietKiem.IconSize = 30;
             this.btnGuiTietKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuiTietKiem.Location = new System.Drawing.Point(0, 209);
-            this.btnGuiTietKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuiTietKiem.Location = new System.Drawing.Point(0, 256);
+            this.btnGuiTietKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuiTietKiem.Name = "btnGuiTietKiem";
-            this.btnGuiTietKiem.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.btnGuiTietKiem.Size = new System.Drawing.Size(172, 32);
+            this.btnGuiTietKiem.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnGuiTietKiem.Size = new System.Drawing.Size(229, 39);
             this.btnGuiTietKiem.TabIndex = 8;
             this.btnGuiTietKiem.Tag = "   Gửi Tiết Kiệm";
             this.btnGuiTietKiem.Text = "   Gửi Tiết Kiệm";
@@ -182,11 +182,11 @@
             this.btnRutTien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRutTien.IconSize = 30;
             this.btnRutTien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutTien.Location = new System.Drawing.Point(0, 177);
-            this.btnRutTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRutTien.Location = new System.Drawing.Point(0, 217);
+            this.btnRutTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRutTien.Name = "btnRutTien";
-            this.btnRutTien.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.btnRutTien.Size = new System.Drawing.Size(172, 32);
+            this.btnRutTien.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnRutTien.Size = new System.Drawing.Size(229, 39);
             this.btnRutTien.TabIndex = 9;
             this.btnRutTien.Tag = "   Rút Tiền";
             this.btnRutTien.Text = "   Rút Tiền";
@@ -207,11 +207,11 @@
             this.btnDeposit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeposit.IconSize = 30;
             this.btnDeposit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeposit.Location = new System.Drawing.Point(0, 145);
-            this.btnDeposit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeposit.Location = new System.Drawing.Point(0, 178);
+            this.btnDeposit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.btnDeposit.Size = new System.Drawing.Size(172, 32);
+            this.btnDeposit.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnDeposit.Size = new System.Drawing.Size(229, 39);
             this.btnDeposit.TabIndex = 6;
             this.btnDeposit.Tag = "   Nạp Tiền";
             this.btnDeposit.Text = "   Nạp Tiền";
@@ -232,11 +232,11 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 381);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 12);
+            this.iconButton1.Location = new System.Drawing.Point(0, 469);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 15);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(172, 32);
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(229, 39);
             this.iconButton1.TabIndex = 5;
             this.iconButton1.Tag = "   Trợ Giúp";
             this.iconButton1.Text = "   Trợ Giúp";
@@ -256,11 +256,11 @@
             this.btnClose2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose2.IconSize = 30;
             this.btnClose2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose2.Location = new System.Drawing.Point(0, 413);
-            this.btnClose2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 12);
+            this.btnClose2.Location = new System.Drawing.Point(0, 508);
+            this.btnClose2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 15);
             this.btnClose2.Name = "btnClose2";
-            this.btnClose2.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.btnClose2.Size = new System.Drawing.Size(172, 32);
+            this.btnClose2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnClose2.Size = new System.Drawing.Size(229, 39);
             this.btnClose2.TabIndex = 4;
             this.btnClose2.Tag = "   Thoát";
             this.btnClose2.Text = "   Thoát";
@@ -281,11 +281,11 @@
             this.btnTransaction.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTransaction.IconSize = 30;
             this.btnTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaction.Location = new System.Drawing.Point(0, 113);
-            this.btnTransaction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTransaction.Location = new System.Drawing.Point(0, 139);
+            this.btnTransaction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.btnTransaction.Size = new System.Drawing.Size(172, 32);
+            this.btnTransaction.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnTransaction.Size = new System.Drawing.Size(229, 39);
             this.btnTransaction.TabIndex = 3;
             this.btnTransaction.Tag = "   Chuyển Tiền";
             this.btnTransaction.Text = "   Chuyển Tiền";
@@ -306,11 +306,11 @@
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHome.IconSize = 30;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 81);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Location = new System.Drawing.Point(0, 100);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(172, 32);
+            this.btnHome.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(229, 39);
             this.btnHome.TabIndex = 1;
             this.btnHome.Tag = "   Trang Chủ";
             this.btnHome.Text = "   Trang Chủ";
@@ -327,9 +327,9 @@
             this.panelTitle.Controls.Add(this.btnClose);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(883, 20);
+            this.panelTitle.Size = new System.Drawing.Size(1177, 25);
             this.panelTitle.TabIndex = 1;
             this.panelTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitle_Paint_1);
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
@@ -344,10 +344,10 @@
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(783, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinimize.Location = new System.Drawing.Point(1044, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(34, 20);
+            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
             this.btnMinimize.TabIndex = 1;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -362,10 +362,10 @@
             this.btnMaximize.IconColor = System.Drawing.Color.White;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(817, 0);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMaximize.Location = new System.Drawing.Point(1089, 0);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(34, 20);
+            this.btnMaximize.Size = new System.Drawing.Size(45, 25);
             this.btnMaximize.TabIndex = 1;
             this.btnMaximize.UseVisualStyleBackColor = false;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -380,10 +380,10 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(851, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(1134, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(32, 20);
+            this.btnClose.Size = new System.Drawing.Size(43, 25);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -392,10 +392,10 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.SystemColors.Control;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(172, 75);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDesktop.Location = new System.Drawing.Point(229, 91);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(711, 390);
+            this.panelDesktop.Size = new System.Drawing.Size(948, 481);
             this.panelDesktop.TabIndex = 0;
             // 
             // menuStrip1
@@ -407,10 +407,10 @@
             this.editToolStripMenuItem,
             this.viewToolStripMenuItem,
             this.tìmKiếmToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(172, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(229, 25);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(711, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(948, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -419,32 +419,32 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiSignin});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.fileToolStripMenuItem.Text = "Tài liệu";
             // 
             // tsmiSignin
             // 
             this.tsmiSignin.Name = "tsmiSignin";
-            this.tsmiSignin.Size = new System.Drawing.Size(212, 22);
+            this.tsmiSignin.Size = new System.Drawing.Size(264, 26);
             this.tsmiSignin.Text = "Đăng nhập tài khoản khác";
             this.tsmiSignin.Click += new System.EventHandler(this.tsmiSignin_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
             this.editToolStripMenuItem.Text = "Sửa";
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.viewToolStripMenuItem.Text = "Xem";
             // 
             // tìmKiếmToolStripMenuItem
             // 
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             this.tìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
             // 
@@ -454,10 +454,10 @@
             this.panelTimKiem.Controls.Add(this.txtTimKiem);
             this.panelTimKiem.Controls.Add(this.iconButton2);
             this.panelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTimKiem.Location = new System.Drawing.Point(172, 44);
-            this.panelTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTimKiem.Location = new System.Drawing.Point(229, 53);
+            this.panelTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTimKiem.Name = "panelTimKiem";
-            this.panelTimKiem.Size = new System.Drawing.Size(711, 31);
+            this.panelTimKiem.Size = new System.Drawing.Size(948, 38);
             this.panelTimKiem.TabIndex = 3;
             this.panelTimKiem.Visible = false;
             // 
@@ -472,13 +472,14 @@
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTimKiem.Location = new System.Drawing.Point(0, 0);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTimKiem.Multiline = false;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.txtTimKiem.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.txtTimKiem.PasswordChar = false;
             this.txtTimKiem.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTimKiem.PlaceholderText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(607, 29);
+            this.txtTimKiem.Size = new System.Drawing.Size(809, 35);
             this.txtTimKiem.TabIndex = 0;
             this.txtTimKiem.Texts = "";
             this.txtTimKiem.UnderlinedStyle = false;
@@ -491,25 +492,25 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(607, 0);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton2.Location = new System.Drawing.Point(809, 0);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(104, 31);
+            this.iconButton2.Size = new System.Drawing.Size(139, 38);
             this.iconButton2.TabIndex = 1;
             this.iconButton2.Text = "Tìm kiếm";
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
             // FHomeKH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 465);
+            this.ClientSize = new System.Drawing.Size(1177, 572);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTimKiem);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelTitle);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FHomeKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý ngân hàng";

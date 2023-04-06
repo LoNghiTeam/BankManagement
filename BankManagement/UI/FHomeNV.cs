@@ -1,4 +1,5 @@
-﻿using BankManagement.DAO;
+﻿using BankManagement.Controller;
+using BankManagement.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -145,6 +146,9 @@ namespace BankManagement.UI
                         this.Padding = new Padding(borderSize);
                     break;
             }
+            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+
+
         }
         private void CollapseMenu()
         {
@@ -153,7 +157,13 @@ namespace BankManagement.UI
                 panelMenu.Width = 100;
                 pictureBox1.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
-                foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
+                foreach (Button menuButton in panelMenuTop.Controls.OfType<Button>())
+                {
+                    menuButton.Text = "";
+                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
+                    menuButton.Padding = new Padding(0);
+                }
+                foreach (Button menuButton in panelMenuBottom.Controls.OfType<Button>())
                 {
                     menuButton.Text = "";
                     menuButton.ImageAlign = ContentAlignment.MiddleCenter;
@@ -165,7 +175,13 @@ namespace BankManagement.UI
                 panelMenu.Width = 230;
                 pictureBox1.Visible = true;
                 btnMenu.Dock = DockStyle.None;
-                foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
+                foreach (Button menuButton in panelMenuTop.Controls.OfType<Button>())
+                {
+                    menuButton.Text = "   " + menuButton.Tag.ToString();
+                    menuButton.ImageAlign = ContentAlignment.MiddleLeft;
+                    menuButton.Padding = new Padding(10, 0, 0, 0);
+                }
+                foreach (Button menuButton in panelMenuBottom.Controls.OfType<Button>())
                 {
                     menuButton.Text = "   " + menuButton.Tag.ToString();
                     menuButton.ImageAlign = ContentAlignment.MiddleLeft;
@@ -191,6 +207,7 @@ namespace BankManagement.UI
                 this.WindowState = FormWindowState.Normal;
                 this.Size = formSize;
             }
+            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -240,7 +257,7 @@ namespace BankManagement.UI
         private void FHomeNV_Load(object sender, EventArgs e)
         {
             formSize = this.ClientSize;
-            lblName.Text = lblName.Tag+logging.Taikhoan.HoTen;
+            lblName.Text = lblName.Tag + logging.Taikhoan.HoTen;
         }
 
         private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
@@ -323,12 +340,6 @@ namespace BankManagement.UI
             fRutTien.ShowDialog();
         }
 
-        private void btnVayTien_Click(object sender, EventArgs e)
-        {
-            FVayTienTheChap fVayTien = new FVayTienTheChap();
-            fVayTien.ShowDialog();
-        }
-
         private void btnGuiTietKiem_Click(object sender, EventArgs e)
         {
             FTietKiem fTietKiem = new FTietKiem();
@@ -338,7 +349,7 @@ namespace BankManagement.UI
         private void FHomeNV_Resize(object sender, EventArgs e)
         {
             AdjustForm();
-    //        userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            //        userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
         }
 
         private void btnTransHis_Click(object sender, EventArgs e)
@@ -369,9 +380,24 @@ namespace BankManagement.UI
             fChangePass.ShowDialog();
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void btnQLSTK_Click(object sender, EventArgs e)
+        {
+            userControl = new CSoTietKiem();
+            CSoTietKiem cSoTK = userControl as CSoTietKiem;
+            cSoTK.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(cSoTK);
+        }
+
+        private void btnVayTD_Click(object sender, EventArgs e)
         {
             FVayTienTinDung fVayTien = new FVayTienTinDung();
+            fVayTien.ShowDialog();
+        }
+
+        private void btnVayTC_Click(object sender, EventArgs e)
+        {
+            FVayTienTheChap fVayTien = new FVayTienTheChap();
             fVayTien.ShowDialog();
         }
     }

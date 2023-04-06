@@ -29,7 +29,6 @@ namespace BankManagement.Model
             this.maGD = maGD;
             this.nguoiGui = nguoiGui;
             this.nguoiNhan = nguoiNhan;
-            this.tien = tien;
             this.ngayGD = ngayGD;
             this.tien = tien;
             this.loai = loai;

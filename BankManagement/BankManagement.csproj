@@ -113,6 +113,18 @@
     <Compile Include="UI\FChangePass.Designer.cs">
       <DependentUpon>FChangePass.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FChiTietGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FChiTietGD.Designer.cs">
+      <DependentUpon>FChiTietGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FSoTietKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FSoTietKiem.Designer.cs">
+      <DependentUpon>FSoTietKiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FHomeNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     </Compile>
     <Compile Include="UI\FRutTien.Designer.cs">
       <DependentUpon>FRutTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FTatToanSTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FTatToanSTK.Designer.cs">
+      <DependentUpon>FTatToanSTK.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FTietKiem.cs">
       <SubType>Form</SubType>
@@ -200,6 +218,21 @@
     <Compile Include="UI\CXinChao.Designer.cs">
       <DependentUpon>CXinChao.cs</DependentUpon>
     </Compile>
+	  <Compile Include="UI\CSoTietKiem.cs">
+		  <SubType>UserControl</SubType>
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Include="UI\CSoTietKiem.Designer.cs">
+		  <DependentUpon>CSoTietKiem.cs</DependentUpon>
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	  <EmbeddedResource Include="RTrans.rdlc">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="UI\CSoTietKiem.resx">
+		  <DependentUpon>CSoTietKiem.cs</DependentUpon>
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
     <Compile Include="UI\FVayTienTinDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +248,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FChangePass.resx">
       <DependentUpon>FChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FChiTietGD.resx">
+      <DependentUpon>FChiTietGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FSoTietKiem.resx">
+      <DependentUpon>FSoTietKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FHomeKH.resx">
       <DependentUpon>FHomeKH.cs</DependentUpon>
@@ -233,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FRutTien.resx">
       <DependentUpon>FRutTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FTatToanSTK.resx">
+      <DependentUpon>FTatToanSTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FTietKiem.resx">
       <DependentUpon>FTietKiem.cs</DependentUpon>
