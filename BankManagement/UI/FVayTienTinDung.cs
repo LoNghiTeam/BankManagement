@@ -116,7 +116,6 @@ namespace BankManagement.UI
         private void btnVayTien_Click(object sender, EventArgs e)
         {
             int soTK = -1;
-            double thechap;
             int.TryParse(tbSoTK.Texts.Trim(), out soTK);
             double.TryParse(tbTien.Texts.Trim(), out tien);
             if (vayTien.TienVayTD(taiKhoan.DiemTD) >= tien)
