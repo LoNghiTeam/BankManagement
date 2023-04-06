@@ -35,61 +35,44 @@ namespace BankManagement.UI
                 dpNgayGD.Value = GiaoDich.NgayGD;
                 tbxMaNgGui.Texts = GiaoDich.NguoiGui.ToString();
                 tbxMaNgNhan.Texts = GiaoDich.NguoiNhan.ToString();
-                switch (GiaoDich.NguoiGui)
+                switch (GiaoDich.Loai)
                 {
-                    case -2:
-                        if (GiaoDich.NguoiNhan > 0)
-                        {
-                            tbxLoaiGD.Texts = "Tất toán tiết kiệm";
-                        }
+                    case 7:
+                         tbxLoaiGD.Texts = "Tất toán tiết kiệm";
                         tbxTenNgGui.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
+                        tbxTenNgNhan.Texts = gdDAO.LayTenKH(GiaoDich.NguoiNhan);
                         break;
-                    case -1:
-                        if (GiaoDich.NguoiNhan > 0)
-                        {
-                            tbxLoaiGD.Texts = "Vay tiền";
-                        }
-                        tbxTenNgGui.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
-                        break;
-                    case 0:
-                        if (GiaoDich.NguoiNhan > 0)
-                        {
-                            tbxLoaiGD.Texts = "Nạp tiền";
-                        }
-                        tbxTenNgGui.Texts = "Chủ thể nạp tiền";
-                        break;
-                    default:
-                        switch (GiaoDich.NguoiNhan)
-                        {
-                            case 0:
-                                tbxLoaiGD.Texts = "Rút tiền";
-                                break;
-                            case -1:
-                                tbxLoaiGD.Texts = "Thanh toán nợ";
-                                break;
-                            case -2:
-                                tbxLoaiGD.Texts = "Gửi tiền tiết kiệm";
-                                break;
-                            default:
-                                tbxLoaiGD.Texts = "Chuyển tiền giữa các tài khoản";
-                                break;
-                        }
+                    case 6:
+                        tbxLoaiGD.Texts = "Tất toán khoản vay";
+                        tbxTenNgNhan.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
                         tbxTenNgGui.Texts = gdDAO.LayTenKH(GiaoDich.NguoiGui);
                         break;
-                }
-                switch (GiaoDich.NguoiNhan)
-                {
-                    case 0:
+                    case 5:
+                        tbxLoaiGD.Texts = "Gửi tiết kiệm";
+                        tbxTenNgNhan.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
+                        tbxTenNgGui.Texts = gdDAO.LayTenKH(GiaoDich.NguoiGui);
+                        break;
+                    case 4:
+                        tbxLoaiGD.Texts = "Vay tiền";
+                        tbxTenNgGui.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
+                        tbxTenNgNhan.Texts = gdDAO.LayTenKH(GiaoDich.NguoiNhan);
+                        break;
+                    case 3:
+                        tbxLoaiGD.Texts = "Rút tiền";
                         tbxTenNgNhan.Texts = "Chủ thể rút tiền";
+                        tbxTenNgGui.Texts = gdDAO.LayTenKH(GiaoDich.NguoiGui);
                         break;
-                    case -1:
-                        tbxTenNgNhan.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
+                    case 2:
+                        tbxLoaiGD.Texts = "Nạp tiền";
+                        tbxTenNgGui.Texts = "Chủ thể nạp tiền";
+                        tbxTenNgNhan.Texts = gdDAO.LayTenKH(GiaoDich.NguoiNhan);
                         break;
-                    case -2:
-                        tbxTenNgNhan.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
+                    case 1:
+                        tbxLoaiGD.Texts = "Chuyển tiền";
+                        tbxTenNgGui.Texts = gdDAO.LayTenKH(GiaoDich.NguoiGui);
+                        tbxTenNgNhan.Texts = gdDAO.LayTenKH(GiaoDich.NguoiNhan);
                         break;
                     default:
-                        tbxTenNgNhan.Texts = gdDAO.LayTenKH(GiaoDich.NguoiNhan);
                         break;
                 }
             }

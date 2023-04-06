@@ -101,6 +101,12 @@
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\KhoanVayDAO.cs" />
     <Compile Include="DAO\LaiSuatDAO.cs" />
+    <Compile Include="UI\CKhoanVay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CKhoanVay.Designer.cs">
+      <DependentUpon>CKhoanVay.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\CTrans.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="UI\FChiTietGD.Designer.cs">
       <DependentUpon>FChiTietGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FKhoanVay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FKhoanVay.Designer.cs">
+      <DependentUpon>FKhoanVay.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FSoTietKiem.cs">
       <SubType>Form</SubType>
@@ -218,27 +230,33 @@
     <Compile Include="UI\CXinChao.Designer.cs">
       <DependentUpon>CXinChao.cs</DependentUpon>
     </Compile>
-	  <Compile Include="UI\CSoTietKiem.cs">
-		  <SubType>UserControl</SubType>
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Compile>
-	  <Compile Include="UI\CSoTietKiem.Designer.cs">
-		  <DependentUpon>CSoTietKiem.cs</DependentUpon>
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Compile>
-	  <EmbeddedResource Include="RTrans.rdlc">
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="UI\CSoTietKiem.resx">
-		  <DependentUpon>CSoTietKiem.cs</DependentUpon>
-		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </EmbeddedResource>
+    <Compile Include="UI\CSoTietKiem.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UI\CSoTietKiem.Designer.cs">
+      <DependentUpon>CSoTietKiem.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <EmbeddedResource Include="RTrans.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CKhoanVay.resx">
+      <DependentUpon>CKhoanVay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CSoTietKiem.resx">
+      <DependentUpon>CSoTietKiem.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Compile Include="UI\FVayTienTinDung.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FVayTienTinDung.Designer.cs">
       <DependentUpon>FVayTienTinDung.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\FKhoanVay.resx">
+      <DependentUpon>FKhoanVay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FVayTienTinDung.resx">
       <DependentUpon>FVayTienTinDung.cs</DependentUpon>
     </EmbeddedResource>

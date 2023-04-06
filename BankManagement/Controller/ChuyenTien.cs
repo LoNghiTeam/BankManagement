@@ -36,7 +36,7 @@ namespace BankManagement.Controller
         }
         public bool TaoGiaoDichNap(int nguoinhan, DateTime ngayGD, double tien, int loai)
         {
-            GiaoDich giaoDich = new GiaoDich(nguoinhan, ngayGD, tien, loai);
+            GiaoDich giaoDich = new GiaoDich(1, nguoinhan, ngayGD, tien, loai);
             if (giaoDichDAO.TaoGD(giaoDich))
                 return true;
             return false;

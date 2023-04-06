@@ -15,6 +15,7 @@ namespace BankManagement
     public partial class FNapTien : Form
     {
         ChuyenTien chuyenTien = new ChuyenTien();
+        TaiKhoan taiKhoan= new TaiKhoan();
         public FNapTien()
         {
             InitializeComponent();
@@ -29,8 +30,8 @@ namespace BankManagement
                     {
                         if (chuyenTien.GiaoDichTienNhan(int.Parse(tbSoTK.Text), result))
                         {
-                            logging.Taikhoan.Tien += result;
-                            lblSoDu.Text = logging.Taikhoan.Tien.ToString() + " VND";
+                            taiKhoan.Tien += result;
+                            lblSoDu.Text = taiKhoan.Tien.ToString() + " VND";
                             MessageBox.Show("Nạp tiền thành công", "Thông báo", MessageBoxButtons.OK);
                         }
                         else
@@ -59,10 +60,18 @@ namespace BankManagement
             
             if (tbSoTK.Text.ToString() != "")
             {
-                logging.Taikhoan = chuyenTien.TimNguoiNhan(int.Parse(tbSoTK.Text));
-                lblNguoiNhan.Text = logging.Taikhoan.HoTen;
-                lblSoDu.Text = logging.Taikhoan.Tien.ToString();
-                btnNap.Enabled = true;
+                int soTK;
+                int.TryParse(tbSoTK.Text, out soTK);
+                taiKhoan = chuyenTien.TimNguoiNhan(soTK);
+                if(taiKhoan != null)
+                {
+                    lblNguoiNhan.Text = taiKhoan.HoTen;
+                    lblSoDu.Text = taiKhoan.Tien.ToString();
+                    btnNap.Enabled = true;
+                }
+                else
+                    MessageBox.Show("Số tài khoản không tồn tại, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
+
             }
             else
                 MessageBox.Show("Yêu cầu nhập số tài khoản!", "Thông báo", MessageBoxButtons.OK);
