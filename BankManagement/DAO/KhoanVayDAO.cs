@@ -22,6 +22,23 @@ namespace BankManagement.DAO
             }
             return false;
         }
-     
+        public DataTable FindAll()
+        {
+            string SQL = string.Format("Select * from KhoanVay");
+
+            return conn.LayDanhSach(SQL);
+        }
+        public DataTable FindSoTK(int soTK)
+        {
+            string SQL = string.Format("Select * from KhoanVay where SoTK = '{0}'", soTK);
+
+            return conn.LayDanhSach(SQL);
+        }
+        public void CapNhatTinhTrang(int soKV)
+        {
+            string SQL = string.Format("UPDATE KhoanVay SET TinhTrang = {1} where SoTK ='{0}'", soKV, 1);
+            conn.Execute(SQL);
+
+        }
     }
 }

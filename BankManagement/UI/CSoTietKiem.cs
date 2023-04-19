@@ -49,6 +49,7 @@ namespace BankManagement.UI
                 tbxTien.Texts = row.Cells[5].Value.ToString();
                 tbxMaLS.Texts = row.Cells[6].Value.ToString();
                 tbxTinhTrang.Texts = row.Cells[7].Value.ToString();
+                
             }
             if (!btnTatToan.Visible && tbxTinhTrang.Texts == "0")
             {
