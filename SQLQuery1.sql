@@ -10,11 +10,13 @@
          isAdmin int,
          Tien FLOAT,
          DiemTD int,
+         BlackList int,
+
 );
-INSERT INTO TaiKhoan VALUES ('Admin', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789', 2, 10000000000000000, 0);
-INSERT INTO TaiKhoan VALUES ('Admin2', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',1, 0, 0);
-INSERT INTO TaiKhoan VALUES ('Admin3', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0, 0);
-INSERT INTO TaiKhoan VALUES ('Admin4', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0, 0);
+INSERT INTO TaiKhoan VALUES ('Admin', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789', 2, 10000000000000000, 0, 0);
+INSERT INTO TaiKhoan VALUES ('Admin2', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',1, 0, 0, 0);
+INSERT INTO TaiKhoan VALUES ('Admin3', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0, 0, 0);
+INSERT INTO TaiKhoan VALUES ('Admin4', '123456', 'Nguyen Van a', '2022-11-16 08:19:41','10','Thanh pho Ho Chi Minh', '0123456789',0, 0, 0, 1);
 
 CREATE TABLE LaiSuat (
          MaLS INT IDENTITY(1,1) PRIMARY KEY,
@@ -75,6 +77,16 @@ CREATE TABLE SoTietKiem (
 INSERT INTO SoTietKiem (SoTK,TenSo, NgayVay, Ngayhan, Tien, MaLS, TinhTrang) VALUES (1,'','2022-11-16','2023-4-3', 100000, 1,0);
 INSERT INTO SoTietKiem (SoTK,TenSo, NgayVay, Ngayhan, Tien, MaLS, TinhTrang) VALUES (1,'','2022-11-15','2023-4-3', 100000, 1,0);
 INSERT INTO SoTietKiem (SoTK,TenSo, NgayVay, Ngayhan, Tien, MaLS, TinhTrang) VALUES (1,'','2022-11-13','2023-4-3', 100000, 1,0);
+CREATE TABLE TheTinDung (
+         MaTTD INT IDENTITY(1,1) PRIMARY KEY,
+         SoTK int,
+         DiemThe int,
+         DaVay float,
+         Khoa int,
+         FOREIGN KEY (SoTK) REFERENCES TaiKhoan(SoTK),
+);
+INSERT INTO TheTinDung (SoTK,DiemThe,DaVay, Khoa) VALUES (1,3,0,0);
+INSERT INTO TheTinDung (SoTK,DiemThe,DaVay, Khoa) VALUES (2,1,0,0);
 
 
 select * from LaiSuat
@@ -82,5 +94,5 @@ select * from KhoanVay
 select * from GiaoDich
 select * from TaiKhoan
 select * from SoTietKiem
-
+select * from TheTinDung
 
