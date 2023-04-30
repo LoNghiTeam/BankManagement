@@ -12,10 +12,10 @@ using Microsoft.Reporting.WinForms;
 
 namespace BankManagement.UI
 {
-    public partial class FPrintTrans : Form
+    public partial class FInGD : Form
     {
         private List<GiaoDich> _data;
-        public FPrintTrans(List<GiaoDich> data)
+        public FInGD(List<GiaoDich> data)
         {
             InitializeComponent();
             _data = data;

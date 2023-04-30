@@ -522,6 +522,7 @@
             this.btnTatToan.Text = "Xác nhận tất toán";
             this.btnTatToan.TextColor = System.Drawing.Color.White;
             this.btnTatToan.UseVisualStyleBackColor = false;
+            this.btnTatToan.Click += new System.EventHandler(this.btnTatToan_Click);
             // 
             // FTatToanSTK
             // 

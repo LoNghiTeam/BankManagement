@@ -1,6 +1,6 @@
 ﻿namespace BankManagement
 {
-    partial class CTrans
+    partial class CGiaoDich
     {
         /// <summary> 
         /// Required designer variable.

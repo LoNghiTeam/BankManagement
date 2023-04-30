@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace BankManagement
 {
-    public partial class FLogin : Form
+    public partial class FDangNhap : Form
     {
         DangNhap dangNhap = new DangNhap();
         DBConnection DBConnection = new DBConnection();
-        public FLogin()
+        public FDangNhap()
         {
             InitializeComponent();
         }
@@ -64,7 +64,7 @@ namespace BankManagement
 
         private void lblSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FSignup signup = new FSignup();
+            FDangKy signup = new FDangKy();
             signup.ShowDialog();
         }
 

@@ -302,7 +302,7 @@ namespace BankManagement
         private void tsmiSignin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FLogin login = new FLogin();
+            FDangNhap login = new FDangNhap();
             login.Show();
             logging.Taikhoan = null;
         }

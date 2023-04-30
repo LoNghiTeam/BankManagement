@@ -39,5 +39,11 @@ namespace BankManagement.DAO
             string sqlStr = string.Format("SELECT * FROM SoTietKiem WHERE SoTK = {'0'}",stk.SoTK);
             return conn.LayDanhSach(sqlStr);
         }
+        public void TatToanGD(SoTietKiem stk)
+        {
+            string sqlStr = string.Format(
+                "UPDATE SoTietKiem SET TinhTrang='1' WHERE MaSTK = '{0}'",stk.MaSTK);
+            conn.Execute(sqlStr);
+        }
     }
 }

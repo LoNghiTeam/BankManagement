@@ -318,7 +318,7 @@ namespace BankManagement.UI
         private void tsmiSignin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FLogin login = new FLogin();
+            FDangNhap login = new FDangNhap();
             login.Show();
             logging.Taikhoan = null;
         }
@@ -357,8 +357,8 @@ namespace BankManagement.UI
             panelTimKiem.Visible = true;
             tbxTimKiem.Focus();
             tìmKiếmToolStripMenuItem.Text = "Ẩn thanh tìm kiếm";
-            userControl = new CTrans();
-            CTrans transControl = userControl as CTrans;
+            userControl = new CGiaoDich();
+            CGiaoDich transControl = userControl as CGiaoDich;
             transControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(transControl);
@@ -366,17 +366,17 @@ namespace BankManagement.UI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (userControl is CTrans)
+            if (userControl is CGiaoDich)
             {
                 GiaoDichDAO gdDAO = new GiaoDichDAO();
-                CTrans transControl = userControl as CTrans;
+                CGiaoDich transControl = userControl as CGiaoDich;
                 transControl.TimKiemGD(tbxTimKiem.Texts);
             }
         }
 
         private void tsmiChangePass_Click(object sender, EventArgs e)
         {
-            FChangePass fChangePass = new FChangePass();
+            FDoiMK fChangePass = new FDoiMK();
             fChangePass.ShowDialog();
         }
 

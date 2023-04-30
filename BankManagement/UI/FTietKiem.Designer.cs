@@ -57,11 +57,11 @@
             // 
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 119);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(0, 146);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(325, 327);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(433, 403);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin gửi tiết kiệm";
@@ -84,29 +84,27 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(2, 15);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(3, 17);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(321, 310);
+            this.panel3.Size = new System.Drawing.Size(427, 384);
             this.panel3.TabIndex = 2;
             // 
             // lblTienHienCo
             // 
             this.lblTienHienCo.AutoSize = true;
-            this.lblTienHienCo.Location = new System.Drawing.Point(115, 91);
-            this.lblTienHienCo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTienHienCo.Location = new System.Drawing.Point(153, 112);
             this.lblTienHienCo.Name = "lblTienHienCo";
-            this.lblTienHienCo.Size = new System.Drawing.Size(13, 13);
+            this.lblTienHienCo.Size = new System.Drawing.Size(14, 16);
             this.lblTienHienCo.TabIndex = 14;
             this.lblTienHienCo.Text = "0";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(4, 91);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(5, 112);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 13);
+            this.label8.Size = new System.Drawing.Size(127, 16);
             this.label8.TabIndex = 13;
             this.label8.Text = "Tiền trong tài khoản:";
             // 
@@ -119,15 +117,15 @@
             this.tbSoTK.BorderSize = 2;
             this.tbSoTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSoTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbSoTK.Location = new System.Drawing.Point(112, 4);
-            this.tbSoTK.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSoTK.Location = new System.Drawing.Point(149, 5);
+            this.tbSoTK.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbSoTK.Multiline = false;
             this.tbSoTK.Name = "tbSoTK";
-            this.tbSoTK.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbSoTK.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.tbSoTK.PasswordChar = false;
             this.tbSoTK.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbSoTK.PlaceholderText = "";
-            this.tbSoTK.Size = new System.Drawing.Size(204, 31);
+            this.tbSoTK.Size = new System.Drawing.Size(272, 39);
             this.tbSoTK.TabIndex = 12;
             this.tbSoTK.Texts = "";
             this.tbSoTK.UnderlinedStyle = false;
@@ -136,29 +134,26 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 16);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(3, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.Size = new System.Drawing.Size(84, 16);
             this.label7.TabIndex = 11;
             this.label7.Text = "Số tài khoản:";
             // 
             // lblTamTinh
             // 
             this.lblTamTinh.AutoSize = true;
-            this.lblTamTinh.Location = new System.Drawing.Point(112, 240);
-            this.lblTamTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTamTinh.Location = new System.Drawing.Point(149, 295);
             this.lblTamTinh.Name = "lblTamTinh";
-            this.lblTamTinh.Size = new System.Drawing.Size(0, 13);
+            this.lblTamTinh.Size = new System.Drawing.Size(0, 16);
             this.lblTamTinh.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 240);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 295);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.Size = new System.Drawing.Size(85, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Tiền tạm tính:";
             // 
@@ -172,10 +167,10 @@
             this.btnGuiTietKiem.FlatAppearance.BorderSize = 0;
             this.btnGuiTietKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuiTietKiem.ForeColor = System.Drawing.Color.White;
-            this.btnGuiTietKiem.Location = new System.Drawing.Point(112, 268);
-            this.btnGuiTietKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuiTietKiem.Location = new System.Drawing.Point(149, 330);
+            this.btnGuiTietKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuiTietKiem.Name = "btnGuiTietKiem";
-            this.btnGuiTietKiem.Size = new System.Drawing.Size(204, 32);
+            this.btnGuiTietKiem.Size = new System.Drawing.Size(272, 39);
             this.btnGuiTietKiem.TabIndex = 8;
             this.btnGuiTietKiem.Text = "Xác nhận gửi tiết kiệm";
             this.btnGuiTietKiem.TextColor = System.Drawing.Color.White;
@@ -193,12 +188,12 @@
             this.cbThoiGian.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cbThoiGian.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbThoiGian.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbThoiGian.Location = new System.Drawing.Point(115, 125);
-            this.cbThoiGian.Margin = new System.Windows.Forms.Padding(2);
-            this.cbThoiGian.MinimumSize = new System.Drawing.Size(150, 24);
+            this.cbThoiGian.Location = new System.Drawing.Point(153, 154);
+            this.cbThoiGian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbThoiGian.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbThoiGian.Name = "cbThoiGian";
             this.cbThoiGian.Padding = new System.Windows.Forms.Padding(1);
-            this.cbThoiGian.Size = new System.Drawing.Size(204, 24);
+            this.cbThoiGian.Size = new System.Drawing.Size(268, 30);
             this.cbThoiGian.TabIndex = 7;
             this.cbThoiGian.Texts = "";
             this.cbThoiGian.OnSelectedIndexChanged += new System.EventHandler(this.cbThoiGian_OnSelectedIndexChanged);
@@ -212,15 +207,15 @@
             this.tbTienGui.BorderSize = 2;
             this.tbTienGui.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTienGui.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbTienGui.Location = new System.Drawing.Point(112, 192);
-            this.tbTienGui.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTienGui.Location = new System.Drawing.Point(149, 236);
+            this.tbTienGui.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbTienGui.Multiline = false;
             this.tbTienGui.Name = "tbTienGui";
-            this.tbTienGui.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.tbTienGui.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.tbTienGui.PasswordChar = false;
             this.tbTienGui.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbTienGui.PlaceholderText = "";
-            this.tbTienGui.Size = new System.Drawing.Size(205, 29);
+            this.tbTienGui.Size = new System.Drawing.Size(273, 35);
             this.tbTienGui.TabIndex = 5;
             this.tbTienGui.Texts = "";
             this.tbTienGui.UnderlinedStyle = false;
@@ -235,15 +230,15 @@
             this.tbTenSo.BorderSize = 2;
             this.tbTenSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTenSo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbTenSo.Location = new System.Drawing.Point(112, 45);
-            this.tbTenSo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTenSo.Location = new System.Drawing.Point(149, 55);
+            this.tbTenSo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tbTenSo.Multiline = false;
             this.tbTenSo.Name = "tbTenSo";
-            this.tbTenSo.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.tbTenSo.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.tbTenSo.PasswordChar = false;
             this.tbTenSo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbTenSo.PlaceholderText = "";
-            this.tbTenSo.Size = new System.Drawing.Size(205, 29);
+            this.tbTenSo.Size = new System.Drawing.Size(273, 35);
             this.tbTenSo.TabIndex = 5;
             this.tbTenSo.Texts = "";
             this.tbTenSo.UnderlinedStyle = false;
@@ -251,50 +246,45 @@
             // lblRate
             // 
             this.lblRate.AutoSize = true;
-            this.lblRate.Location = new System.Drawing.Point(115, 166);
-            this.lblRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRate.Location = new System.Drawing.Point(153, 204);
             this.lblRate.Name = "lblRate";
-            this.lblRate.Size = new System.Drawing.Size(21, 13);
+            this.lblRate.Size = new System.Drawing.Size(26, 16);
             this.lblRate.TabIndex = 1;
             this.lblRate.Text = "0%";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 166);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(3, 204);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 13);
+            this.label4.Size = new System.Drawing.Size(127, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Lãi suất cho hạn gửi:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 208);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(7, 256);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.Size = new System.Drawing.Size(108, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Số tiền muốn gửi:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 129);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(5, 159);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.Size = new System.Drawing.Size(108, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chọn thời hạn gửi";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 53);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(5, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.Size = new System.Drawing.Size(121, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Đặt tên sổ tiết kiệm:";
             // 
@@ -303,30 +293,30 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 119);
+            this.panel1.Size = new System.Drawing.Size(433, 146);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BankManagement.Properties.Resources.Asset_2_4x;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(160, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 90);
+            this.pictureBox1.Size = new System.Drawing.Size(117, 111);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FTietKiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 446);
+            this.ClientSize = new System.Drawing.Size(433, 549);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FTietKiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GuiTietKiem";

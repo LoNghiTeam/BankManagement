@@ -1,6 +1,6 @@
 ﻿namespace BankManagement
 {
-    partial class FSignup
+    partial class FDangKy
     {
         /// <summary>
         /// Required designer variable.
