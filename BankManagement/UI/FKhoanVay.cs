@@ -16,5 +16,11 @@ namespace BankManagement.UI
         {
             InitializeComponent();
         }
+
+        private void FKhoanVay_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

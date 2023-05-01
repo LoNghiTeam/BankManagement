@@ -105,6 +105,12 @@ namespace BankManagement.DAO
             return false;
         }
 
+        public void CapNhatDiemTinDung(int diem, int soTK )
+        {
+            string SQL = string.Format("UPDATE TaiKhoan SET DiemTD = {1} where SoTK ='{0}'", soTK, diem);
+            conn.Execute(SQL);
+           
+        }
         public bool DoiMatKhau(string mk)
         {
             string SQL = string.Format("UPDATE TaiKhoan SET Pass = {1} where SoTK ='{0}'", 

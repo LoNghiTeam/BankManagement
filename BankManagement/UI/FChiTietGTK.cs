@@ -9,13 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace BankManagement.UI
 {
-    public partial class CSoTietKiem : UserControl
+    public partial class FChiTietGTK : Form
     {
         SoTietKiemDAO stkDAO = new SoTietKiemDAO();
-        public CSoTietKiem()
+        public FChiTietGTK()
         {
             InitializeComponent();
             this.dtgvGuiTK.Size = new Size(Width, Height);
@@ -28,7 +29,6 @@ namespace BankManagement.UI
 
         private void dtgvGuiTK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dtgvGuiTK.Rows[e.RowIndex];
@@ -49,11 +49,6 @@ namespace BankManagement.UI
                 tbxTien.Texts = row.Cells[5].Value.ToString();
                 tbxMaLS.Texts = row.Cells[6].Value.ToString();
                 tbxTinhTrang.Texts = row.Cells[7].Value.ToString();
-                
-            }
-            if (!btnTatToan.Visible && tbxTinhTrang.Texts == "0")
-            {
-                btnTatToan.Visible = true;
             }
         }
 
@@ -63,24 +58,49 @@ namespace BankManagement.UI
             tietKiem.ShowDialog();
         }
 
-        private void btnTatToan_Click(object sender, EventArgs e)
+        private void btnSuaSTK_Click(object sender, EventArgs e)
         {
-            int index = dtgvGuiTK.CurrentCell.RowIndex;
-            SoTietKiem stk = new SoTietKiem(
-                    int.Parse(dtgvGuiTK.Rows[index].Cells[0].Value.ToString()),
-                    int.Parse(dtgvGuiTK.Rows[index].Cells[1].Value.ToString()),
-                    dtgvGuiTK.Rows[index].Cells[2].Value.ToString(),
-                    (DateTime)dtgvGuiTK.Rows[index].Cells[3].Value,
-                    (DateTime)dtgvGuiTK.Rows[index].Cells[4].Value,
-                    double.Parse(dtgvGuiTK.Rows[index].Cells[5].Value.ToString()),
-                    int.Parse(dtgvGuiTK.Rows[index].Cells[6].Value.ToString()),
-                    int.Parse(dtgvGuiTK.Rows[index].Cells[7].Value.ToString())
-            );
-            FTatToanSTK tatToanSTK = new FTatToanSTK(stk);
-            tatToanSTK.ShowDialog();
+            try
+            {
+                SoTietKiem stk = new SoTietKiem(
+                                Int32.Parse(tbxMaSo.Texts),
+                                Int32.Parse(tbxSTK.Texts),
+                                tbxTenSo.Texts,
+                                dpNgayVay.Value,
+                                dpNgayHan.Value,
+                                Double.Parse(tbxTien.Texts),
+                                Int32.Parse(tbxMaLS.Texts),
+                                Int32.Parse(tbxTinhTrang.Texts));
+
+                if (IsValid(stk))
+                {
+                    stkDAO.Sua(stk);
+                }
+
+                HienThiDanhSach();
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Xảy ra lỗi: "+ex);
+            }
+        }
+        bool IsValid(SoTietKiem stk)
+        {
+            if (string.IsNullOrWhiteSpace(stk.MaSTK.ToString()) ||
+                string.IsNullOrWhiteSpace(stk.SoTK.ToString()) ||
+                string.IsNullOrWhiteSpace(stk.TenSo.ToString()) ||
+                string.IsNullOrWhiteSpace(stk.Tien.ToString()) ||
+                string.IsNullOrWhiteSpace(stk.MaLS.ToString()) ||
+                string.IsNullOrWhiteSpace(stk.TinhTrang.ToString()) ||
+                string.IsNullOrWhiteSpace(stk.NgayVay.ToString()) ||
+                string.IsNullOrWhiteSpace(stk.NgayHan.ToString()))
+            {
+                MessageBox.Show("Không được để trống!");
+                return false;
+            }
+            return true;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void FChiTietGTK_Load(object sender, EventArgs e)
         {
 
         }

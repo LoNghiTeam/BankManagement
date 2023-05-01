@@ -40,7 +40,6 @@ namespace BankManagement.UI
             lblSoTien.Text = stk.Tien.ToString();
             lblMaLS.Text = stk.MaLS.ToString();
             lblTT.Text = "Chua xu ly";
-
             lblDaoHan.Text = stk.NgayHan.ToString();
             lblTatToan.Text = DateTime.Now.ToString();
             TimeSpan duration = stk.NgayHan - DateTime.Now;  

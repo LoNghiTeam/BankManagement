@@ -60,5 +60,40 @@ namespace BankManagement.DAO
             }
             return false;
         }
+        public LaiSuat find(int maLS)
+        {
+            LaiSuat laiSuat = new LaiSuat();
+            string sql = string.Format("select  * from LaiSuat where MaLS = '{0}'", maLS);
+            try
+            {
+                // Ket noi
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    laiSuat.MaLS = (int)reader["MaLS"];
+                    laiSuat.LaiVay = (double)reader["LaiVay"];
+                    laiSuat.LaiGui = (double)reader["LaiGui"];
+                    laiSuat.TiLe = (double)reader["TiLe"];
+                    laiSuat.QuyDoiTD = (double)reader["QuyDoiTD"];
+                    laiSuat.NgayApDung = (DateTime)reader["NgayApDung"];
+                    return laiSuat;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + "");
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
+            return null;
+        }
     }
 }

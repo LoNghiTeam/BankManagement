@@ -8,14 +8,7 @@ namespace BankManagement.Model
 {
     internal class KhoanVay
     {
-        private int maKV;
-        private int soTK;
-        private DateTime ngayVay;
-        private DateTime ngayHan;
-        private double tien;
-        private int maLS;
-        private int tinhTrang;
-        private int loai;
+
 
         public KhoanVay()
         {
@@ -31,6 +24,25 @@ namespace BankManagement.Model
             this.tinhTrang = tinhTrang;
             this.loai = loai;
         }
+        public KhoanVay(int maKV, int soTK, DateTime ngayVay, DateTime ngayHan, double tien, int maLS, int tinhTrang, int loai)
+        {
+            this.maKV = maKV;
+            this.soTK = soTK;
+            this.ngayVay = ngayVay;
+            this.tien = tien;
+            this.maLS = maLS;
+            this.ngayHan = ngayHan;
+            this.tinhTrang = tinhTrang;
+            this.loai = loai;
+        }
+        private int maKV;
+        private int soTK;
+        private DateTime ngayVay;
+        private DateTime ngayHan;
+        private double tien;
+        private int maLS;
+        private int tinhTrang;
+        private int loai;
 
         public int MaKV
         {

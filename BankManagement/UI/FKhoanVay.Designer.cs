@@ -35,19 +35,23 @@
             // 
             this.cKhoanVay1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cKhoanVay1.Location = new System.Drawing.Point(0, 0);
+            this.cKhoanVay1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cKhoanVay1.Name = "cKhoanVay1";
-            this.cKhoanVay1.Size = new System.Drawing.Size(879, 516);
+            this.cKhoanVay1.Size = new System.Drawing.Size(659, 419);
             this.cKhoanVay1.TabIndex = 0;
+
             // 
             // FKhoanVay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 516);
+            this.ClientSize = new System.Drawing.Size(659, 419);
             this.Controls.Add(this.cKhoanVay1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FKhoanVay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FKhoanVay";
+            this.Load += new System.EventHandler(this.FKhoanVay_Load);
             this.ResumeLayout(false);
 
         }

@@ -146,7 +146,7 @@ namespace BankManagement.UI
                         this.Padding = new Padding(borderSize);
                     break;
             }
-            userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+ //           userControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
 
 
         }

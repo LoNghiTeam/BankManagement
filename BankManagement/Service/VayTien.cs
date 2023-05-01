@@ -11,7 +11,6 @@ namespace BankManagement.Controller
     
     internal class VayTien
     {
-        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();    
         LaiSuatDAO laiSuatDAO = new LaiSuatDAO();  
         KhoanVayDAO khoanVayDAO = new KhoanVayDAO();
         LaiSuat laiSuat = new LaiSuat();
