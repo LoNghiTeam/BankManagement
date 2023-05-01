@@ -472,7 +472,7 @@
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTimKiem.Location = new System.Drawing.Point(0, 0);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(5);
             this.txtTimKiem.Multiline = false;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);

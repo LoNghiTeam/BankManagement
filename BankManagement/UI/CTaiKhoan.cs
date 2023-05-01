@@ -108,7 +108,7 @@ namespace BankManagement
 
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        /*private void btnThem_Click(object sender, EventArgs e)
         {
             TaiKhoan tk = new TaiKhoan(
                 tbxSTK.Texts,
@@ -124,6 +124,6 @@ namespace BankManagement
             }
 
             HienThiDanhSach();
-        }
+        }*/
     }
 }

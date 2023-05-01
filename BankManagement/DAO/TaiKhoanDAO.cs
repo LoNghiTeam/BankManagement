@@ -136,7 +136,9 @@ namespace BankManagement.DAO
             conn.Execute(sqlStr);
         }
 
-        public void Them(TaiKhoan tk)
+
+        //Tính năng random tài khoản:
+        /*public void Them(TaiKhoan tk)
         {
             string userName = GenerateRandom();
             string pass = GenerateRandom();
@@ -165,6 +167,6 @@ namespace BankManagement.DAO
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             return new string(Enumerable.Repeat(chars, 10)
               .Select(s => s[random.Next(s.Length)]).ToArray());
-        }
+        }*/
     }
 }

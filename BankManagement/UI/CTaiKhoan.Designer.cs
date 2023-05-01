@@ -45,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnThem = new RJCodeAdvance.RJControls.RJButton();
             this.btnSua = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBank)).BeginInit();
             this.panel1.SuspendLayout();
@@ -288,32 +287,12 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnThem);
             this.flowLayoutPanel1.Controls.Add(this.btnSua);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(830, 191);
             this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnThem.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThem.BorderRadius = 0;
-            this.btnThem.BorderSize = 0;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(3, 3);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(150, 40);
-            this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextColor = System.Drawing.Color.White;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -325,7 +304,7 @@
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(159, 3);
+            this.btnSua.Location = new System.Drawing.Point(3, 3);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(150, 40);
             this.btnSua.TabIndex = 1;
@@ -372,6 +351,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private RJCodeAdvance.RJControls.RJDatePicker dpNgaySinh;
-        private RJCodeAdvance.RJControls.RJButton btnThem;
     }
 }

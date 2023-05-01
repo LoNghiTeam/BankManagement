@@ -83,6 +83,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Service\GuiTien.cs" />
+    <Compile Include="Service\TatToanSTK.cs" />
+    <Compile Include="Service\ThoiHanGiaoDich.cs" />
     <Compile Include="Service\TinhLai.cs" />
     <Compile Include="DAO\SoTietKiemDAO.cs" />
     <Compile Include="Model\SoTietKiem.cs" />
