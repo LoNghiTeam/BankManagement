@@ -15,7 +15,7 @@ namespace BankManagement
 {
     public partial class CTaiKhoan : UserControl
     {
-        KhachHangDAO khDAO = new KhachHangDAO();
+        TaiKhoanDAO tkDAO = new TaiKhoanDAO();
         //public event EventHandler ButtonClicked;
         public CTaiKhoan()
         {
@@ -32,7 +32,7 @@ namespace BankManagement
         //}
         private void HienThiDanhSach()
         {
-            this.dtgvBank.DataSource = khDAO.LayDanhSachKH();
+            this.dtgvBank.DataSource = tkDAO.LayDanhSachKH();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace BankManagement
 
             if (IsValid(tk))
             {
-                khDAO.Sua(tk);
+                tkDAO.Sua(tk);
             }
 
             HienThiDanhSach();
@@ -108,7 +108,7 @@ namespace BankManagement
 
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        /*private void btnThem_Click(object sender, EventArgs e)
         {
             TaiKhoan tk = new TaiKhoan(
                 tbxSTK.Texts,
@@ -120,10 +120,10 @@ namespace BankManagement
 
             if (IsValid(tk))
             {
-                khDAO.Them(tk);
+                tkDAO.Them(tk);
             }
 
             HienThiDanhSach();
-        }
+        }*/
     }
 }

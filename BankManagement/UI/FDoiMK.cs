@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace BankManagement.UI
 {
-    public partial class FChangePass : Form
+    public partial class FDoiMK : Form
     {
         TaiKhoanDAO tkDAO = new TaiKhoanDAO();
-        public FChangePass()
+        public FDoiMK()
         {
             InitializeComponent();
         }

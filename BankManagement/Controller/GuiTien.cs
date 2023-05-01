@@ -11,9 +11,9 @@ namespace BankManagement.Controller
     internal class GuiTien
     {
         LaiSuat laiSuat = new LaiSuat();
+        TinhLai tinhLai = new TinhLai();
         LaiSuatDAO laiSuatDAO = new LaiSuatDAO();
         SoTietKiemDAO soTietKiemDAO = new SoTietKiemDAO();
-        TinhLai tinhLai = new TinhLai();
         public GuiTien() { }
         public void TinhlaichangecbThoiGian(ref int thoigian, string chuoithoigian, ref double lai)
         {

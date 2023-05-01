@@ -79,5 +79,10 @@ namespace BankManagement.UI
             FTatToanSTK tatToanSTK = new FTatToanSTK(stk);
             tatToanSTK.ShowDialog();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

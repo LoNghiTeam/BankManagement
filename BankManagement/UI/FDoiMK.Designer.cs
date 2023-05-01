@@ -1,6 +1,6 @@
 ﻿namespace BankManagement.UI
 {
-    partial class FChangePass
+    partial class FDoiMK
     {
         /// <summary>
         /// Required designer variable.

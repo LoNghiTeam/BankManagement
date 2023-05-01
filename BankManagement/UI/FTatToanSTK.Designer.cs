@@ -73,6 +73,7 @@
             this.lblTien = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.btnTatToan = new RJCodeAdvance.RJControls.RJButton();
+            this.btnTiepTuc = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -241,7 +242,7 @@
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(123, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(442, 406);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(442, 445);
             this.flowLayoutPanel3.TabIndex = 4;
             // 
             // panel6
@@ -304,7 +305,7 @@
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(114, 406);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(114, 445);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // pictureBox1
@@ -312,7 +313,7 @@
             this.pictureBox1.Image = global::BankManagement.Properties.Resources._1527713;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 403);
+            this.pictureBox1.Size = new System.Drawing.Size(109, 442);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -326,7 +327,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1001, 412);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1001, 460);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // flowLayoutPanel4
@@ -338,9 +339,10 @@
             this.flowLayoutPanel4.Controls.Add(this.panel13);
             this.flowLayoutPanel4.Controls.Add(this.panel14);
             this.flowLayoutPanel4.Controls.Add(this.btnTatToan);
+            this.flowLayoutPanel4.Controls.Add(this.btnTiepTuc);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(571, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(430, 406);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(430, 445);
             this.flowLayoutPanel4.TabIndex = 5;
             // 
             // panel9
@@ -447,9 +449,9 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(13, 17);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(114, 16);
+            this.label16.Size = new System.Drawing.Size(102, 16);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Tổng tiền tạm tính:";
+            this.label16.Text = "Tiền lãi tạm tính:";
             // 
             // panel13
             // 
@@ -522,12 +524,32 @@
             this.btnTatToan.Text = "Xác nhận tất toán";
             this.btnTatToan.TextColor = System.Drawing.Color.White;
             this.btnTatToan.UseVisualStyleBackColor = false;
+            this.btnTatToan.Click += new System.EventHandler(this.btnTatToan_Click);
+            // 
+            // btnTiepTuc
+            // 
+            this.btnTiepTuc.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTiepTuc.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnTiepTuc.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTiepTuc.BorderRadius = 0;
+            this.btnTiepTuc.BorderSize = 0;
+            this.btnTiepTuc.FlatAppearance.BorderSize = 0;
+            this.btnTiepTuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTiepTuc.ForeColor = System.Drawing.Color.White;
+            this.btnTiepTuc.Location = new System.Drawing.Point(3, 385);
+            this.btnTiepTuc.Name = "btnTiepTuc";
+            this.btnTiepTuc.Size = new System.Drawing.Size(415, 40);
+            this.btnTiepTuc.TabIndex = 1;
+            this.btnTiepTuc.Text = "Tiếp tục gửi với lãi";
+            this.btnTiepTuc.TextColor = System.Drawing.Color.White;
+            this.btnTiepTuc.UseVisualStyleBackColor = false;
+            this.btnTiepTuc.Click += new System.EventHandler(this.btnTatToan_Click);
             // 
             // FTatToanSTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 412);
+            this.ClientSize = new System.Drawing.Size(1001, 460);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FTatToanSTK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -614,5 +636,6 @@
         private System.Windows.Forms.Label lblMaLS;
         private System.Windows.Forms.Label lblTT;
         private System.Windows.Forms.Label lblDaoHan;
+        private RJCodeAdvance.RJControls.RJButton btnTiepTuc;
     }
 }

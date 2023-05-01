@@ -18,12 +18,12 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace BankManagement
 {
-    public partial class CTrans : UserControl
+    public partial class CGiaoDich : UserControl
     {
         GiaoDichDAO gdDAO = new GiaoDichDAO();
         List<GiaoDich> giaoDiches = new List<GiaoDich>();
 
-        public CTrans()
+        public CGiaoDich()
         {
             InitializeComponent();
             this.dtgvTrans.Size = new Size(Width, Height);
@@ -212,7 +212,7 @@ namespace BankManagement
             {
                 ThemGDVaoMayIn(i);
             }
-            FPrintTrans print = new FPrintTrans(giaoDiches);
+            FInGD print = new FInGD(giaoDiches);
             print.ShowDialog();
         }
         private void ThemGDVaoMayIn(int i)
@@ -231,7 +231,7 @@ namespace BankManagement
         {
             giaoDiches.Clear();
             ThemGDVaoMayIn(dtgvTrans.CurrentCell.RowIndex);
-            FPrintTrans print = new FPrintTrans(giaoDiches);
+            FInGD print = new FInGD(giaoDiches);
             print.ShowDialog();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace BankManagement.UI
 {
-    partial class FPrintTrans
+    partial class FInGD
     {
         /// <summary>
         /// Required designer variable.
