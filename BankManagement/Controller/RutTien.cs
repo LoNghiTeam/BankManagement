@@ -16,16 +16,13 @@ namespace BankManagement.Controller
         {
             TaiKhoan taiKhoan = new TaiKhoan();
             taiKhoan = taiKhoanDAO.TimSoTK(SoTK);
-            if (taiKhoan != null)
-                return taiKhoan;
-            return null;
+            return taiKhoan;
         }
         public bool TaoGiaoDich(int nguoigui, int nguoinhan, DateTime ngayGD, double tien, int loai)
         {
             GiaoDich giaoDich = new GiaoDich(nguoigui, nguoinhan, ngayGD, tien, loai);
-            if (giaoDichDAO.TaoGD(giaoDich))
-                return true;
-            return false;
+            return giaoDichDAO.TaoGD(giaoDich);
+
         }
         public bool GiaoDichTien(int nguoigui, double tiengiaodich)
         {
@@ -33,9 +30,7 @@ namespace BankManagement.Controller
             if (tiennhan != -1)
             {
                 tiennhan -= tiengiaodich;
-                if (taiKhoanDAO.CapNhatTien(nguoigui, tiennhan))
-                    return true;
-                return false;
+                return taiKhoanDAO.CapNhatTien(nguoigui, tiennhan);
             }
             return false;
         }

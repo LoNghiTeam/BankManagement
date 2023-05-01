@@ -19,21 +19,17 @@ namespace BankManagement
         VayTien vayTien = new VayTien();
         HoatDongLaiSuat hdLS = new HoatDongLaiSuat();
         DieuChinhLaiSuat dieuChinh = new DieuChinhLaiSuat();
+
         public FLaiSuat()
         {
             InitializeComponent();
         }
-
         private void FLaiSuat_Load(object sender, EventArgs e)
         {
             laiSuat = hdLS.GetLaiSuat(laiSuat);
             btnChange.Enabled = false;
             lblRate.Text = string.Empty;
             tbxNewRate.Enabled = false;
-            cbTypeRate.Items.Add("Lãi vay");
-            cbTypeRate.Items.Add("Lãi gửi");
-            cbTypeRate.Items.Add("Tỉ lệ");
-            cbTypeRate.Items.Add("Giá trị quy đổi điểm tín dụng");
         }
 
         private void cbTypeRate_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -43,19 +39,19 @@ namespace BankManagement
             switch (cbTypeRate.Texts)
             {
                 case ("Lãi vay"):
-                    type = 1;
+                    type = (int)LoaiLaiSuat.laivay;
                     lblRate.Text = (laiSuat.LaiVay * 100).ToString() + "%";
                     break;
                 case ("Lãi gửi"):
-                    type = 2;
+                    type = (int)LoaiLaiSuat.laigui;
                     lblRate.Text = (laiSuat.LaiGui * 100).ToString() + "%";
                     break;
                 case ("Tỉ lệ"):
-                    type = 3;
+                    type = (int)LoaiLaiSuat.tile;
                     lblRate.Text = laiSuat.TiLe.ToString();
                     break;
                 case ("Giá trị quy đổi điểm tín dụng"):
-                    type = 4;
+                    type = (int)LoaiLaiSuat.quydoiTD;
                     lblRate.Text = laiSuat.QuyDoiTD.ToString();
                     break;
                 default:
@@ -89,16 +85,16 @@ namespace BankManagement
                 laiSuat = hdLS.GetLaiSuat(laiSuat);
                 switch (type)
                 {
-                    case (1):
+                    case ((int)LoaiLaiSuat.laivay):
                         lblRate.Text = (laiSuat.LaiVay * 100).ToString() + "%";
                         break;
-                    case (2):
+                    case ((int)LoaiLaiSuat.laigui):
                         lblRate.Text = (laiSuat.LaiGui * 100).ToString() + "%";
                         break;
-                    case (3):
+                    case ((int)LoaiLaiSuat.tile):
                         lblRate.Text = laiSuat.TiLe.ToString();
                         break;
-                    case (4):
+                    case ((int)LoaiLaiSuat.quydoiTD):
                         lblRate.Text = laiSuat.QuyDoiTD.ToString();
                         break;
                     default:

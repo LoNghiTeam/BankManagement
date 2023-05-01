@@ -24,7 +24,14 @@ namespace BankManagement.UI
             tbxTinhTrang.Enabled = false;
             dpNgayHan.Enabled = false;
             dpNgayVay.Enabled = false;
-            dtgvKhoanVay.DataSource = khoanVayDAO.FindAll();
+            if(logging.Taikhoan.IsAdmin == 0)
+            {
+                dtgvKhoanVay.DataSource = khoanVayDAO.FindSoTK(logging.Taikhoan.SoTK);
+                tbxSoTK.Enabled = false;
+                tbxSoTK.Texts = logging.Taikhoan.SoTK.ToString();
+            }   
+            else
+                dtgvKhoanVay.DataSource = khoanVayDAO.FindAll();
             btnTatToan.Enabled = false;
         }
 
@@ -47,7 +54,10 @@ namespace BankManagement.UI
                 DataGridViewRow row = dtgvKhoanVay.Rows[e.RowIndex];
 
                 tbxSoKV.Texts = row.Cells[0].Value.ToString();
-                tbxSoTK.Texts = row.Cells[1].Value.ToString();
+                if (logging.Taikhoan.IsAdmin != 0)
+                {
+                    tbxSoTK.Texts = row.Cells[1].Value.ToString();
+                }
                 try
                 {
                     dpNgayVay.Value = (DateTime)row.Cells[2].Value;

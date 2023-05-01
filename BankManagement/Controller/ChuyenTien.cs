@@ -30,16 +30,14 @@ namespace BankManagement.Controller
         }
         public bool TaoGiaoDich(int nguoigui, int nguoinhan, DateTime ngayGD, double tien, int loai) {
             GiaoDich giaoDich = new GiaoDich(nguoigui, nguoinhan, ngayGD, tien, loai);
-            if(giaoDichDAO.TaoGD(giaoDich))
-                return true;
-            return false;
+            return giaoDichDAO.TaoGD(giaoDich);
+
         }
         public bool TaoGiaoDichNap(int nguoinhan, DateTime ngayGD, double tien, int loai)
         {
             GiaoDich giaoDich = new GiaoDich(1, nguoinhan, ngayGD, tien, loai);
-            if (giaoDichDAO.TaoGD(giaoDich))
-                return true;
-            return false;
+            return giaoDichDAO.TaoGD(giaoDich);
+
         }
         public bool GiaoDichTien(int nguoiGui, int nguoiNhan, double tienGiaoGich)
         {
@@ -73,9 +71,7 @@ namespace BankManagement.Controller
             if (tiennhan != -1)
             {
                 tiennhan -= tiengiaodich;
-                if (taiKhoanDAO.CapNhatTien(nguoigui, tiennhan))
-                    return true;
-                return false;
+                return taiKhoanDAO.CapNhatTien(nguoigui, tiennhan);
             }
             return false;
         }

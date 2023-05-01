@@ -18,30 +18,28 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace BankManagement
 {
-    public partial class CGiaoDich : UserControl
+    public partial class CTrans : UserControl
     {
         GiaoDichDAO gdDAO = new GiaoDichDAO();
         List<GiaoDich> giaoDiches = new List<GiaoDich>();
 
-        public CGiaoDich()
+        public CTrans()
         {
             InitializeComponent();
             this.dtgvTrans.Size = new Size(Width, Height);
-            if(logging.Taikhoan.IsAdmin == 0)
-            {
-                HienThiDanhSach(logging.Taikhoan.SoTK);
-                tbxNgGui.Enabled = false;
-                tbxNgNhan.Enabled = false;
-            }
-            else
-            {
-                HienThiDanhSach();
-            }
-            
+            HienThiDanhSach();
         }
 
         private void CTrans_Load(object sender, EventArgs e)
         {
+            cbbLoaiGD.Items.Add("Toàn bộ giao dịch");
+            cbbLoaiGD.Items.Add("Khoản vay");
+            cbbLoaiGD.Items.Add("Gửi tiết kiệm");
+            cbbLoaiGD.Items.Add("Tất toán tiết kiệm");
+            cbbLoaiGD.Items.Add("Chuyển tiền");
+            cbbLoaiGD.Items.Add("Rút tiền");
+            cbbLoaiGD.Items.Add("Nạp tiền");
+            cbbLoaiGD.Items.Add("Thanh toán nợ");
             cbbLoaiGD.SelectedItem = "Toàn bộ giao dịch";
             cbDate.Checked = false;
         }
@@ -49,11 +47,6 @@ namespace BankManagement
         private void HienThiDanhSach()
         {
             this.dtgvTrans.DataSource = gdDAO.LayDanhSachGD();
-        }
-
-        private void HienThiDanhSach(int soTK)
-        {
-            this.dtgvTrans.DataSource = gdDAO.LayDanhSachGD(soTK);
         }
         public void TimKiemGD(string text)
         {
@@ -219,7 +212,7 @@ namespace BankManagement
             {
                 ThemGDVaoMayIn(i);
             }
-            FInGD print = new FInGD(giaoDiches);
+            FPrintTrans print = new FPrintTrans(giaoDiches);
             print.ShowDialog();
         }
         private void ThemGDVaoMayIn(int i)
@@ -238,7 +231,7 @@ namespace BankManagement
         {
             giaoDiches.Clear();
             ThemGDVaoMayIn(dtgvTrans.CurrentCell.RowIndex);
-            FInGD print = new FInGD(giaoDiches);
+            FPrintTrans print = new FPrintTrans(giaoDiches);
             print.ShowDialog();
         }
 

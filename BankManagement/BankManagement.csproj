@@ -83,9 +83,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\GuiTien.cs" />
+    <Compile Include="Controller\LoaiLaiSuat.cs" />
     <Compile Include="Controller\TatToanSTK.cs" />
-    <Compile Include="Controller\ThoiHanGiaoDich.cs" />
     <Compile Include="Controller\HoatDongLaiSuat.cs" />
+    <Compile Include="Controller\ThoiHanGiaoDich.cs" />
     <Compile Include="Controller\TinhLai.cs" />
     <Compile Include="DAO\SoTietKiemDAO.cs" />
     <Compile Include="DAO\TheTinDungDAO.cs" />

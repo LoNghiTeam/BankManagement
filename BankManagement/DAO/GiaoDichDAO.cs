@@ -16,15 +16,17 @@ namespace BankManagement.DAO
         {
             string SQL = string.Format("INSERT INTO GiaoDich(NguoiGui, NguoiNhan, NgayGD, Tien, LoaiGD) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
                 giaoDich.NguoiGui, giaoDich.NguoiNhan, giaoDich.NgayGD, giaoDich.Tien, giaoDich.Loai);
-            if (conn.Execute(SQL))
-            {
-                return true;
-            }
-            return false;
+            return conn.Execute(SQL);
+
         }
         public DataTable LayDanhSachGD()
         {
             string sqlStr = string.Format("Select * from GiaoDich where LoaiGD = 1");
+            return conn.LayDanhSach(sqlStr);
+        }
+        public DataTable LayDanhSachGD(int soTK)
+        {
+            string sqlStr = string.Format("Select * from GiaoDich where (NguoiNhan = {0} or NguoiGui = {1}) and LoaiGD = 1", soTK, soTK);
             return conn.LayDanhSach(sqlStr);
         }
         public DataTable TimKiemGDCB(string text, string option)

@@ -53,11 +53,7 @@ namespace BankManagement.DAO
         {
             string SQL = string.Format("INSERT INTO LaiSuat(LaiGui, LaiVay, TiLe, QuyDoiTD, NgayApDung)  VALUES ('{0}', '{1}','{2}','{3}', '{4}');",
                 laiSuat.LaiGui, laiSuat.LaiVay,laiSuat.TiLe, laiSuat.QuyDoiTD, laiSuat.NgayApDung);
-            if (dBConnection.Execute(SQL))
-            {
-                return true;
-            }
-            return false;
+            return dBConnection.Execute(SQL);
         }
         public LaiSuat find(int maLS)
         {

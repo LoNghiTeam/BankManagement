@@ -16,22 +16,16 @@ namespace BankManagement.DAO
         {
             string SQL = string.Format("INSERT INTO KhoanVay(SoTK, NgayVay, NgayHan, Tien, MaLS, TinhTrang, Loai) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}');",
                 khoanVay.SoTK, khoanVay.NgayVay, khoanVay.NgayHan, khoanVay.Tien, khoanVay.MaLS, khoanVay.TinhTrang, khoanVay.Loai);
-            if (conn.Execute(SQL))
-            {
-                return true;
-            }
-            return false;
+            return conn.Execute(SQL);
         }
         public DataTable FindAll()
         {
             string SQL = string.Format("Select * from KhoanVay");
-
             return conn.LayDanhSach(SQL);
         }
         public DataTable FindSoTK(int soTK)
         {
             string SQL = string.Format("Select * from KhoanVay where SoTK = '{0}'", soTK);
-
             return conn.LayDanhSach(SQL);
         }
         public void CapNhatTinhTrang(int soKV)

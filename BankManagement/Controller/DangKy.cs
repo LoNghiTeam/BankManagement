@@ -15,11 +15,8 @@ namespace BankManagement.Controller
         public DangKy() { }
         public bool ktTaikhoan (string taikhoan)
         {
-            if (taiKhoanDAO.KiemtraTK(taikhoan) == true)
-            {
-                return false;
-            }
-            return true;
+            return taiKhoanDAO.KiemtraTK(taikhoan);
+            
         }
         public bool ktMatKhau(string matkhau, string matkhaunhaplai)
         {
@@ -61,9 +58,7 @@ namespace BankManagement.Controller
         }
         public bool TaoTKKH(TaiKhoan taiKhoan)
         {
-            if (taiKhoanDAO.TaoTK(taiKhoan, 0))
-                return true;
-            return false;
+            return taiKhoanDAO.TaoTK(taiKhoan, 0);
         }
 
     }

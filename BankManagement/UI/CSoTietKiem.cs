@@ -19,13 +19,24 @@ namespace BankManagement.UI
         {
             InitializeComponent();
             this.dtgvGuiTK.Size = new Size(Width, Height);
-            HienThiDanhSach();
+            if(logging.Taikhoan.IsAdmin == 0)
+            {
+                tbxSTK.Texts = logging.Taikhoan.SoTK.ToString();
+                HienThiDanhSach(logging.Taikhoan.SoTK);
+            }
+            else
+            {
+                HienThiDanhSach();
+            }
         }
         private void HienThiDanhSach()
         {
             this.dtgvGuiTK.DataSource = stkDAO.LayDanhSachSTK();
         }
-
+        private void HienThiDanhSach(int soTK)
+        {
+            this.dtgvGuiTK.DataSource = stkDAO.LayDanhSachSTK(soTK);
+        }
         private void dtgvGuiTK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 

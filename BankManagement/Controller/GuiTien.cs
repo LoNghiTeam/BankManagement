@@ -47,10 +47,6 @@ namespace BankManagement.Controller
                     lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 1.2);
                     thoigian = 36;
                     break;
-                case "Không thời hạn":
-                    lai = tinhLai.TinhLaiSuat(laiSuat.LaiVay, 0.7);
-                    thoigian = 12;
-                    break;
             }
         }
 
@@ -78,9 +74,6 @@ namespace BankManagement.Controller
                 case "36 tháng":
                     tien += tinhLai.TinhTienLai(tien, lai / 100, 36);
                     break;
-                case "Không thời hạn":
-                    tien += tinhLai.TinhTienLai(tien, lai / 100, 12);
-                    break;
             }
         }
 
@@ -90,9 +83,8 @@ namespace BankManagement.Controller
             if (thoiGian != 0)
                 ngayHan = ngayGui.AddMonths(thoiGian);
             SoTietKiem soTietKiem = new SoTietKiem(soTK, tenSo, ngayGui, ngayHan, tienGui, maLS, 0);
-            if (soTietKiemDAO.TaoSTK(soTietKiem))
-                return true;
-            return false;
+            return soTietKiemDAO.TaoSTK(soTietKiem);
+
         }
     }
 }

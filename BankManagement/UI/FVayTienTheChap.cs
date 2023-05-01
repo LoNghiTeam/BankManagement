@@ -34,12 +34,6 @@ namespace BankManagement.UI
         private void FVayTien_Load(object sender, EventArgs e)
         {
             btnVayTien.Enabled = false;
-            cbThoiGian.Items.Add("1 tháng");
-            cbThoiGian.Items.Add("3 tháng");
-            cbThoiGian.Items.Add("6 tháng");
-            cbThoiGian.Items.Add("12 tháng");
-            cbThoiGian.Items.Add("24 tháng");
-            cbThoiGian.Items.Add("36 tháng");
             if(logging.Taikhoan.IsAdmin < 1)
             {
                 tbSoTK.Enabled = false;

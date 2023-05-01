@@ -67,7 +67,7 @@ namespace BankManagement.UI
                 chuyenTien.TaoGiaoDich(taiKhoan.SoTK, 1, DateTime.Now, tienRut, 3);
                 theTinDung.DaVay += tienRut;
                 if (theTinDungDAO.CapNhatThe(theTinDung))
-                    MessageBox.Show("Thanh toán thành công", "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Rút tiền thành công", "Thông báo", MessageBoxButtons.OK);
             }
             else
                 MessageBox.Show("Rút tiền không thành công", "Thông báo", MessageBoxButtons.OK);

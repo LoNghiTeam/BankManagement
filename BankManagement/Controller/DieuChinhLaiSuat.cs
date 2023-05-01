@@ -10,29 +10,28 @@ namespace BankManagement.Controller
 {
     internal class DieuChinhLaiSuat
     {
-        LaiSuatDAO laiSuatDAO = new LaiSuatDAO();   
+        LaiSuatDAO laiSuatDAO = new LaiSuatDAO();
+
         public DieuChinhLaiSuat(){ }
         public bool dieuchinh(int type, LaiSuat laiSuat, double gtMoi)
         {
             switch (type)
             {
-                case (1):
+                case ((int)LoaiLaiSuat.laivay):
                     laiSuat.LaiVay = gtMoi / 100;
                     break;
-                case (2):
+                case ((int)LoaiLaiSuat.laigui):
                     laiSuat.LaiGui = gtMoi / 100;
                     break;
-                case (3):
+                case ((int)LoaiLaiSuat.tile):
                     laiSuat.TiLe = gtMoi;
                     break;
-                case (4):
+                case ((int)LoaiLaiSuat.quydoiTD):
                     laiSuat.QuyDoiTD = gtMoi;
                     break;
             }
             laiSuat.NgayApDung = DateTime.Now;
-            if(laiSuatDAO.taoLaiSuat(laiSuat))
-                return true;
-            return false;
+            return laiSuatDAO.taoLaiSuat(laiSuat);
         }
 
     }

@@ -33,13 +33,6 @@ namespace BankManagement
         private void FTietKiem_Load(object sender, EventArgs e)
         {
             btnGuiTietKiem.Enabled = false;
-            cbThoiGian.Items.Add("1 tháng");
-            cbThoiGian.Items.Add("3 tháng");
-            cbThoiGian.Items.Add("6 tháng");
-            cbThoiGian.Items.Add("12 tháng");
-            cbThoiGian.Items.Add("24 tháng");
-            cbThoiGian.Items.Add("36 tháng");
-            cbThoiGian.Items.Add("Không thời hạn");
             lblRate.Text = string.Empty;
             if (logging.Taikhoan.IsAdmin < 1)
             {
@@ -83,10 +76,7 @@ namespace BankManagement
             if(lblTamTinh.Text != ""){
                 double.TryParse(tbTienGui.Texts.Trim(), out tien);
                 tien += tinhLai.TinhTienLai(tien, lai / 100, thoigian);
-                if (cbThoiGian.Texts == "Không thời hạn")
-                    lblTamTinh.Text = tien.ToString() + "VNĐ (12 tháng)";
-                else
-                    lblTamTinh.Text = tien.ToString() + "VNĐ";
+                lblTamTinh.Text = tien.ToString() + "VNĐ";
                 btnGuiTietKiem.Enabled = true;
             }
 
@@ -103,10 +93,7 @@ namespace BankManagement
                 laiSuat = laiSuat.Remove(laiSuat.IndexOf('%'));
                 double.TryParse(laiSuat, out lai);
                 guiTien.TinhlaichangeTbGuiTien(cbThoiGian.Texts.ToString(), ref tien, ref lai);
-                if (cbThoiGian.Texts == "Không thời hạn") 
-                    lblTamTinh.Text = tien.ToString() + "VNĐ (12 tháng)";
-                else
-                    lblTamTinh.Text = tien.ToString() + "VNĐ";
+                lblTamTinh.Text = tien.ToString() + "VNĐ";
                 btnGuiTietKiem.Enabled = true;
             }
             else

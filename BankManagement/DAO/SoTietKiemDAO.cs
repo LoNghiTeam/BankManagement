@@ -16,11 +16,7 @@ namespace BankManagement.DAO
         {
             string SQL = string.Format("INSERT INTO SoTietKiem(SoTK,TenSo, NgayVay, Ngayhan, Tien, MaLS, TinhTrang) VALUES ('{0}', '{1}', '{2}', '{3}','{4}', '{5}', '{6}');",
                 soTietKiem.SoTK, soTietKiem.TenSo, soTietKiem.NgayVay, soTietKiem.NgayHan, soTietKiem.Tien, soTietKiem.MaLS, soTietKiem.TinhTrang);
-            if (conn.Execute(SQL))
-            {
-                return true;
-            }
-            return false;
+            return conn.Execute(SQL);
         }
         public void Sua(SoTietKiem stk)
         {
@@ -32,6 +28,11 @@ namespace BankManagement.DAO
         public DataTable LayDanhSachSTK()
         {
             string sqlStr = string.Format("SELECT * FROM SoTietKiem");
+            return conn.LayDanhSach(sqlStr);
+        }
+        public DataTable LayDanhSachSTK(int soTK)
+        {
+            string sqlStr = string.Format("SELECT * FROM SoTietKiem where SoTK = {0}", soTK);
             return conn.LayDanhSach(sqlStr);
         }
         public DataTable LaySTK(SoTietKiem stk)

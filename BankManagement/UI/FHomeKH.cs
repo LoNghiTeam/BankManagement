@@ -329,5 +329,43 @@ namespace BankManagement
             FTietKiem fTietKiem = new FTietKiem();
             fTietKiem.ShowDialog();
         }
+
+        private void btnTheTinDung_Click(object sender, EventArgs e)
+        {
+            FTheTinDung fTheTinDung = new FTheTinDung();
+            fTheTinDung.ShowDialog();
+        }
+
+        private void btnVayTD_Click(object sender, EventArgs e)
+        {
+            FVayTienTinDung fVayTienTinDung = new FVayTienTinDung();
+            fVayTienTinDung.ShowDialog();
+        }
+
+        private void btnQLSTK_Click(object sender, EventArgs e)
+        {
+            FSoTietKiem fsoTietKiem = new FSoTietKiem();
+            fsoTietKiem.ShowDialog();
+        }
+
+        private void btnTransHis_Click(object sender, EventArgs e)
+        {
+            panelTimKiem.Visible = true;
+            tìmKiếmToolStripMenuItem.Text = "Ẩn thanh tìm kiếm";
+            userControl = new CGiaoDich();
+            CGiaoDich transControl = userControl as CGiaoDich;
+            transControl.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(transControl);
+        }
+
+        private void btnQLKV_Click(object sender, EventArgs e)
+        {
+            userControl = new CKhoanVay();
+            CKhoanVay cKV = userControl as CKhoanVay;
+            cKV.Size = new Size(panelDesktop.Width, panelDesktop.Height);
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(cKV);
+        }
     }
 }
