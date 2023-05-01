@@ -126,12 +126,14 @@ namespace BankManagement.UI
             {
                 if (chuyenTien.GiaoDichTienGui(taiKhoan.SoTK, tongTien))
                 {
+                    chuyenTien.TaoGiaoDich(taiKhoan.SoTK, 1, DateTime.Now, tongTien, 6);
                     if (tinhtrang != 0)
                         taiKhoanDAO.CapNhatDiemTinDung(taiKhoan.DiemTD + 1, taiKhoan.SoTK);
                     else
                         taiKhoanDAO.CapNhatDiemTinDung(taiKhoan.DiemTD - 1, taiKhoan.SoTK);
                     khoanVayDAO.CapNhatTinhTrang(khoanVay.MaKV);
                     MessageBox.Show("Tất toán thành công", "Thông báo", MessageBoxButtons.OK);
+                    this.Dispose();
                 }
                     
 

@@ -15,9 +15,8 @@ namespace BankManagement.DAO
         DBConnection dBConnection = new DBConnection();
         public LaiSuatDAO() { }
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
-        public LaiSuat find()
+        public LaiSuat find(LaiSuat laiSuat)
         {
-            LaiSuat laiSuat = new LaiSuat();
             string sql = string.Format("select top(1) * from LaiSuat ORDER BY MaLS DESC");
             try
             {

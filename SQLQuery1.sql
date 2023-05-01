@@ -80,13 +80,14 @@ INSERT INTO SoTietKiem (SoTK,TenSo, NgayVay, Ngayhan, Tien, MaLS, TinhTrang) VAL
 CREATE TABLE TheTinDung (
          MaTTD INT IDENTITY(1,1) PRIMARY KEY,
          SoTK int,
-         DiemThe int,
-         DaVay float,
-         Khoa int,
+         DiemThe int DEFAULT 1,
+         DaVay float DEFAULT 0,
+         Khoa int DEFAULT 0,
+         NgayHan DATE,
          FOREIGN KEY (SoTK) REFERENCES TaiKhoan(SoTK),
 );
-INSERT INTO TheTinDung (SoTK,DiemThe,DaVay, Khoa) VALUES (1,3,0,0);
-INSERT INTO TheTinDung (SoTK,DiemThe,DaVay, Khoa) VALUES (2,1,0,0);
+INSERT INTO TheTinDung (SoTK,DiemThe,NgayHan,DaVay, Khoa) VALUES (1,3,'2022-5-16',0,0);
+INSERT INTO TheTinDung (SoTK,DiemThe,NgayHan,DaVay, Khoa) VALUES (2,1,'2022-5-16',0,0);
 
 
 select * from LaiSuat

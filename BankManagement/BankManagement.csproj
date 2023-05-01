@@ -83,9 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\GuiTien.cs" />
+    <Compile Include="Controller\HoatDongLaiSuat.cs" />
     <Compile Include="Controller\TinhLai.cs" />
     <Compile Include="DAO\SoTietKiemDAO.cs" />
+    <Compile Include="DAO\TheTinDungDAO.cs" />
     <Compile Include="Model\SoTietKiem.cs" />
+    <Compile Include="Model\TheTinDung.cs" />
     <Compile Include="UI\bankDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -125,11 +128,23 @@
     <Compile Include="UI\FChiTietGD.Designer.cs">
       <DependentUpon>FChiTietGD.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FChuyenTienTTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FChuyenTienTTD.Designer.cs">
+      <DependentUpon>FChuyenTienTTD.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FKhoanVay.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FKhoanVay.Designer.cs">
       <DependentUpon>FKhoanVay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FRutTienTTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FRutTienTTD.Designer.cs">
+      <DependentUpon>FRutTienTTD.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FSoTietKiem.cs">
       <SubType>Form</SubType>
@@ -172,6 +187,18 @@
     </Compile>
     <Compile Include="UI\FTatToanSTK.Designer.cs">
       <DependentUpon>FTatToanSTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FThanhToanTTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FThanhToanTTD.Designer.cs">
+      <DependentUpon>FThanhToanTTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FTheTinDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FTheTinDung.Designer.cs">
+      <DependentUpon>FTheTinDung.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FTietKiem.cs">
       <SubType>Form</SubType>
@@ -260,11 +287,23 @@
     <Compile Include="UI\FVayTienTinDung.Designer.cs">
       <DependentUpon>FVayTienTinDung.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\FChuyenTienTTD.resx">
+      <DependentUpon>FChuyenTienTTD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FKhoanVay.resx">
       <DependentUpon>FKhoanVay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FRutTienTTD.resx">
+      <DependentUpon>FRutTienTTD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FTatToanKV.resx">
       <DependentUpon>FTatToanKV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FThanhToanTTD.resx">
+      <DependentUpon>FThanhToanTTD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FTheTinDung.resx">
+      <DependentUpon>FTheTinDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FVayTienTinDung.resx">
       <DependentUpon>FVayTienTinDung.cs</DependentUpon>
