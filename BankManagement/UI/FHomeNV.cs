@@ -409,5 +409,11 @@ namespace BankManagement.UI
             panelDesktop.Controls.Clear();
             panelDesktop.Controls.Add(cKV);
         }
+
+        private void btnTheTinDung_Click(object sender, EventArgs e)
+        {
+            FTheTinDung fTheTinDung = new FTheTinDung();
+            fTheTinDung.ShowDialog();
+        }
     }
 }

@@ -133,6 +133,45 @@ namespace BankManagement.DAO
             }
             return null;
         }
+        public TheTinDung FindTTD(string Sql, TheTinDung theTinDung)
+        {
+
+            try
+            {
+                if (checkExist(Sql))
+                {
+                    // Ket noi
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(Sql, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        theTinDung.MaTTD = (int)reader["MaTTD"];
+                        theTinDung.SoTK = (int)reader["SoTK"];
+                        theTinDung.DiemThe = (int)reader["DiemThe"];
+                        theTinDung.NgayHan = (DateTime)reader["NgayHan"];
+                        theTinDung.DaVay = (double)reader["DaVay"];
+                        theTinDung.Khoa = (int)reader["Khoa"];
+                        return theTinDung;
+                    }
+                }
+                
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex + "");
+                return null;
+            }
+            finally
+            {
+
+                conn.Close();
+            }
+            TheTinDung rong = new TheTinDung();
+            return rong;
+        }
         public double FindTien(string Sql)
         {
             try

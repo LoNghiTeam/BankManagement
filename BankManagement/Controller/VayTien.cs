@@ -15,14 +15,7 @@ namespace BankManagement.Controller
         KhoanVayDAO khoanVayDAO = new KhoanVayDAO();
         LaiSuat laiSuat = new LaiSuat();
         TinhLai tinhLai = new TinhLai();
-        public LaiSuat GetLaiSuat()
-        {
-            LaiSuat laiSuat = new LaiSuat();
-            laiSuat = laiSuatDAO.find();
-            if (laiSuat != null)
-            { return laiSuat; }
-            return null;
-        }
+        HoatDongLaiSuat hdLS = new HoatDongLaiSuat();
 
 
         public bool TaoKhoanVay(int soTK, DateTime ngayVay, int thoigian, double tien, int maLS, int tinhTrang, int loai)
@@ -37,7 +30,7 @@ namespace BankManagement.Controller
 
         public double TienVayTD(int diem)
         {
-            laiSuat = GetLaiSuat();
+            laiSuat = hdLS.GetLaiSuat(laiSuat);
             return diem * laiSuat.QuyDoiTD;
         }
 
@@ -70,7 +63,7 @@ namespace BankManagement.Controller
         {
             thoigian = 0;
             lai = -1;
-            laiSuat = GetLaiSuat();
+            laiSuat = hdLS.GetLaiSuat(laiSuat);
             switch (chuoithoigian)
             {
                 case "1 tháng":

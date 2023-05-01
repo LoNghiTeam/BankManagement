@@ -19,7 +19,7 @@ namespace BankManagement.Controller
         {
             thoigian = 0;
             lai = -1;
-            laiSuat = laiSuatDAO.find();
+            laiSuat = laiSuatDAO.find(laiSuat);
             switch (chuoithoigian)
             {
                 case "1 tháng":

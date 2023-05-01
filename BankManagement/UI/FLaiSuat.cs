@@ -17,6 +17,7 @@ namespace BankManagement
         int type;
         LaiSuat laiSuat = new LaiSuat();
         VayTien vayTien = new VayTien();
+        HoatDongLaiSuat hdLS = new HoatDongLaiSuat();
         DieuChinhLaiSuat dieuChinh = new DieuChinhLaiSuat();
         public FLaiSuat()
         {
@@ -25,7 +26,7 @@ namespace BankManagement
 
         private void FLaiSuat_Load(object sender, EventArgs e)
         {
-            laiSuat = vayTien.GetLaiSuat();
+            laiSuat = hdLS.GetLaiSuat(laiSuat);
             btnChange.Enabled = false;
             lblRate.Text = string.Empty;
             tbxNewRate.Enabled = false;
@@ -85,7 +86,7 @@ namespace BankManagement
             if(dieuChinh.dieuchinh(type, laiSuat, double.Parse(tbxNewRate.Texts)))
             {
                 MessageBox.Show("Điều chỉnh thành công", "Thông báo", MessageBoxButtons.OK);
-                laiSuat = vayTien.GetLaiSuat();
+                laiSuat = hdLS.GetLaiSuat(laiSuat);
                 switch (type)
                 {
                     case (1):

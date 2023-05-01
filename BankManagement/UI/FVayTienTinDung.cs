@@ -78,7 +78,7 @@ namespace BankManagement.UI
 
         private void cbThoiGian_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            laiSuat = laiSuatDAO.find();
+            laiSuat = laiSuatDAO.find(laiSuat);
             double lai = 0;
             vayTien.TinhlaichangecbThoiGian(ref thoigian, cbThoiGian.Texts.ToString(), ref lai);
             lblLaiSuat.Text = lai.ToString() + "%";

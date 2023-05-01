@@ -44,6 +44,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnClose2 = new FontAwesome.Sharp.IconButton();
             this.panelMenuTop = new System.Windows.Forms.Panel();
+            this.btnTheTinDung = new FontAwesome.Sharp.IconButton();
             this.btnTransHis = new FontAwesome.Sharp.IconButton();
             this.btnQLSTK = new FontAwesome.Sharp.IconButton();
             this.btnGuiTietKiem = new FontAwesome.Sharp.IconButton();
@@ -188,6 +189,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -278,6 +280,7 @@
             // panelMenuTop
             // 
             this.panelMenuTop.AutoScroll = true;
+            this.panelMenuTop.Controls.Add(this.btnTheTinDung);
             this.panelMenuTop.Controls.Add(this.btnTransHis);
             this.panelMenuTop.Controls.Add(this.btnQLSTK);
             this.panelMenuTop.Controls.Add(this.btnGuiTietKiem);
@@ -295,6 +298,31 @@
             this.panelMenuTop.Name = "panelMenuTop";
             this.panelMenuTop.Size = new System.Drawing.Size(229, 466);
             this.panelMenuTop.TabIndex = 13;
+            // 
+            // btnTheTinDung
+            // 
+            this.btnTheTinDung.BackColor = System.Drawing.Color.Transparent;
+            this.btnTheTinDung.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTheTinDung.FlatAppearance.BorderSize = 0;
+            this.btnTheTinDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTheTinDung.ForeColor = System.Drawing.Color.White;
+            this.btnTheTinDung.IconChar = FontAwesome.Sharp.IconChar.Apple;
+            this.btnTheTinDung.IconColor = System.Drawing.Color.White;
+            this.btnTheTinDung.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTheTinDung.IconSize = 30;
+            this.btnTheTinDung.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTheTinDung.Location = new System.Drawing.Point(0, 352);
+            this.btnTheTinDung.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTheTinDung.Name = "btnTheTinDung";
+            this.btnTheTinDung.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
+            this.btnTheTinDung.Size = new System.Drawing.Size(146, 32);
+            this.btnTheTinDung.TabIndex = 16;
+            this.btnTheTinDung.Tag = "   Thẻ tín dụng";
+            this.btnTheTinDung.Text = "   Thẻ tín dung";
+            this.btnTheTinDung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTheTinDung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTheTinDung.UseVisualStyleBackColor = false;
+            this.btnTheTinDung.Click += new System.EventHandler(this.btnTheTinDung_Click);
             // 
             // btnTransHis
             // 
@@ -759,5 +787,6 @@
         private FontAwesome.Sharp.IconButton btnVayTC;
         private FontAwesome.Sharp.IconButton btnVayTD;
         private FontAwesome.Sharp.IconButton btnQLKV;
+        private FontAwesome.Sharp.IconButton btnTheTinDung;
     }
 }

@@ -21,11 +21,8 @@ namespace BankManagement.DAO
         public bool KiemtraTK(string taikhoan, string matkhau)
         {
             string SQL = string.Format("select * from TaiKhoan WHERE UserName  = '{0}' and Pass = '{1}'", taikhoan, matkhau);
-            if(conn.checkExist(SQL))
-            {
-                return true;
-            }
-            return false;
+            return conn.checkExist(SQL);
+
         }
         public bool KiemtraTK(string taikhoan)
         {
@@ -51,11 +48,7 @@ namespace BankManagement.DAO
         {
             string SQL = string.Format("select * from TaiKhoan WHERE SoTK  = '{0}'", SoTK);
             TaiKhoan Ten = conn.FindTK(SQL);
-            if (Ten != null)
-            {
-                return Ten;
-            }
-            return null;
+            return Ten;
         }
         public bool TaoTK(TaiKhoan taiKhoan, int role) { 
             string SQL = string.Format("INSERT INTO TaiKhoan(UserName, Pass, HoTen, NgaySinh, Cccd, Diachi, Sodienthoai, isAdmin, Tien, DiemTD) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}', '{7}', '{8}', '{9}');",

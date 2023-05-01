@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankManagement.Model
 {
-    internal class LaiSuat
+    public class LaiSuat
     {
         private int maLS;
         private double laiGui;

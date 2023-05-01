@@ -75,7 +75,7 @@ namespace BankManagement
         private void cbThoiGian_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             TinhLai tinhLai = new TinhLai();
-            laiSuat = laiSuatDAO.find();
+            laiSuat = laiSuatDAO.find(laiSuat);
             double lai = 0;
 
             guiTien.TinhlaichangecbThoiGian(ref thoigian, cbThoiGian.Texts.ToString(), ref lai);
