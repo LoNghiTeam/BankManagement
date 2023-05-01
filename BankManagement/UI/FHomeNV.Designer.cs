@@ -85,7 +85,7 @@
             this.tbxTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxTimKiem.Location = new System.Drawing.Point(0, 0);
-            this.tbxTimKiem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbxTimKiem.Margin = new System.Windows.Forms.Padding(5);
             this.tbxTimKiem.Multiline = false;
             this.tbxTimKiem.Name = "tbxTimKiem";
             this.tbxTimKiem.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -189,7 +189,6 @@
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -311,11 +310,11 @@
             this.btnTheTinDung.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTheTinDung.IconSize = 30;
             this.btnTheTinDung.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTheTinDung.Location = new System.Drawing.Point(0, 352);
+            this.btnTheTinDung.Location = new System.Drawing.Point(0, 429);
             this.btnTheTinDung.Margin = new System.Windows.Forms.Padding(2);
             this.btnTheTinDung.Name = "btnTheTinDung";
             this.btnTheTinDung.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
-            this.btnTheTinDung.Size = new System.Drawing.Size(146, 32);
+            this.btnTheTinDung.Size = new System.Drawing.Size(229, 32);
             this.btnTheTinDung.TabIndex = 16;
             this.btnTheTinDung.Tag = "   Thẻ tín dụng";
             this.btnTheTinDung.Text = "   Thẻ tín dung";
