@@ -82,10 +82,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service\GuiTien.cs" />
-    <Compile Include="Service\TatToanSTK.cs" />
-    <Compile Include="Service\ThoiHanGiaoDich.cs" />
-    <Compile Include="Service\TinhLai.cs" />
+    <Compile Include="Controller\GuiTien.cs" />
+    <Compile Include="Controller\TatToanSTK.cs" />
+    <Compile Include="Controller\ThoiHanGiaoDich.cs" />
+    <Compile Include="Controller\TinhLai.cs" />
     <Compile Include="DAO\SoTietKiemDAO.cs" />
     <Compile Include="Model\SoTietKiem.cs" />
     <Compile Include="UI\bankDataSet.Designer.cs">
@@ -93,12 +93,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bankDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Service\ChuyenTien.cs" />
-    <Compile Include="Service\DangKy.cs" />
-    <Compile Include="Service\DangNhap.cs" />
-    <Compile Include="Service\DieuChinhLaiSuat.cs" />
-    <Compile Include="Service\RutTien.cs" />
-    <Compile Include="Service\VayTien.cs" />
+    <Compile Include="Controller\ChuyenTien.cs" />
+    <Compile Include="Controller\DangKy.cs" />
+    <Compile Include="Controller\DangNhap.cs" />
+    <Compile Include="Controller\DieuChinhLaiSuat.cs" />
+    <Compile Include="Controller\RutTien.cs" />
+    <Compile Include="Controller\VayTien.cs" />
     <Compile Include="DAO\GiaoDichDAO.cs" />
     <Compile Include="DAO\KhoanVayDAO.cs" />
     <Compile Include="DAO\LaiSuatDAO.cs" />
