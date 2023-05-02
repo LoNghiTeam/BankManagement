@@ -36,11 +36,11 @@ namespace BankManagement.DAO
             taiKhoan = conn.FindTK(SQL);
             return taiKhoan;
         }
-        public TaiKhoan TimSoTK(int SoTK)
+        public TaiKhoan TimSoTK(int soTK)
         {
-            string SQL = string.Format("select * from TaiKhoan WHERE SoTK  = '{0}'", SoTK);
-            TaiKhoan Ten = conn.FindTK(SQL);
-            return Ten;
+            string SQL = string.Format("select * from TaiKhoan WHERE SoTK  = '{0}'", soTK);
+            TaiKhoan tk = conn.FindTK(SQL);
+            return tk;
         }
         public bool TaoTK(TaiKhoan taiKhoan, int role)
         {

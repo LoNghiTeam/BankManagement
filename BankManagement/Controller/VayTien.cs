@@ -23,9 +23,7 @@ namespace BankManagement.Controller
 
             DateTime ngayHan = ngayVay.AddMonths(thoigian);
             KhoanVay khoanVay = new KhoanVay(soTK, ngayVay, ngayHan, tien, maLS, tinhTrang, loai);
-            if (khoanVayDAO.Tao(khoanVay))
-            { return true; }
-            return false;
+            return khoanVayDAO.Tao(khoanVay);
         }
 
         public double TienVayTD(int diem)
