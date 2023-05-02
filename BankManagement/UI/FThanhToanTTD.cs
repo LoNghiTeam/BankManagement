@@ -58,7 +58,7 @@ namespace BankManagement.UI
             {
                 if (chuyenTien.GiaoDichTienGui(taiKhoan.SoTK, tongTien))
                 {
-                    chuyenTien.TaoGiaoDich(taiKhoan.SoTK, 1, DateTime.Now, tongTien, 6);
+                    chuyenTien.TaoGiaoDich(taiKhoan.SoTK, (int)TaiKhoanGD.nganhang, DateTime.Now, tongTien, (int)LoaiGiaoDich.travay);
                     theTinDung.NgayHan = DateTime.Now.AddMonths(1);
                     theTinDung.DaVay = 0;
                     if (lech.Days == 0 && theTinDung.DiemThe <= 100)

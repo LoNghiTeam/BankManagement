@@ -44,7 +44,7 @@ namespace BankManagement
             {
                 logging.Taikhoan = dangNhap.TimTK(txtTK.Text.ToString());
                 this.Hide();
-                if (logging.Taikhoan.IsAdmin != 0)
+                if (logging.Taikhoan.IsAdmin != (int)QuyenTaiKhoan.khachhang)
                 {
                     FHomeNV fHomeNV = new FHomeNV();
                     fHomeNV.ShowDialog();

@@ -64,7 +64,7 @@ namespace BankManagement.UI
             taiKhoan = taiKhoanDAO.TimSoTK(theTinDung.SoTK);
             if (chuyenTien.GiaoDichTienGui(taiKhoan.SoTK, tienRut))
             {
-                chuyenTien.TaoGiaoDich(taiKhoan.SoTK, 1, DateTime.Now, tienRut, 3);
+                chuyenTien.TaoGiaoDich(taiKhoan.SoTK, (int)TaiKhoanGD.nganhang, DateTime.Now, tienRut, (int)LoaiGiaoDich.ruttien);
                 theTinDung.DaVay += tienRut;
                 if (theTinDungDAO.CapNhatThe(theTinDung))
                     MessageBox.Show("Rút tiền thành công", "Thông báo", MessageBoxButtons.OK);

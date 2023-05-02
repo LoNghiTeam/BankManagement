@@ -1,4 +1,5 @@
-﻿using BankManagement.DAO;
+﻿using BankManagement.Controller;
+using BankManagement.DAO;
 using BankManagement.Model;
 using BankManagement.UI;
 using Microsoft.Reporting.WinForms;
@@ -27,7 +28,7 @@ namespace BankManagement
         {
             InitializeComponent();
             this.dtgvTrans.Size = new Size(Width, Height);
-            if(logging.Taikhoan.IsAdmin == 0)
+            if(logging.Taikhoan.IsAdmin == (int)QuyenTaiKhoan.khachhang)
             {
                 HienThiDanhSach(logging.Taikhoan.SoTK);
                 tbxNgGui.Enabled = false;

@@ -45,7 +45,7 @@ namespace BankManagement.UI
             lblMaLS.Text = khoanVay.MaLS.ToString();
             lblSoTien.Text = khoanVay.Tien.ToString();
             lblTT.Text = "Chưa tất toán";
-            if (khoanVay.Loai == 1)
+            if (khoanVay.Loai == (int)LoaiVay.vaytindung)
                 lblLoai.Text = "Vay tín dụng";
             else
                 lblLoai.Text = "Vay thế chấp";
@@ -126,7 +126,7 @@ namespace BankManagement.UI
             {
                 if (chuyenTien.GiaoDichTienGui(taiKhoan.SoTK, tongTien))
                 {
-                    chuyenTien.TaoGiaoDich(taiKhoan.SoTK, 1, DateTime.Now, tongTien, 6);
+                    chuyenTien.TaoGiaoDich(taiKhoan.SoTK, (int)TaiKhoanGD.nganhang, DateTime.Now, tongTien, (int)LoaiGiaoDich.travay);
                     if (tinhtrang != 0)
                         taiKhoanDAO.CapNhatDiemTinDung(taiKhoan.DiemTD + 1, taiKhoan.SoTK);
                     else

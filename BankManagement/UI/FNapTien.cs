@@ -26,7 +26,7 @@ namespace BankManagement
             if(double.TryParse(tbSoTien.Text,out result)){
                 if (result.ToString() != "" && result>0)
                 {
-                    if (chuyenTien.TaoGiaoDichNap(int.Parse(tbSoTK.Text), DateTime.Now, result, 2))
+                    if (chuyenTien.TaoGiaoDichNap(int.Parse(tbSoTK.Text), DateTime.Now, result, (int)LoaiGiaoDich.naptien))
                     {
                         if (chuyenTien.GiaoDichTienNhan(int.Parse(tbSoTK.Text), result))
                         {

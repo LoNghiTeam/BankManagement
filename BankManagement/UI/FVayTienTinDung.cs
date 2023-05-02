@@ -32,7 +32,7 @@ namespace BankManagement.UI
         private void FVayTienTinDung_Load(object sender, EventArgs e)
         {
             btnVayTien.Enabled = false;
-            if (logging.Taikhoan.IsAdmin < 1)
+            if (logging.Taikhoan.IsAdmin < (int)QuyenTaiKhoan.nhanvien)
             {
                 tbSoTK.Enabled = false;
             }
@@ -114,9 +114,9 @@ namespace BankManagement.UI
             double.TryParse(tbTien.Texts.Trim(), out tien);
             if (vayTien.TienVayTD(taiKhoan.DiemTD) >= tien)
             {
-                if (vayTien.TaoKhoanVay(soTK, DateTime.Now, thoigian, tien, laiSuat.MaLS, 0, 2))
+                if (vayTien.TaoKhoanVay(soTK, DateTime.Now, thoigian, tien, laiSuat.MaLS, (int)TinhTrang.chuatra, (int)LoaiVay.vaytindung))
                     if (chuyenTien.GiaoDichTienNhan(soTK, tien))
-                        if (chuyenTien.TaoGiaoDich(1, soTK, DateTime.Now, tien, 5))
+                        if (chuyenTien.TaoGiaoDich((int)TaiKhoanGD.nganhang, soTK, DateTime.Now, tien, (int)LoaiGiaoDich.guitietkiem))
                             MessageBox.Show("Vay tiền thành công", "Thông báo", MessageBoxButtons.OK);
             }
             else

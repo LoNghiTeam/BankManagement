@@ -58,7 +58,7 @@ namespace BankManagement.Controller
         }
         public bool TaoTKKH(TaiKhoan taiKhoan)
         {
-            return taiKhoanDAO.TaoTK(taiKhoan, 0);
+            return taiKhoanDAO.TaoTK(taiKhoan, (int)QuyenTaiKhoan.khachhang);
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using BankManagement.DAO;
+﻿using BankManagement.Controller;
+using BankManagement.DAO;
 using BankManagement.Model;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace BankManagement.UI
             tbxTinhTrang.Enabled = false;
             dpNgayHan.Enabled = false;
             dpNgayVay.Enabled = false;
-            if(logging.Taikhoan.IsAdmin == 0)
+            if(logging.Taikhoan.IsAdmin == (int)QuyenTaiKhoan.khachhang)
             {
                 dtgvKhoanVay.DataSource = khoanVayDAO.FindSoTK(logging.Taikhoan.SoTK);
                 tbxSoTK.Enabled = false;

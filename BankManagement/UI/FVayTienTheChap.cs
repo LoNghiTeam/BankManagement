@@ -34,7 +34,7 @@ namespace BankManagement.UI
         private void FVayTien_Load(object sender, EventArgs e)
         {
             btnVayTien.Enabled = false;
-            if(logging.Taikhoan.IsAdmin < 1)
+            if(logging.Taikhoan.IsAdmin < (int)QuyenTaiKhoan.nhanvien)
             {
                 tbSoTK.Enabled = false;
             }
@@ -115,9 +115,9 @@ namespace BankManagement.UI
             {
                 if (thechap >= tien)
                 {
-                    if (vayTien.TaoKhoanVay(soTK, DateTime.Now, thoigian, tien, laiSuat.MaLS, 0, 1))
+                    if (vayTien.TaoKhoanVay(soTK, DateTime.Now, thoigian, tien, laiSuat.MaLS, (int)TinhTrang.chuatra, (int)LoaiVay.vaythechap))
                         if (chuyenTien.GiaoDichTienNhan(soTK, tien))
-                            if (chuyenTien.TaoGiaoDich(1, soTK, DateTime.Now, tien, 4))
+                            if (chuyenTien.TaoGiaoDich((int)TaiKhoanGD.nganhang, soTK, DateTime.Now, tien, (int)LoaiGiaoDich.vaytien))
                                 MessageBox.Show("Vay tiền thành công", "Thông báo", MessageBoxButtons.OK);
                 }
                 else

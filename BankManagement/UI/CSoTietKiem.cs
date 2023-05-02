@@ -1,4 +1,5 @@
-﻿using BankManagement.DAO;
+﻿using BankManagement.Controller;
+using BankManagement.DAO;
 using BankManagement.Model;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace BankManagement.UI
         {
             InitializeComponent();
             this.dtgvGuiTK.Size = new Size(Width, Height);
-            if(logging.Taikhoan.IsAdmin == 0)
+            if(logging.Taikhoan.IsAdmin == (int)QuyenTaiKhoan.khachhang)
             {
                 tbxSTK.Texts = logging.Taikhoan.SoTK.ToString();
                 HienThiDanhSach(logging.Taikhoan.SoTK);

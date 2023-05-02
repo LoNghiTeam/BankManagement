@@ -27,7 +27,7 @@ namespace BankManagement.UI
 
         private void FTheTinDung_Load(object sender, EventArgs e)
         {
-            if (logging.Taikhoan.IsAdmin == 0)
+            if (logging.Taikhoan.IsAdmin == (int)QuyenTaiKhoan.khachhang)
             {
                 tbSTK.Enabled = false;
             }

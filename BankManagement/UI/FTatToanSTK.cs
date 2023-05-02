@@ -80,9 +80,9 @@ namespace BankManagement.UI
                 //Sửa tiền người gửi
                 tkDAO.CongTien(stk.SoTK, tienTT);
                 //Sửa tiền ngân hàng
-                tkDAO.TruTien(1, tienTT);
+                tkDAO.TruTien((int)TaiKhoanGD.nganhang, tienTT);
                 //Thêm giao dịch tất toán vào bảng tất toán
-                GiaoDich gd = new GiaoDich(1, stk.SoTK, DateTime.Now, tienTT, 7);
+                GiaoDich gd = new GiaoDich(1, stk.SoTK, DateTime.Now, tienTT, (int)LoaiGiaoDich.ruttietkiem);
                 gdDAO.TaoGD(gd); 
                 //Tất toán
                 stkDAO.TatToanGD(stk);

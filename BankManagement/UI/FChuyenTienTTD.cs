@@ -96,7 +96,7 @@ namespace BankManagement.UI
             
             if (chuyenTien.GiaoDichTien(theTinDung.SoTK, taiKhoan.SoTK, tienChuyen))
             {
-                chuyenTien.TaoGiaoDich(taiKhoan.SoTK, 1, DateTime.Now, tienChuyen, 3);
+                chuyenTien.TaoGiaoDich(taiKhoan.SoTK, (int)TaiKhoanGD.nganhang, DateTime.Now, tienChuyen, (int)LoaiGiaoDich.ruttien);
                 theTinDung.DaVay += tienChuyen;
                 if (theTinDungDAO.CapNhatThe(theTinDung))
                     MessageBox.Show("Chuyển tiền thành công", "Thông báo", MessageBoxButtons.OK);

@@ -17,9 +17,8 @@ namespace BankManagement.Controller
         {
             TaiKhoan taiKhoan = new TaiKhoan();
             taiKhoan = taiKhoanDAO.TimSoTK(SoTK);
-            if(taiKhoan != null)
-                return taiKhoan;
-            return null;
+            return taiKhoan;
+
         }
         public string checkSoTien(double tien)
         {
@@ -35,7 +34,7 @@ namespace BankManagement.Controller
         }
         public bool TaoGiaoDichNap(int nguoinhan, DateTime ngayGD, double tien, int loai)
         {
-            GiaoDich giaoDich = new GiaoDich(1, nguoinhan, ngayGD, tien, loai);
+            GiaoDich giaoDich = new GiaoDich((int)TaiKhoanGD.nganhang, nguoinhan, ngayGD, tien, loai);
             return giaoDichDAO.TaoGD(giaoDich);
 
         }
@@ -75,5 +74,7 @@ namespace BankManagement.Controller
             }
             return false;
         }
+
+
     }
 }

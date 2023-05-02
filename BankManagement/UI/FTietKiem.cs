@@ -34,7 +34,7 @@ namespace BankManagement
         {
             btnGuiTietKiem.Enabled = false;
             lblRate.Text = string.Empty;
-            if (logging.Taikhoan.IsAdmin < 1)
+            if (logging.Taikhoan.IsAdmin < (int)QuyenTaiKhoan.nhanvien)
             {
                 tbSoTK.Enabled = false;
             }
@@ -110,7 +110,7 @@ namespace BankManagement
             int.TryParse(tbSoTK.Texts.Trim(), out soTK);
             if (guiTien.TaoSoTietKiem(soTK,tbTenSo.Texts, DateTime.Now, thoigian, tien, laiSuat.MaLS))
                 if (chuyenTien.GiaoDichTienGui(soTK, tien))
-                    if (chuyenTien.TaoGiaoDich(soTK, 1, DateTime.Now, tien, 5))
+                    if (chuyenTien.TaoGiaoDich(soTK, (int)TaiKhoanGD.nganhang, DateTime.Now, tien, (int)LoaiGiaoDich.guitietkiem))
                         MessageBox.Show("Gửi tiết kiệm thành công", "Thông báo", MessageBoxButtons.OK);
 
             if (soTK == logging.Taikhoan.SoTK)

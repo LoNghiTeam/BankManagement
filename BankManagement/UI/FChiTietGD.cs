@@ -1,4 +1,5 @@
-﻿using BankManagement.DAO;
+﻿using BankManagement.Controller;
+using BankManagement.DAO;
 using BankManagement.Model;
 using System;
 using System.Collections.Generic;
@@ -14,16 +15,7 @@ namespace BankManagement.UI
 {
     public partial class FChiTietGD : Form
     {
-        enum Loai{
-            chuyentien = 1,
-            nap = 2,
-            rut = 3,
-            vay = 4,
-            gui = 5,
-            travay = 6,
-            ruttietkiem = 7,
 
-        }
         private GiaoDich giaoDich;
         private GiaoDichDAO gdDAO = new GiaoDichDAO();
         public GiaoDich GiaoDich { get => giaoDich; set => giaoDich = value; }
@@ -47,37 +39,37 @@ namespace BankManagement.UI
                 tbxMaNgNhan.Texts = GiaoDich.NguoiNhan.ToString();
                 switch (GiaoDich.Loai)
                 {
-                    case (int)Loai.ruttietkiem:
+                    case (int)LoaiGiaoDich.ruttietkiem:
                          tbxLoaiGD.Texts = "Tất toán tiết kiệm";
                         tbxTenNgGui.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
                         tbxTenNgNhan.Texts = gdDAO.LayTenKH(GiaoDich.NguoiNhan);
                         break;
-                    case (int)Loai.travay:
+                    case (int)LoaiGiaoDich.travay:
                         tbxLoaiGD.Texts = "Tất toán khoản vay";
                         tbxTenNgNhan.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
                         tbxTenNgGui.Texts = gdDAO.LayTenKH(GiaoDich.NguoiGui);
                         break;
-                    case (int)Loai.gui:
+                    case (int)LoaiGiaoDich.guitietkiem:
                         tbxLoaiGD.Texts = "Gửi tiết kiệm";
                         tbxTenNgNhan.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
                         tbxTenNgGui.Texts = gdDAO.LayTenKH(GiaoDich.NguoiGui);
                         break;
-                    case (int)Loai.vay:
+                    case (int)LoaiGiaoDich.vaytien:
                         tbxLoaiGD.Texts = "Vay tiền";
                         tbxTenNgGui.Texts = "Ngân hàng đầu tư và phát triển nhóm 4";
                         tbxTenNgNhan.Texts = gdDAO.LayTenKH(GiaoDich.NguoiNhan);
                         break;
-                    case (int)Loai.rut:
+                    case (int)LoaiGiaoDich.ruttien:
                         tbxLoaiGD.Texts = "Rút tiền";
                         tbxTenNgNhan.Texts = "Chủ thể rút tiền";
                         tbxTenNgGui.Texts = gdDAO.LayTenKH(GiaoDich.NguoiGui);
                         break;
-                    case (int)Loai.nap:
+                    case (int)LoaiGiaoDich.naptien:
                         tbxLoaiGD.Texts = "Nạp tiền";
                         tbxTenNgGui.Texts = "Chủ thể nạp tiền";
                         tbxTenNgNhan.Texts = gdDAO.LayTenKH(GiaoDich.NguoiNhan);
                         break;
-                    case (int)Loai.chuyentien:
+                    case (int)LoaiGiaoDich.chuyentien:
                         tbxLoaiGD.Texts = "Chuyển tiền";
                         tbxTenNgGui.Texts = gdDAO.LayTenKH(GiaoDich.NguoiGui);
                         tbxTenNgNhan.Texts = gdDAO.LayTenKH(GiaoDich.NguoiNhan);
